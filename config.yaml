@@ -1,38 +1,57 @@
 # yaml-language-server: $schema=./node_modules/envio/evm.schema.json
 name: uni_v3
-networks:
-- id: 1
-  start_block: 0
-  contracts:
+rollback_on_reorg: true
+unordered_multichain_mode: true
+
+contracts:
   - name: UniswapV3Factory
-    address: 0x1F98431c8aD98523631AE4a59f267346ea31F984
     handler: src/EventHandlers.ts
     events:
-    - event: PoolCreated(address indexed token0, address indexed token1, uint24 indexed fee, int24 tickSpacing, address pool)
+      - event: PoolCreated(address indexed token0, address indexed token1, uint24 indexed fee, int24 tickSpacing, address pool)
   - name: UniswapV3Pool
     handler: src/EventHandlers.ts
     events:
-    - event: Initialize(uint160 sqrtPriceX96, int24 tick)
-    - event: Collect(address indexed owner, address recipient, int24 indexed tickLower, int24 indexed tickUpper, uint128 amount0, uint128 amount1)
-      field_selection:
-        transaction_fields:
-        - hash
-        - gasPrice
-    - event: Burn(address indexed owner, int24 indexed tickLower, int24 indexed tickUpper, uint128 amount, uint256 amount0, uint256 amount1)
-      field_selection:
-        transaction_fields:
-        - hash
-        - gasPrice
-        - from
-    - event: Mint(address sender, address indexed owner, int24 indexed tickLower, int24 indexed tickUpper, uint128 amount, uint256 amount0, uint256 amount1)
-      field_selection:
-        transaction_fields:
-        - hash
-        - gasPrice
-        - from
-    - event: Swap(address indexed sender, address indexed recipient, int256 amount0, int256 amount1, uint160 sqrtPriceX96, uint128 liquidity, int24 tick)
-      field_selection:
-        transaction_fields:
-        - hash
-        - gasPrice
-        - from
+      - event: Initialize(uint160 sqrtPriceX96, int24 tick)
+      - event: Collect(address indexed owner, address recipient, int24 indexed tickLower, int24 indexed tickUpper, uint128 amount0, uint128 amount1)
+        field_selection:
+          transaction_fields:
+            - hash
+            - gasPrice
+      - event: Burn(address indexed owner, int24 indexed tickLower, int24 indexed tickUpper, uint128 amount, uint256 amount0, uint256 amount1)
+        field_selection:
+          transaction_fields:
+            - hash
+            - gasPrice
+            - from
+      - event: Mint(address sender, address indexed owner, int24 indexed tickLower, int24 indexed tickUpper, uint128 amount, uint256 amount0, uint256 amount1)
+        field_selection:
+          transaction_fields:
+            - hash
+            - gasPrice
+            - from
+      - event: Swap(address indexed sender, address indexed recipient, int256 amount0, int256 amount1, uint160 sqrtPriceX96, uint128 liquidity, int24 tick)
+        field_selection:
+          transaction_fields:
+            - hash
+            - gasPrice
+            - from
+
+networks:
+  - id: 1 # Ethereum Mainnet
+    start_block: 0
+    contracts:
+      - name: UniswapV3Factory
+        address: 0x1F98431c8aD98523631AE4a59f267346ea31F984
+      - name: UniswapV3Pool
+  # - id: 42161 # Arbitrum One
+  #   start_block: 0
+  #   contracts:
+  #     - name: UniswapV3Factory
+  #       address: 0x1F98431c8aD98523631AE4a59f267346ea31F984
+  #     - name: UniswapV3Pool
+  # - id: 10 # Optimism
+  #   start_block: 0
+  #   contracts:
+  #     - name: UniswapV3Factory
+  #       address: 0x1F98431c8aD98523631AE4a59f267346ea31F984
+  #     - name: UniswapV3Pool

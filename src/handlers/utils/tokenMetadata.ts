@@ -1,8 +1,9 @@
 import { createPublicClient, http, getContract, type PublicClient } from "viem";
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
+import { existsSync, mkdirSync } from "fs";
+import { readFile, writeFile } from "fs/promises";
 import { join } from "path";
 import { ADDRESS_ZERO } from "./constants";
-import { CHAIN_CONFIGS } from "./chains";
+import { getChainConfig } from "./chains";
 import * as dotenv from "dotenv";
 
 dotenv.config();
@@ -42,7 +43,7 @@ const ERC20_ABI = [
     outputs: [{ type: "uint8" }],
     stateMutability: "view",
     type: "function",
-  }
+  },
 ] as const;
 
 // Create .cache directory if it doesn't exist
@@ -59,42 +60,35 @@ const getCachePath = (chainId: number): string => {
 interface TokenMetadata {
   name: string;
   symbol: string;
-  decimals: bigint;
+  decimals: number;
 }
 
-const getRpcUrls = (chainId: number): string[] => {
+const getRpcUrl = (chainId: number): string => {
   switch (chainId) {
     case 1:
-      return [
-        'https://eth.drpc.org',
-        'https://rpc.mevblocker.io/fast',
-        'https://rpc.mevblocker.io',
-        'https://1rpc.io/eth',
-        'https://ethereum-rpc.publicnode.com'
-      ];
-
+      return process.env.MAINNET_RPC_URL || "https://eth.drpc.org";
     case 42161:
-      return [process.env.ARBITRUM_RPC_URL || "https://arbitrum.drpc.org"];
+      return process.env.ARBITRUM_RPC_URL || "https://arbitrum.drpc.org";
     case 10:
-      return [process.env.OPTIMISM_RPC_URL || "https://optimism.drpc.org"];
+      return process.env.OPTIMISM_RPC_URL || "https://optimism.drpc.org";
     case 8453:
-      return [process.env.BASE_RPC_URL || "https://base.drpc.org"];
+      return process.env.BASE_RPC_URL || "https://base.drpc.org";
     case 137:
-      return [process.env.POLYGON_RPC_URL || "https://polygon.drpc.org"];
+      return process.env.POLYGON_RPC_URL || "https://polygon.drpc.org";
     case 43114:
-      return [process.env.AVALANCHE_RPC_URL || "https://avalanche.drpc.org"];
+      return process.env.AVALANCHE_RPC_URL || "https://avalanche.drpc.org";
     case 56:
-      return [process.env.BSC_RPC_URL || "https://bsc.drpc.org"];
+      return process.env.BSC_RPC_URL || "https://bsc.drpc.org";
     case 81457:
-      return [process.env.BLAST_RPC_URL || "https://blast.drpc.org"];
+      return process.env.BLAST_RPC_URL || "https://blast.drpc.org";
     case 7777777:
-      return [process.env.ZORA_RPC_URL || "https://zora.drpc.org"];
+      return process.env.ZORA_RPC_URL || "https://zora.drpc.org";
     case 1868:
-      return [process.env.SONIEUM_RPC_URL || "https://sonieum.drpc.org"];
+      return process.env.SONIEUM_RPC_URL || "https://sonieum.drpc.org";
     case 130:
-      return [process.env.UNICHAIN_RPC_URL || "https://unichain.drpc.org"];
+      return process.env.UNICHAIN_RPC_URL || "https://unichain.drpc.org";
     case 57073:
-      return [process.env.INK_RPC_URL || "https://ink.drpc.org"];
+      return process.env.INK_RPC_URL || "https://ink.drpc.org";
     // Add generic fallback for any chain
     default:
       throw new Error(`No RPC URL configured for chainId ${chainId}`);
@@ -102,42 +96,38 @@ const getRpcUrls = (chainId: number): string[] => {
 };
 
 // Cache of clients per chainId
-const clients: Record<string, PublicClient> = {};
+const clients: Record<number, PublicClient> = {};
 
 // Get client for a specific chain
-const getClient = (chainId: number, rpcUrl: string): PublicClient => {
-  const key = `${chainId}-${rpcUrl}`;
-
-  if (!clients[key]) {
+const getClient = (chainId: number): PublicClient => {
+  if (!clients[chainId]) {
     try {
       // Create a simpler client configuration
-      clients[key] = createPublicClient({
-        transport: http(rpcUrl),
+      clients[chainId] = createPublicClient({
+        transport: http(getRpcUrl(chainId)),
       });
-      console.log(`Created client for chain ${key}`);
+      console.log(`Created client for chain ${chainId}`);
     } catch (e) {
-      console.error(`Error creating client for chain ${key}:`, e);
+      console.error(`Error creating client for chain ${chainId}:`, e);
       throw e;
     }
   }
-  return clients[key];
+  return clients[chainId];
 };
 
 // Cache of metadata per chainId
 const metadataCaches: Record<number, Record<string, TokenMetadata>> = {};
 
-const bigIntReviver = (k: any, v: any) => (k === 'decimals') ? BigInt(v) : v;
-const bigIntReplacer = (_: any, v: any) => (typeof v === 'bigint') ? v.toString() : v;
-const metadataParser = (json: string) => JSON.parse(json, bigIntReviver);
-const metadataSerializer = (item: any) => JSON.stringify(item, bigIntReplacer, 2);
-
-// Load cache for a specific chain
-const loadCache = (chainId: number): Record<string, TokenMetadata> => {
+// Load cache for a specific chain (async to avoid blocking the event loop)
+const loadCache = async (
+  chainId: number
+): Promise<Record<string, TokenMetadata>> => {
   if (!metadataCaches[chainId]) {
     const cachePath = getCachePath(chainId);
     if (existsSync(cachePath)) {
       try {
-        metadataCaches[chainId] = metadataParser(readFileSync(cachePath, "utf8"));
+        const data = await readFile(cachePath, "utf8");
+        metadataCaches[chainId] = JSON.parse(data);
       } catch (e) {
         console.error(
           `Error loading token metadata cache for chain ${chainId}:`,
@@ -152,11 +142,14 @@ const loadCache = (chainId: number): Record<string, TokenMetadata> => {
   return metadataCaches[chainId];
 };
 
-// Save cache for a specific chain
-const saveCache = (chainId: number): void => {
+// Save cache for a specific chain (async to avoid blocking the event loop)
+const saveCache = async (chainId: number): Promise<void> => {
   const cachePath = getCachePath(chainId);
   try {
-    writeFileSync(cachePath, metadataSerializer(metadataCaches[chainId]));
+    await writeFile(
+      cachePath,
+      JSON.stringify(metadataCaches[chainId], null, 2)
+    );
   } catch (e) {
     console.error(`Error saving token metadata cache for chain ${chainId}:`, e);
   }
@@ -175,36 +168,36 @@ export async function getTokenMetadata(
   chainId: number
 ): Promise<TokenMetadata> {
   // Load cache for this chain
-  const metadataCache = loadCache(chainId);
-  const chainConfig = CHAIN_CONFIGS[chainId];
+  const metadataCache = await loadCache(chainId);
 
   // Handle native token
-  if (address === ADDRESS_ZERO) {
+  if (address.toLowerCase() === ADDRESS_ZERO.toLowerCase()) {
+    const chainConfig = getChainConfig(chainId);
     return {
       name: chainConfig.nativeTokenDetails.name,
       symbol: chainConfig.nativeTokenDetails.symbol,
-      decimals: chainConfig.nativeTokenDetails.decimals,
+      decimals: Number(chainConfig.nativeTokenDetails.decimals),
     };
   }
 
-  address = address.toLowerCase();
-
   // Check for token overrides in chain config
+  const chainConfig = getChainConfig(chainId);
   const tokenOverride = chainConfig.tokenOverrides.find(
-    (t) => t.address.toLowerCase() === address
+    (t) => t.address.toLowerCase() === address.toLowerCase()
   );
 
   if (tokenOverride) {
     return {
       name: tokenOverride.name,
       symbol: tokenOverride.symbol,
-      decimals: tokenOverride.decimals,
+      decimals: Number(tokenOverride.decimals),
     };
   }
 
   // Check cache
-  if (metadataCache[address]) {
-    return metadataCache[address];
+  const normalizedAddress = address;
+  if (metadataCache[normalizedAddress]) {
+    return metadataCache[normalizedAddress];
   }
 
   try {
@@ -212,8 +205,8 @@ export async function getTokenMetadata(
     const metadata = await fetchTokenMetadataMulticall(address, chainId);
 
     // Update cache
-    metadataCache[address] = metadata;
-    saveCache(chainId);
+    metadataCache[normalizedAddress] = metadata;
+    await saveCache(chainId);
 
     return metadata;
   } catch (e) {
@@ -225,84 +218,73 @@ export async function getTokenMetadata(
   }
 }
 
+// Update the fetchTokenMetadataMulticall function to sanitize name and symbol
 async function fetchTokenMetadataMulticall(
   address: string,
   chainId: number
 ): Promise<TokenMetadata> {
-  const rpcUrls = getRpcUrls(chainId);
-  let name, symbol, decimals;
+  const client = getClient(chainId);
+  const contract = getContract({
+    address: address as `0x${string}`,
+    abi: ERC20_ABI,
+    client,
+  });
 
-  for (const rpcUrl of rpcUrls) {
-    const contract = getContract({
-      address: address as `0x${string}`,
-      abi: ERC20_ABI,
-      client: getClient(chainId, rpcUrl),
-    });
+  // Prepare promises but don't await them yet
+  const namePromise = contract.read.name().catch(() => null);
+  const nameBytes32Promise = contract.read.NAME().catch(() => null);
+  const symbolPromise = contract.read.symbol().catch(() => null);
+  const symbolBytes32Promise = contract.read.SYMBOL().catch(() => null);
+  const decimalsPromise = contract.read.decimals().catch(() => 18); // Default to 18
 
-    const promiseList = [];
+  // Execute all promises in a single multicall batch
+  const [
+    nameResult,
+    nameBytes32Result,
+    symbolResult,
+    symbolBytes32Result,
+    decimalsResult,
+  ] = await Promise.all([
+    namePromise,
+    nameBytes32Promise,
+    symbolPromise,
+    symbolBytes32Promise,
+    decimalsPromise,
+  ]);
 
-    if (name === undefined) {
-      const namePromise = contract.read.name()
-                          .then(val => {
-                            if (val === null) throw 'Result is null';
-                            name = sanitizeString(val);
-                          });
-  
-      const nameBytes32Promise = contract.read.NAME()
-                          .then(val => name = parseBytes32String(val));
-      
-      promiseList.push(Promise.any([namePromise, nameBytes32Promise]));
-    }
+  // Process name with fallbacks
+  let name = "unknown";
+  if (nameResult !== null) {
+    name = sanitizeString(nameResult);
+  } else if (nameBytes32Result !== null) {
+    name = sanitizeString(
+      new TextDecoder().decode(
+        new Uint8Array(
+          Buffer.from(nameBytes32Result.slice(2), "hex").filter((n) => n !== 0)
+        )
+      )
+    );
+  }
 
-    if (symbol === undefined) {
-      const symbolPromise = contract.read.symbol()
-                          .then(val => {
-                            if (val === null) throw 'Result is null';
-                            symbol = sanitizeString(val);
-                          });
-  
-      const symbolBytes32Promise = contract.read.SYMBOL()
-                          .then(val => symbol = parseBytes32String(val));
-
-      promiseList.push(Promise.any([symbolPromise, symbolBytes32Promise]));
-    }
-
-    if (decimals === undefined) {
-      const decimalsPromise = contract.read.decimals()
-                          .then(val => {
-                            if (val === null) throw 'Result is null';
-                            decimals = val;
-                          });
-
-      promiseList.push(decimalsPromise);
-    }
-
-    try {
-      await Promise.all(promiseList);
-    } catch (err) {
-      console.log(err);
-    }
-
-    if (name !== undefined && symbol !== undefined && decimals !== undefined) {
-      break;
-    }
+  // Process symbol with fallbacks
+  let symbol = "UNKNOWN";
+  if (symbolResult !== null) {
+    symbol = sanitizeString(symbolResult);
+  } else if (symbolBytes32Result !== null) {
+    symbol = sanitizeString(
+      new TextDecoder().decode(
+        new Uint8Array(
+          Buffer.from(symbolBytes32Result.slice(2), "hex").filter(
+            (n) => n !== 0
+          )
+        )
+      )
+    );
   }
 
   return {
-    name: name === undefined ? 'unknown' : name,
-    symbol: symbol === undefined ? 'UNKNOWN' : symbol,
-    decimals: typeof decimals === "number" ? BigInt(decimals) : 18n
+    name: name || "unknown",
+    symbol: symbol || "UNKNOWN",
+    decimals: typeof decimalsResult === "number" ? decimalsResult : 18,
   };
-}
-
-function parseBytes32String(bytes32String: string | null): string {
-  if (bytes32String === null) throw 'Result is null';
-
-  return sanitizeString(
-    new TextDecoder().decode(
-      new Uint8Array(
-        Buffer.from(bytes32String.slice(2), "hex").filter(n => n !== 0)
-      )
-    )
-  );
 }

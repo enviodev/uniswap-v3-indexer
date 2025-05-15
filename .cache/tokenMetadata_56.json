@@ -1,0 +1,3962 @@
+{
+  "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d": {
+    "name": "USD Coin",
+    "symbol": "USDC",
+    "decimals": 18
+  },
+  "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c": {
+    "name": "Wrapped BNB",
+    "symbol": "WBNB",
+    "decimals": 18
+  },
+  "0x55d398326f99059fF775485246999027B3197955": {
+    "name": "Tether USD",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82": {
+    "name": "PancakeSwap Token",
+    "symbol": "Cake",
+    "decimals": 18
+  },
+  "0x5094AE45E6b89b35EB1CB43DE31743dc4c881bd6": {
+    "name": "MAKE",
+    "symbol": "MAKE",
+    "decimals": 18
+  },
+  "0x4DB5a66E937A9F4473fA95b1cAF1d1E1D62E29EA": {
+    "name": "Wrapped Ether",
+    "symbol": "WETH",
+    "decimals": 18
+  },
+  "0xec1480fE43739Ac9BB1940Cb669B5bbC2a37E4fB": {
+    "name": "Tether",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "0x9d1A7A3191102e9F900Faa10540837ba84dCBAE7": {
+    "name": "EURITE",
+    "symbol": "EURI",
+    "decimals": 18
+  },
+  "0x2170Ed0880ac9A755fd29B2688956BD959F933F8": {
+    "name": "Ethereum Token",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "0x1D2F0da169ceB9fC7B3144628dB156f3F6c60dBE": {
+    "name": "XRP Token",
+    "symbol": "XRP",
+    "decimals": 18
+  },
+  "0xc748673057861a797275CD8A068AbB95A902e8de": {
+    "name": "Baby Doge Coin",
+    "symbol": "BabyDoge",
+    "decimals": 9
+  },
+  "0x570A5D26f7765Ecb712C0924E4De545B89fD43dF": {
+    "name": "SOLANA",
+    "symbol": "SOL",
+    "decimals": 18
+  },
+  "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c": {
+    "name": "BTCB Token",
+    "symbol": "BTCB",
+    "decimals": 18
+  },
+  "0xBf5140A22578168FD562DCcF235E5D43A02ce9B1": {
+    "name": "Uniswap",
+    "symbol": "UNI",
+    "decimals": 18
+  },
+  "0x0cF8e180350253271f4b917CcFb0aCCc4862F262": {
+    "name": "Bitcoin BR",
+    "symbol": "BTCBR",
+    "decimals": 18
+  },
+  "0x5683e027Ffc703fD6fb97914eBE3a7d209aBDC25": {
+    "name": "SATS (Ordinals)",
+    "symbol": "SATS",
+    "decimals": 9
+  },
+  "0x46444974bfFa632b0299418281efB8C94762402e": {
+    "name": "IMOSuccess",
+    "symbol": "IMS",
+    "decimals": 18
+  },
+  "0x031b41e504677879370e9DBcF937283A8691Fa7f": {
+    "name": "Fetch",
+    "symbol": "FET",
+    "decimals": 18
+  },
+  "0xB8Fd1438CA2aF47b940FFF34D13cF58C64ac96A1": {
+    "name": "Space Frog X",
+    "symbol": "SFX",
+    "decimals": 18
+  },
+  "0xD10d6F1d4b905b67735a62079743723E6f3C19C3": {
+    "name": "BULLDOGITO",
+    "symbol": "BDOGITO",
+    "decimals": 18
+  },
+  "0x7f662F9F0Bd3eEe2E0a9546e3010B24e18a26094": {
+    "name": "tcoin",
+    "symbol": "TCN",
+    "decimals": 18
+  },
+  "0xbA2aE424d960c26247Dd6c32edC70B295c744C43": {
+    "name": "Dogecoin",
+    "symbol": "DOGE",
+    "decimals": 8
+  },
+  "0x4eA98c1999575aaadfb38237Dd015c5E773F75a2": {
+    "name": "MAGA",
+    "symbol": "TRUMP",
+    "decimals": 9
+  },
+  "0xeA3A6c436C2047BF9cc0E5f55176b2Dd84274318": {
+    "name": "Bigb Fun Token",
+    "symbol": "BIGB",
+    "decimals": 18
+  },
+  "0xBCC758C8592451c5Aaf38edd305150C878E580A4": {
+    "name": "pepeking",
+    "symbol": "pepek",
+    "decimals": 18
+  },
+  "0x38C522bbCc32987f5708355d20E46AaC70f06508": {
+    "name": "WESLEY RODERICK BURFORD",
+    "symbol": "WRB",
+    "decimals": 18
+  },
+  "0x7B27309ecF7F173893f1d0719e33046d5Ca1D824": {
+    "name": "4FOODLAB",
+    "symbol": "4MT",
+    "decimals": 18
+  },
+  "0xfb6115445Bff7b52FeB98650C87f44907E58f802": {
+    "name": "Aave Token",
+    "symbol": "AAVE",
+    "decimals": 18
+  },
+  "0xfA54fF1a158B5189Ebba6ae130CEd6bbd3aEA76e": {
+    "name": "Wrapped SOL",
+    "symbol": "SOL",
+    "decimals": 9
+  },
+  "0x1CE0c2827e2eF14D5C4f29a091d735A204794041": {
+    "name": "Avalanche",
+    "symbol": "AVAX",
+    "decimals": 18
+  },
+  "0x5E0a1d876557CF43c66C08c8A247bC4954eCa8bd": {
+    "name": "TENTER USD.T",
+    "symbol": "USD.T",
+    "decimals": 18
+  },
+  "0x90Ed8F1dc86388f14b64ba8fb4bbd23099f18240": {
+    "name": "Singularity Dao",
+    "symbol": "SDAO",
+    "decimals": 18
+  },
+  "0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47": {
+    "name": "Cardano Token",
+    "symbol": "ADA",
+    "decimals": 18
+  },
+  "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56": {
+    "name": "BUSD Token",
+    "symbol": "BUSD",
+    "decimals": 18
+  },
+  "0xff8BBc599EA030AA69d0298035dFE263740a95bC": {
+    "name": "Dohrnii",
+    "symbol": "DHN",
+    "decimals": 18
+  },
+  "0xF9DD128951D93E38571Bda9b57CADc763588d356": {
+    "name": "Zuma AI Token",
+    "symbol": "ZUMA",
+    "decimals": 18
+  },
+  "0xCBD359106dfECcc3e56527CD3d0eAd5437778bd9": {
+    "name": "The Graph",
+    "symbol": "GRTU",
+    "decimals": 18
+  },
+  "0xC0041EF357B183448B235a8Ea73Ce4E4eC8c265F": {
+    "name": "Cookie",
+    "symbol": "COOKIE",
+    "decimals": 18
+  },
+  "0x69a71033a59131c9b18f035e44E074A6EA3755CE": {
+    "name": "TALENT",
+    "symbol": "TLNT",
+    "decimals": 18
+  },
+  "0xF8A0BF9cF54Bb92F17374d9e9A321E6a111a51bD": {
+    "name": "ChainLink Token",
+    "symbol": "LINK",
+    "decimals": 18
+  },
+  "0xb3Ed0A426155B79B898849803E3B36552f7ED507": {
+    "name": "Pendle",
+    "symbol": "PENDLE",
+    "decimals": 18
+  },
+  "0xDf5225D7F514F76Dba074215Ad947Df9f0EeBc44": {
+    "name": "OMNI COIN",
+    "symbol": "OTP",
+    "decimals": 16
+  },
+  "0x5Ab7f350F237F2886D367AEEBdf85d8256dE0531": {
+    "name": "Aurexia",
+    "symbol": "ARX",
+    "decimals": 18
+  },
+  "0xb994882a1b9bd98A71Dd6ea5F61577c42848B0E8": {
+    "name": "World of Dypians",
+    "symbol": "WoD",
+    "decimals": 18
+  },
+  "0x2D6E7de3e470BbeF38Cdfed589fa88102bA3134A": {
+    "name": "VDS",
+    "symbol": "VOLLAR",
+    "decimals": 8
+  },
+  "0xA996dbDa4a536700Dc1441442fFbDeF10C32cb9b": {
+    "name": "Vitra Studios",
+    "symbol": "VITRA",
+    "decimals": 18
+  },
+  "0xA1f04Bc5318Cd884f8534432FC844A601FeE325c": {
+    "name": "GIGACHAD",
+    "symbol": "GCT",
+    "decimals": 18
+  },
+  "0x210B8EC709aC95AdA79B5b1ae4939eb796EEA998": {
+    "name": "iCASH",
+    "symbol": "iCASH",
+    "decimals": 18
+  },
+  "0x8CD6e29d3686d24d3C2018CEe54621eA0f89313B": {
+    "name": "Nuls",
+    "symbol": "NULS",
+    "decimals": 8
+  },
+  "0xfb5B838b6cfEEdC2873aB27866079AC55363D37E": {
+    "name": "FLOKI",
+    "symbol": "FLOKI",
+    "decimals": 9
+  },
+  "0x111111111117dC0aa78b770fA6A738034120C302": {
+    "name": "1INCH Token",
+    "symbol": "1INCH",
+    "decimals": 18
+  },
+  "0xf486ad071f3bEE968384D2E39e2D8aF0fCf6fd46": {
+    "name": "VELO",
+    "symbol": "VELO",
+    "decimals": 18
+  },
+  "0xe2a59D5E33c6540E18aAA46BF98917aC3158Db0D": {
+    "name": "PureFi Token",
+    "symbol": "UFI",
+    "decimals": 18
+  },
+  "0xCC42724C6683B7E57334c4E856f4c9965ED682bD": {
+    "name": "Matic Token",
+    "symbol": "MATIC",
+    "decimals": 18
+  },
+  "0x6c47c786E019f9A9f390397Eb540Fe5e80C2962C": {
+    "name": "LUI33",
+    "symbol": "LUI33",
+    "decimals": 18
+  },
+  "0x0E7BeEc376099429b85639Eb3abE7cF22694ed49": {
+    "name": "Buni Token",
+    "symbol": "BUNI",
+    "decimals": 18
+  },
+  "0x03fF0ff224f904be3118461335064bB48Df47938": {
+    "name": "Harmony ONE",
+    "symbol": "ONE",
+    "decimals": 18
+  },
+  "0x803CafaF2910419B32bdb385dBEB8e2C1cDB27f1": {
+    "name": "ABDS Token",
+    "symbol": "ABDS",
+    "decimals": 18
+  },
+  "0x5de3939b2F811A61d830E6F52d13B066881412ab": {
+    "name": "Proton",
+    "symbol": "XPR",
+    "decimals": 4
+  },
+  "0x1f5c2ef130f4c81c24dbe7F4cb60510c54f8F678": {
+    "name": "The Graph",
+    "symbol": "GRTU",
+    "decimals": 18
+  },
+  "0x14579faa7AFab34BF0Aab4802F4b3C2d6c6c5881": {
+    "name": "Restarab",
+    "symbol": "RSRB",
+    "decimals": 18
+  },
+  "0x6985884C4392D348587B19cb9eAAf157F13271cd": {
+    "name": "LayerZero",
+    "symbol": "ZRO",
+    "decimals": 18
+  },
+  "0x5739cF28Caf3816c8B80Bd792FE8C0B1Ae188217": {
+    "name": "$100 Mil Market Cap",
+    "symbol": "$100MIL",
+    "decimals": 18
+  },
+  "0x5868A0Bc3a64CFf82e19A135E17fE18E18E03bC1": {
+    "name": "KRWO",
+    "symbol": "KRWO",
+    "decimals": 6
+  },
+  "0xf17F473F08AE0C4B4F754A80b4224DAc848E5744": {
+    "name": "Trump",
+    "symbol": "$Trump",
+    "decimals": 10
+  },
+  "0xF4C8E32EaDEC4BFe97E0F595AdD0f4450a863a11": {
+    "name": "THENA",
+    "symbol": "THE",
+    "decimals": 18
+  },
+  "0xA67c48F86Fc6d0176Dca38883CA8153C76a532c7": {
+    "name": "syBTC",
+    "symbol": "syBTC",
+    "decimals": 8
+  },
+  "0xCE7de646e7208a4Ef112cb6ed5038FA6cC6b12e3": {
+    "name": "TRON",
+    "symbol": "TRX",
+    "decimals": 6
+  },
+  "0x1f66eac2597307F9Ad0B76979e23251F65Dfa3C9": {
+    "name": "GenesisCipher Labs Token",
+    "symbol": "GCL",
+    "decimals": 18
+  },
+  "0x81Ad67E5a8532ee23aBE0dcB9Ba0FdeC18866396": {
+    "name": "minidoge",
+    "symbol": "MDT",
+    "decimals": 18
+  },
+  "0x1Fa4a73a3F0133f0025378af00236f3aBDEE5D63": {
+    "name": "NEAR Protocol",
+    "symbol": "NEAR",
+    "decimals": 18
+  },
+  "0x23e8a70534308a4AAF76fb8C32ec13d17a3BD89e": {
+    "name": "lUSD",
+    "symbol": "lUSD",
+    "decimals": 18
+  },
+  "0x762539b45A1dCcE3D36d080F74d1AED37844b878": {
+    "name": "Linear Token",
+    "symbol": "LINA",
+    "decimals": 18
+  },
+  "0x2859e4544C4bB03966803b044A93563Bd2D0DD4D": {
+    "name": "SHIBA INU",
+    "symbol": "SHIB",
+    "decimals": 18
+  },
+  "0x8dA443F84fEA710266C8eB6bC34B71702d033EF2": {
+    "name": "Cartesi Token",
+    "symbol": "CTSI",
+    "decimals": 18
+  },
+  "0x7b753C429EE7F5072DCa749355df53A262AfF39C": {
+    "name": "Taurus Filikos 5",
+    "symbol": "TFKS5",
+    "decimals": 18
+  },
+  "0x3d6545b08693daE087E957cb1180ee38B9e3c25E": {
+    "name": "Ethereum Classic",
+    "symbol": "ETC",
+    "decimals": 18
+  },
+  "0x52866188c7857550C0D36f7804fA2aCDDcd9d91D": {
+    "name": "The Graph",
+    "symbol": "GRT",
+    "decimals": 18
+  },
+  "0x2D060Ef4d6BF7f9e5edDe373Ab735513c0e4F944": {
+    "name": "AITECH",
+    "symbol": "AITECH",
+    "decimals": 18
+  },
+  "0x25d887Ce7a35172C62FeBFD67a1856F20FaEbB00": {
+    "name": "Pepe",
+    "symbol": "PEPE",
+    "decimals": 18
+  },
+  "0x0D8Ce2A99Bb6e3B7Db580eD848240e4a0F9aE153": {
+    "name": "Filecoin",
+    "symbol": "FIL",
+    "decimals": 18
+  },
+  "0x34df64a10dA34bC106D1CBaEB04a75Da5074406B": {
+    "name": "The Graph",
+    "symbol": "GRT",
+    "decimals": 18
+  },
+  "0x25afbAEBfc7B903AEb4f5FEaB59dA6c8c81D6a4e": {
+    "name": "$100 Mil Market Cap",
+    "symbol": "$100MIL",
+    "decimals": 18
+  },
+  "0x317ae555dd3D474C4427699a7841891d398fA5A0": {
+    "name": "WEEBS",
+    "symbol": "WEEBS",
+    "decimals": 18
+  },
+  "0xcC6f1e1B87cfCbe9221808d2d85C501aab0B5192": {
+    "name": "Dmail Network",
+    "symbol": "DMAIL",
+    "decimals": 18
+  },
+  "0x8CAD8967dEBFA213C32F3C6b93FFC9ac6c527E37": {
+    "name": "VINE COIN",
+    "symbol": "VINE",
+    "decimals": 18
+  },
+  "0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3": {
+    "name": "Dai Token",
+    "symbol": "DAI",
+    "decimals": 18
+  },
+  "0xFf7a620974dD67999E5E87fde509576f29bB1681": {
+    "name": "Michi",
+    "symbol": "MICHI",
+    "decimals": 18
+  },
+  "0xc054009642189a2952074F7B530B5524a66Ebd30": {
+    "name": "VINE COIN",
+    "symbol": "VINE",
+    "decimals": 18
+  },
+  "0x76A797A59Ba2C17726896976B7B3747BfD1d220f": {
+    "name": "Wrapped TON Coin",
+    "symbol": "TONCOIN",
+    "decimals": 9
+  },
+  "0x5651fA7a726B9Ec0cAd00Ee140179912B6E73599": {
+    "name": "OORT",
+    "symbol": "OORT",
+    "decimals": 18
+  },
+  "0x4B0F1812e5Df2A09796481Ff14017e6005508003": {
+    "name": "Trust Wallet",
+    "symbol": "TWT",
+    "decimals": 18
+  },
+  "0x7324c7C0d95CEBC73eEa7E85CbAac0dBdf88a05b": {
+    "name": "Chain",
+    "symbol": "XCN",
+    "decimals": 18
+  },
+  "0xDa83288D9A122Ef18b3947889b4612939a9Ab391": {
+    "name": "GLOBAL AK101 GOLD",
+    "symbol": "GLOBAL AK101",
+    "decimals": 18
+  },
+  "0xd4188FC5400fd343dbEe93231C97Ed3dD3CF988C": {
+    "name": "VINE COIN",
+    "symbol": "VINE",
+    "decimals": 18
+  },
+  "0xFb52203109F72D6689060D42200E790024DF129C": {
+    "name": "TAO COIN",
+    "symbol": "TAO",
+    "decimals": 18
+  },
+  "0x59C03e31a03Bcd15cfB22F145951935a74A94D03": {
+    "name": "VINE COIN",
+    "symbol": "VINE",
+    "decimals": 18
+  },
+  "0x715D400F88C167884bbCc41C5FeA407ed4D2f8A0": {
+    "name": "Axie Infinity Shard",
+    "symbol": "AXS",
+    "decimals": 18
+  },
+  "0x62892c7648B10426c452FbaAdFC9602b6655244d": {
+    "name": "PancakeBaby",
+    "symbol": "CakeBaby",
+    "decimals": 18
+  },
+  "0x86dA4B72f0Ce7A9D263263f521f37B3aA9A996d4": {
+    "name": "Trader",
+    "symbol": "TDE",
+    "decimals": 9
+  },
+  "0x111B95C2b65CbA53aB4E0AaDA12f55985045E446": {
+    "name": "TibiaToken",
+    "symbol": "TIB",
+    "decimals": 18
+  },
+  "0x0688977ae5b10075f46519063Fd2f03aDC052C1f": {
+    "name": "5thScape",
+    "symbol": "$5SCAPE",
+    "decimals": 6
+  },
+  "0x6d106C0B8d2f47c5465bdBD58D1Be253762cBBC1": {
+    "name": "DeFi",
+    "symbol": "DEFI",
+    "decimals": 18
+  },
+  "0x55F0e4Ba3D7BE9A9cd5C0b6A8Bdac0b32A998469": {
+    "name": "BIGO LIVE",
+    "symbol": "BIGO LIVE",
+    "decimals": 18
+  },
+  "0x0DF0587216a4a1bB7d5082fdc491d93d2dD4B413": {
+    "name": "Cheems",
+    "symbol": "Cheems",
+    "decimals": 18
+  },
+  "0x3BA7327E218242167075471DDbcc22dF6BD0eb8e": {
+    "name": "VINE COIN",
+    "symbol": "VINE",
+    "decimals": 18
+  },
+  "0x32ee6B6Be84A0eEb0926035b2E096A4Da8c4503B": {
+    "name": "VINE COIN",
+    "symbol": "VINE",
+    "decimals": 18
+  },
+  "0x9b90Db27f1ecF9B05e152a89051b956D890fBF67": {
+    "name": "Junkie",
+    "symbol": "JUNKIE",
+    "decimals": 18
+  },
+  "0x14B0089BC450064cFa7971BAa1b8701C46379feE": {
+    "name": "The Club",
+    "symbol": "TCLUB",
+    "decimals": 18
+  },
+  "0x160A42d9a2231cbF702E02C1d334b7bcC6069D93": {
+    "name": "XAI23H",
+    "symbol": "XAI23H",
+    "decimals": 18
+  },
+  "0xB7686fd3d046c91260d33f4fbc9fcC599650CAe3": {
+    "name": "Fractional Plus Token",
+    "symbol": "F+",
+    "decimals": 18
+  },
+  "0x0203D275D2A65030889aF45ed91D472be3948B92": {
+    "name": "Engines of Fury Token",
+    "symbol": "FURY",
+    "decimals": 18
+  },
+  "0x9812B179cD4D91F269084a793a71a1732ce23dF7": {
+    "name": "Berachain",
+    "symbol": "$BERA",
+    "decimals": 18
+  },
+  "0x6Aac098e8F68Ee575802971c211E064cfe73AAEF": {
+    "name": "iBTC",
+    "symbol": "iBTC",
+    "decimals": 18
+  },
+  "0xCea53c31613c5AA344a3Af54D6C6850F1AF6763A": {
+    "name": "HighCake",
+    "symbol": "BAKED",
+    "decimals": 18
+  },
+  "0x5D985b903Dd8038f3d02B0ba4d4E34c609CEDE4C": {
+    "name": "MARS COIN",
+    "symbol": "MARS",
+    "decimals": 18
+  },
+  "0x04F97bC4E942a5C3Fb8E180a885F87819fA18a61": {
+    "name": "Wrapped Ocvcoin",
+    "symbol": "WOCV",
+    "decimals": 18
+  },
+  "0x3f2E98738400E10386e7B38Ec481Af2260C11708": {
+    "name": "GARRYCOIN",
+    "symbol": "GC",
+    "decimals": 18
+  },
+  "0x46777C76dBbE40fABB2AAB99E33CE20058e76C59": {
+    "name": "Layer3",
+    "symbol": "L3",
+    "decimals": 18
+  },
+  "0x9E24415d1e549EBc626a13a482Bb117a2B43e9CF": {
+    "name": "Lovely Inu Finance",
+    "symbol": "LOVELY",
+    "decimals": 8
+  },
+  "0xcF6BB5389c92Bdda8a3747Ddb454cB7a64626C63": {
+    "name": "Venus",
+    "symbol": "XVS",
+    "decimals": 18
+  },
+  "0xC4961322FFf7c698b45cC8a91530fCE844CD0256": {
+    "name": "XAI23H",
+    "symbol": "XAI23H",
+    "decimals": 18
+  },
+  "0xda52b818c1348bFee27989E2a0DF39224A3E52fA": {
+    "name": "Blend",
+    "symbol": "BLEND",
+    "decimals": 18
+  },
+  "0x86Bb94DdD16Efc8bc58e6b056e8df71D9e666429": {
+    "name": "Test",
+    "symbol": "TST",
+    "decimals": 18
+  },
+  "0x402780e590E80fD89014c60Cc1730c1f71471C76": {
+    "name": "KURWACoin",
+    "symbol": "KURWA",
+    "decimals": 18
+  },
+  "0x56b6fB708fC5732DEC1Afc8D8556423A2EDcCbD6": {
+    "name": "EOS Token",
+    "symbol": "EOS",
+    "decimals": 18
+  },
+  "0x4338665CBB7B2485A8855A139b75D5e34AB0DB94": {
+    "name": "Litecoin Token",
+    "symbol": "LTC",
+    "decimals": 18
+  },
+  "0x7858463A9BC417BB5e0469E71E392dDb98c68E3A": {
+    "name": "Kurwa",
+    "symbol": "KURWA",
+    "decimals": 18
+  },
+  "0xDB69FE43Fe5E0848F74Bbe8808c8a906710aB9D2": {
+    "name": "VINE COIN",
+    "symbol": "VINE",
+    "decimals": 18
+  },
+  "0xFdc66A08B0d0Dc44c17bbd471B88f49F50CdD20F": {
+    "name": "SmarDex Token",
+    "symbol": "SDEX",
+    "decimals": 18
+  },
+  "0x57f7Ec2cC2326d85451D64969568485B08c0b7Db": {
+    "name": "FroggyFi",
+    "symbol": "FGFY",
+    "decimals": 18
+  },
+  "0x3D7b05DCf23f6CED1F26F9559c9a926832caDEF8": {
+    "name": "Cent",
+    "symbol": "C",
+    "decimals": 18
+  },
+  "0x5Ae23b0316148BFc475b7315551b868C7B9BaBe5": {
+    "name": "QinlinyCoin",
+    "symbol": "QNY",
+    "decimals": 18
+  },
+  "0x296f66f16fc54A04d748821d87B440Ea65eEAF02": {
+    "name": "Tether USD Token",
+    "symbol": "TUSDT",
+    "decimals": 6
+  },
+  "0x21FD16cD0eF24A49D28429921e335bb0C1bfAdB3": {
+    "name": "4",
+    "symbol": "FOUR",
+    "decimals": 18
+  },
+  "0x098Dd64c998e7f9095EC0BA26b6bCf6f7D9D007B": {
+    "name": "QinkDCoin",
+    "symbol": "QNK",
+    "decimals": 18
+  },
+  "0x064E52CE95b0e5C693225344947A6CD8bAb54367": {
+    "name": "Dolphin Pro",
+    "symbol": "DOLPHIN",
+    "decimals": 9
+  },
+  "0x4b48c0db4e460c894BFC031d602A5c3B57a26857": {
+    "name": "Alquimia Token",
+    "symbol": "ALQ",
+    "decimals": 18
+  },
+  "0xD0b5A97af2Aa324324e80EfB44D5E3a11102b863": {
+    "name": "VINE COIN",
+    "symbol": "VINE",
+    "decimals": 18
+  },
+  "0x43C934A845205F0b514417d757d7235B8f53f1B9": {
+    "name": "Stellar",
+    "symbol": "XLM",
+    "decimals": 18
+  },
+  "0x75a658568dFd94335861F6610bE3E5A5fFF4C16C": {
+    "name": "qwadroX",
+    "symbol": "qwrx",
+    "decimals": 18
+  },
+  "0x003A446adAE2407068f1c6cFAa2ADCBD2C14bC71": {
+    "name": "Cannabis Medical Coin",
+    "symbol": "CMC",
+    "decimals": 18
+  },
+  "0xffa5517b534fe77F3887C12c78B864d2E44538C6": {
+    "name": "VINE COIN",
+    "symbol": "VINE",
+    "decimals": 18
+  },
+  "0x0AF7d262dd329f3CBB3F6BBa3DfF8cA6F94375B5": {
+    "name": "ELONOFFICIAL",
+    "symbol": "ELON",
+    "decimals": 18
+  },
+  "0x44055F43A0dc22E77c53b16eAB04e253158D6b06": {
+    "name": "AI protocol",
+    "symbol": "AIT",
+    "decimals": 18
+  },
+  "0xf312b19E54F8F2D4a0092B08e2D9291968100cB9": {
+    "name": "DigitalEuro",
+    "symbol": "€",
+    "decimals": 2
+  },
+  "0x8fF795a6F4D97E7887C79beA79aba5cc76444aDf": {
+    "name": "Bitcoin Cash Token",
+    "symbol": "BCH",
+    "decimals": 18
+  },
+  "0x735d0D4e6426EcC77FB46F140874B32Ab8dAa3B3": {
+    "name": "Blixon",
+    "symbol": "BLIX",
+    "decimals": 18
+  },
+  "0xfA88D8A08e40Cd9d13D77C4c03431C06C6B25198": {
+    "name": "OIIA OIIAI CAT",
+    "symbol": "OIIA",
+    "decimals": 18
+  },
+  "0x84E99d3d81Ffa0c16BfD24d037589EE87D021294": {
+    "name": "Helvetia Coin",
+    "symbol": "HVC",
+    "decimals": 18
+  },
+  "0xF7F7cd411434B1f35BB385d290704B9678074E7d": {
+    "name": "ECOVIVO",
+    "symbol": "ECOVIV",
+    "decimals": 18
+  },
+  "0xDe6a1779B9a0Db9AA592e8a21DCC0CEfeBF2E87E": {
+    "name": "Bepe",
+    "symbol": "BEPE",
+    "decimals": 18
+  },
+  "0xd3D3274851094E024A5e186F645518154Cd61018": {
+    "name": "RETRØFØX",
+    "symbol": "RFØX",
+    "decimals": 6
+  },
+  "0xB9767caebCAbaC1F3AEE68c785264961bEa8cA77": {
+    "name": "QDKM",
+    "symbol": "QDKM",
+    "decimals": 18
+  },
+  "0xcE30b968d5e76A67f3946E0598F95d551ce03Ac3": {
+    "name": "Four",
+    "symbol": "FOUR",
+    "decimals": 18
+  },
+  "0x5a6C8C4C095CdD387acf8A1A9bC43AdBeDb2c3B7": {
+    "name": "Orbit Network Chain Server",
+    "symbol": "ONCS",
+    "decimals": 18
+  },
+  "0x08E8aC8c4bCA64503F774d2C40C911E8A3FfCc12": {
+    "name": "TCC",
+    "symbol": "TCC",
+    "decimals": 18
+  },
+  "0x2AB0e9e4eE70FFf1fB9D67031E44F6410170d00e": {
+    "name": "XEN Crypto",
+    "symbol": "bXEN",
+    "decimals": 18
+  },
+  "0x31dF01747f60AD7d1421e38C98D0AE01D2A38F22": {
+    "name": "VINE COIN",
+    "symbol": "VINE",
+    "decimals": 18
+  },
+  "0x848B991fb420Cd59C8296143c8153477393ddcab": {
+    "name": "Kylacoin",
+    "symbol": "KCN",
+    "decimals": 12
+  },
+  "0xD6a540543327B5A4F2223F123640932eE3C6C583": {
+    "name": "Lyncoin",
+    "symbol": "LCN",
+    "decimals": 8
+  },
+  "0x7636D8722Fdf7cd34232a915E48e96aA3eB386BF": {
+    "name": "Singularity Finance",
+    "symbol": "SFI",
+    "decimals": 18
+  },
+  "0xD06716E1Ff2E492Cc5034c2E81805562dd3b45fa": {
+    "name": "Magpie Token",
+    "symbol": "MGP",
+    "decimals": 18
+  },
+  "0x0AB774D8e49009ef9F8F4b23F8fAd9dF39eF1E05": {
+    "name": "Pepe Test Token",
+    "symbol": "PTT",
+    "decimals": 18
+  },
+  "0x1f0201666Fc1c939eF5418A3632ed4F218e409f0": {
+    "name": "4REAL",
+    "symbol": "4REAL",
+    "decimals": 18
+  },
+  "0x4c1D177c7b45B6c28d12bb3ED6bEb04Dc194be43": {
+    "name": "Decentralized Chain Node",
+    "symbol": "DCN",
+    "decimals": 18
+  },
+  "0x5C0cd8302E22e5F0B8908595198fB5962f5A435a": {
+    "name": "SHUAI",
+    "symbol": "S",
+    "decimals": 8
+  },
+  "0x452bD5CE9af909e774990222b8a81B31B48dcCB6": {
+    "name": "BUSD",
+    "symbol": "BUSD",
+    "decimals": 18
+  },
+  "0xc00f2D2220205c903aBcd77150701070D0C284DC": {
+    "name": "DONALD J.",
+    "symbol": "DONALD J.",
+    "decimals": 18
+  },
+  "0xdE368451274f9B5190168B4604e755cA34408520": {
+    "name": "[LIKWID] Shorthair Kitty",
+    "symbol": "SHORTHAIR",
+    "decimals": 18
+  },
+  "0xD104a30d316a48c1323eCe1F72F2FCb00E9a7cDf": {
+    "name": "ARAW",
+    "symbol": "ARAW",
+    "decimals": 18
+  },
+  "0x91715c79EF356d45cb015c3e0AF622Dac5ba5ab5": {
+    "name": "USDT",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "0xa4c3497b57C8b6D510F3707A1e9694fD791f45FB": {
+    "name": "Vameon",
+    "symbol": "VON",
+    "decimals": 18
+  },
+  "0x6Dc3CE8b2f1B0930CE24bD8871D93c0cF5E23db4": {
+    "name": "Caramelo Coin",
+    "symbol": "$CARAM",
+    "decimals": 18
+  },
+  "0x34961193b566B6F7549b69C9F45299F1E05BC940": {
+    "name": "TAS",
+    "symbol": "Tas",
+    "decimals": 18
+  },
+  "0x2d617271B47da3FD4440191439BA66931F6BbDcd": {
+    "name": "VINE COIN",
+    "symbol": "VINE",
+    "decimals": 18
+  },
+  "0x5D17823E45F2E0574F736e9301365e5B203E78dA": {
+    "name": "YENİEGEİLERİTEKNOLOJİ",
+    "symbol": "EGELİ",
+    "decimals": 6
+  },
+  "0x47A1EB0b825b73e6A14807BEaECAFef199d5477c": {
+    "name": "CaptainBNB",
+    "symbol": "CaptainBNB",
+    "decimals": 18
+  },
+  "0x12444425727616729B5927E796648205A9B8c91b": {
+    "name": "Boppy on BSC",
+    "symbol": "BOPPY",
+    "decimals": 18
+  },
+  "0xbCf114b5454b8c9158A2e554eD891c3319523dfd": {
+    "name": "BIRD DOG",
+    "symbol": "BDOG",
+    "decimals": 18
+  },
+  "0x252817c5dd2e90Bca477D5975724418CBca49B60": {
+    "name": "NEZHA",
+    "symbol": "NEZHA",
+    "decimals": 18
+  },
+  "0x8b56e20317b62bc11f61B3E13e370835A025f3FC": {
+    "name": "PinkCat",
+    "symbol": "Saul",
+    "decimals": 18
+  },
+  "0x4567F173A655660c4e9f9C1d8219309DE9Efbd88": {
+    "name": "DevToken1",
+    "symbol": "DVET1",
+    "decimals": 18
+  },
+  "0xEf2D3dd5150d0e96A48641b73709d178a4Eee728": {
+    "name": "Chantelle Song",
+    "symbol": "Chantelle",
+    "decimals": 18
+  },
+  "0xC29A6CcfD3f9b34F1A3de368Eb6d407b0CEf0f37": {
+    "name": "ervanet",
+    "symbol": "ERV",
+    "decimals": 18
+  },
+  "0x299A84A7AD3c7D6b3806665cDc04F4c4a90233d4": {
+    "name": "M10",
+    "symbol": "M10",
+    "decimals": 18
+  },
+  "0x96C248751da635C6D59656bFF24ef0735aB1D052": {
+    "name": "PIPIPI",
+    "symbol": "PIPIPI",
+    "decimals": 18
+  },
+  "0x87266413e5b64DB72f11bB6795Ee976545DBAf43": {
+    "name": "Shibabitcoin",
+    "symbol": "SHIBTC",
+    "decimals": 18
+  },
+  "0x374Ca32fd7934c5d43240E1e73fa9B2283468609": {
+    "name": "Equilibria Token",
+    "symbol": "EQB",
+    "decimals": 18
+  },
+  "0xbEDB42625Eb7EE1f3c8419e970685DE4062eC5D1": {
+    "name": "BinanceAI",
+    "symbol": "BAI",
+    "decimals": 18
+  },
+  "0x2aFDC2AF8C11e01180329f0C02eA17Df308e58c4": {
+    "name": "Diamond Rug",
+    "symbol": "DMDR",
+    "decimals": 18
+  },
+  "0x87F89b95B507E628905535bA6b13F852e4E0E887": {
+    "name": "Binance Printer",
+    "symbol": "PRINTR",
+    "decimals": 9
+  },
+  "0x9BeEE89723cEeC27d7c2834bec6834208FFdc202": {
+    "name": "AVL",
+    "symbol": "AVL",
+    "decimals": 18
+  },
+  "0x3d85Ad8040B3d5431332596Dc4F72426b4D71aD8": {
+    "name": "EGESAHİLTEKNOLOJİ",
+    "symbol": "SHLTEK",
+    "decimals": 6
+  },
+  "0x632acf29DDf81FE67033DD84bF86F5170C15aD38": {
+    "name": "VINE COIN",
+    "symbol": "VINE",
+    "decimals": 18
+  },
+  "0x69763Bf14262467DE510467CAE7d826FEda7F9BC": {
+    "name": "Petunia",
+    "symbol": "Petunia",
+    "decimals": 18
+  },
+  "0xf87196d2D4B146fE4832538A501eb9F89F91Fdde": {
+    "name": "Gold Bitcoin Token",
+    "symbol": "GBT",
+    "decimals": 18
+  },
+  "0xf82e65A823B364713Df7E1D2423a4290bb1478CC": {
+    "name": "NIKEPRO",
+    "symbol": "NIKEPRO",
+    "decimals": 18
+  },
+  "0xc9210963b831095c35740A9Ec943CdC35995c467": {
+    "name": "Piastr",
+    "symbol": "PST",
+    "decimals": 9
+  },
+  "0x5043F271095350c5ac7db2384A0d9337E27c1055": {
+    "name": "Perry",
+    "symbol": "PERRY",
+    "decimals": 18
+  },
+  "0x645F197fe94276e8807687227Bd8482a12bB6142": {
+    "name": "EA Token",
+    "symbol": "EA",
+    "decimals": 18
+  },
+  "0xD3FDCb837DAfdb7C9C3eBD48FE22a53F6Dd3d7D7": {
+    "name": "QiDao",
+    "symbol": "QI",
+    "decimals": 18
+  },
+  "0xD4bc52075c810459aFC64272c96504236838D6B2": {
+    "name": "PRO COIN",
+    "symbol": "PRO",
+    "decimals": 18
+  },
+  "0xC01EaabB2277842e5B3B04E95F3e6Ca0Bea30A0d": {
+    "name": "SMT CHINA",
+    "symbol": "SMTD",
+    "decimals": 18
+  },
+  "0x6147e74D0031041523352de6388BEC538E0c5405": {
+    "name": "Sadie",
+    "symbol": "SADIE",
+    "decimals": 18
+  },
+  "0x250632378E573c6Be1AC2f97Fcdf00515d0Aa91B": {
+    "name": "Binance Beacon ETH",
+    "symbol": "BETH",
+    "decimals": 18
+  },
+  "0x18c4AF61DbE6fD55d6470943b4ab8530777d009C": {
+    "name": "AgaTech",
+    "symbol": "AGATA",
+    "decimals": 18
+  },
+  "0x201bC9F242f74C47Bbd898a5DC99cDCD81A21943": {
+    "name": "IGU Token",
+    "symbol": "IGU",
+    "decimals": 18
+  },
+  "0xf2c88757f8d03634671208935974B60a2a28Bdb3": {
+    "name": "MyShell Token",
+    "symbol": "SHELL",
+    "decimals": 18
+  },
+  "0xAA7cD678C8a2809c6DFF1250a87f184E779922c9": {
+    "name": "CZ's Dog",
+    "symbol": "BROWNIE",
+    "decimals": 18
+  },
+  "0x6d5AD1592ed9D6D1dF9b93c793AB759573Ed6714": {
+    "name": "CZ'S DOG",
+    "symbol": "Broccoli",
+    "decimals": 18
+  },
+  "0x3eCeC4dbA80a301C617eF2175Cf03c4623e598F5": {
+    "name": "Broccoli",
+    "symbol": "BRC",
+    "decimals": 18
+  },
+  "0xf20c8D25692a959027223bE8D8871607131FC5B5": {
+    "name": "Broccoli Token",
+    "symbol": "BROCCOLI",
+    "decimals": 18
+  },
+  "0xD89336Eac00e689D218C46Cdd854585A09f432b3": {
+    "name": "lUSD",
+    "symbol": "lUSD",
+    "decimals": 18
+  },
+  "0xCC01B52C80e7E82282956b1BE0d20B65C592570D": {
+    "name": "BROCCOLI",
+    "symbol": "BROC",
+    "decimals": 18
+  },
+  "0x12819623921Be0F4d5ebfC12C75E6D08a1683080": {
+    "name": "Broccoli",
+    "symbol": "Broccoli",
+    "decimals": 18
+  },
+  "0x51E72dd1F2628295cC2ef931cB64fDbDc3a0c599": {
+    "name": "Kaspa",
+    "symbol": "KAS",
+    "decimals": 8
+  },
+  "0xD512Ee4F87338cE2C513D45908AEC8b7d450b720": {
+    "name": "Broccoli",
+    "symbol": "Broccoli",
+    "decimals": 18
+  },
+  "0x77Ab1053066bE9eAdDC21BE5B731976eb2601686": {
+    "name": "Sobota",
+    "symbol": "SOBOTA",
+    "decimals": 18
+  },
+  "0x7CDB2CdAa4a62Ef93Bfeb9A2DB9132AD83cD334d": {
+    "name": "BNB makes a comeback",
+    "symbol": "BNBS",
+    "decimals": 18
+  },
+  "0x3628674303596c6701d4B6ffdc1053DbbE99e8Ca": {
+    "name": "MINI DOGE",
+    "symbol": "MINIDOGE",
+    "decimals": 18
+  },
+  "0x3B4Ab1855866E49684BA2405bcDe844305D96bB9": {
+    "name": "SafeMoon",
+    "symbol": "MOON",
+    "decimals": 18
+  },
+  "0x840eF7e5f896Be71D46Df234C60898216feFCBe3": {
+    "name": "Byte",
+    "symbol": "BYTE",
+    "decimals": 9
+  },
+  "0x8291CADd6d3fb42AE7615382156B6b42c465De2c": {
+    "name": "DONALD J.",
+    "symbol": "DONALD J.",
+    "decimals": 18
+  },
+  "0xa1832f7F4e534aE557f9B5AB76dE54B1873e498B": {
+    "name": "CreatorBid",
+    "symbol": "BID",
+    "decimals": 18
+  },
+  "0x7dc66B21b0eD706b91bBf1d4C238cfc3019d5d08": {
+    "name": "WBNB",
+    "symbol": "WBNB",
+    "decimals": 18
+  },
+  "0x66Cafcf6C32315623C7fFd3f2FF690aa36EBeD38": {
+    "name": "Brokoli Token [via ChainPort.io]",
+    "symbol": "BRKL",
+    "decimals": 18
+  },
+  "0x12BB890508c125661E03b09EC06E404bc9289040": {
+    "name": "Radio Caca V2",
+    "symbol": "RACA",
+    "decimals": 18
+  },
+  "0x3Ab1A5f76E12202d1AD1548A08a799501581Da4E": {
+    "name": "DIN",
+    "symbol": "DIN",
+    "decimals": 18
+  },
+  "0x23D3F4EaaA515403C6765bb623F287a8Cca28F2b": {
+    "name": "Broccoli",
+    "symbol": "BROCCOLI",
+    "decimals": 18
+  },
+  "0xEbe2d1968abc1B3729CdFB9147E81A9Cc34479f8": {
+    "name": "USDT Tether",
+    "symbol": "USDT",
+    "decimals": 8
+  },
+  "0x1Fd448D0361c3212961a70930f3129A45f425B68": {
+    "name": "Marscoin",
+    "symbol": "Mars",
+    "decimals": 18
+  },
+  "0xcF599bB51705D0C7837339257663E9FaFEED87E1": {
+    "name": "Broccoli",
+    "symbol": "Broccoli",
+    "decimals": 18
+  },
+  "0x67F39DB48cEeFBaBD4b744A282d587bceB2cDF42": {
+    "name": "Holo",
+    "symbol": "HOT",
+    "decimals": 18
+  },
+  "0x80A78A9b6B1272FdB612B39181BF113706024875": {
+    "name": "Halo",
+    "symbol": "HLO",
+    "decimals": 18
+  },
+  "0x324Abecb7D7750669573630baa894C81Fd8751da": {
+    "name": "BABY CAT",
+    "symbol": "BABY CAT",
+    "decimals": 18
+  },
+  "0x7bC75e291E656E8658D66Be1cc8154A3769A35Dd": {
+    "name": "iMe Lab",
+    "symbol": "LIME",
+    "decimals": 18
+  },
+  "0xb7C955EDFa7Dc85Ae253A5A5AAc3aa2F72D84A8d": {
+    "name": "Binance Mascot",
+    "symbol": "BIBI",
+    "decimals": 9
+  },
+  "0x0Ef2e7602adD1733Bfdb17aC3094d0421B502cA3": {
+    "name": "eCash",
+    "symbol": "XEC",
+    "decimals": 18
+  },
+  "0xc2c28b58db223DA89b567A0A98197Fc17C115148": {
+    "name": "Sologenic",
+    "symbol": "SOLO",
+    "decimals": 15
+  },
+  "0x73FBF47D0A8F40DDFeF37645DC2F893a4b04fb30": {
+    "name": "Goat",
+    "symbol": "Goat",
+    "decimals": 10
+  },
+  "0xe865CE4Cf5071ebF057156368fAca360a6Aec6d9": {
+    "name": "fuckthesystem",
+    "symbol": "FTS",
+    "decimals": 18
+  },
+  "0x4E7faCc6FDfc453F901e65a607Bf89c404DC64F5": {
+    "name": "SU COIN",
+    "symbol": "SU",
+    "decimals": 18
+  },
+  "0x3629d2e9c512558b98cd42f53631c0171F6674F5": {
+    "name": "CZ First Computer",
+    "symbol": "x286",
+    "decimals": 18
+  },
+  "0x2114eD8Ed375C2056053234F0a457f700E04B650": {
+    "name": "FART BNB",
+    "symbol": "FartBNB",
+    "decimals": 18
+  },
+  "0xCAb6311f95faF6B5Db4fD306092b6BcD9807e8F0": {
+    "name": "FourXBT",
+    "symbol": "FXBT",
+    "decimals": 18
+  },
+  "0xF8DB04c9e0214bBF3EF8204569B32AbcFB7F0cDE": {
+    "name": "AIPILOT",
+    "symbol": "AIPI",
+    "decimals": 6
+  },
+  "0x44CE82723EAACaa1A341b91B2e08eE3840CEB5C2": {
+    "name": "MINDCoin",
+    "symbol": "MIND",
+    "decimals": 18
+  },
+  "0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE": {
+    "name": "Beam",
+    "symbol": "BEAM",
+    "decimals": 18
+  },
+  "0xD27bd23928125f88B1204000f44723145bc3A07D": {
+    "name": "BNBMAN",
+    "symbol": "BNBMAN",
+    "decimals": 18
+  },
+  "0x76e112203eF59D445452ef7556386dD2DF3Ed914": {
+    "name": "Canadian Inuit Dog V2",
+    "symbol": "CADINU",
+    "decimals": 18
+  },
+  "0xB122fD12620E798e1e165a78501089b508Fc7846": {
+    "name": "LodoCoin",
+    "symbol": "LDC",
+    "decimals": 18
+  },
+  "0x01CA78a2B5F1a9152D8A3A625bd7dF5765eeE1D8": {
+    "name": "ANDY",
+    "symbol": "ANDY",
+    "decimals": 18
+  },
+  "0x1E91d58eb6E9BFEAf516B0676B89674dA0CD634f": {
+    "name": "Tethr USD",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "0x8afC14fb1954F909c167bDF06C93ED4e1E51592b": {
+    "name": "ZeroByte",
+    "symbol": "ZB",
+    "decimals": 18
+  },
+  "0x2AaBE2ef9eE8Ab04C6F27C4284c3F268769B35eC": {
+    "name": "BNB Agents",
+    "symbol": "BNBAI",
+    "decimals": 18
+  },
+  "0xfa7b521420D560213A4390d74A3135Ad705f3DbB": {
+    "name": "BTCBRToken",
+    "symbol": "BTCBR",
+    "decimals": 18
+  },
+  "0xa0Ad0a4683605722458C03fCB32Fb62Deb9759Dc": {
+    "name": "AIBN Test",
+    "symbol": "AIBNT",
+    "decimals": 18
+  },
+  "0xA18BBdCd86e4178d10eCd9316667cfE4C4AA8717": {
+    "name": "BNBXBT",
+    "symbol": "BNBXBT",
+    "decimals": 18
+  },
+  "0xf7DE7E8A6bd59ED41a4b5fe50278b3B7f31384dF": {
+    "name": "Radiant",
+    "symbol": "RDNT",
+    "decimals": 18
+  },
+  "0x33d08D8C7a168333a85285a68C0042b39fC3741D": {
+    "name": "AIOZ Network",
+    "symbol": "AIOZ",
+    "decimals": 18
+  },
+  "0xAAE8Bc4Ca805E8e15D278E0562e074f0f4b38f3D": {
+    "name": "AA1",
+    "symbol": "aa1",
+    "decimals": 18
+  },
+  "0xBc7d6B50616989655AfD682fb42743507003056D": {
+    "name": "Alchemy",
+    "symbol": "ACH",
+    "decimals": 8
+  },
+  "0x083C30a26898C24b65D0eb6Ad4baA38970baf89e": {
+    "name": "Pepe 2.0",
+    "symbol": "PEPE2.0",
+    "decimals": 18
+  },
+  "0xD67E5cD3DF6d156AbfDd7fd4938502974F8FDA04": {
+    "name": "Dai Token",
+    "symbol": "DAI",
+    "decimals": 18
+  },
+  "0x6d6B1c78595a61F1d44ce0E252629c29c03466df": {
+    "name": "Tether",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "0xf5e861b3547e246A4dd096dd14F68689cE971905": {
+    "name": "VINE COIN",
+    "symbol": "VINE",
+    "decimals": 18
+  },
+  "0xaA0a4c82d0692BA3BE39A95ffc9dC9d3A4843684": {
+    "name": "Legendary Token",
+    "symbol": "LGT",
+    "decimals": 18
+  },
+  "0x3Ba9B1d246a025F60B3AfB74AC772D735a5cb20E": {
+    "name": "TestToken",
+    "symbol": "TST",
+    "decimals": 18
+  },
+  "0xf7a593Fb8f4E6AF3a2F334fE798e63600101298e": {
+    "name": "TestToken",
+    "symbol": "TST",
+    "decimals": 18
+  },
+  "0xE841CDB1A7178b5995fce683D2e34c3D49D4f89A": {
+    "name": "EtheronAI",
+    "symbol": "Etheron",
+    "decimals": 18
+  },
+  "0x12B4356C65340Fb02cdff01293F95FEBb1512F3b": {
+    "name": "Broccoli",
+    "symbol": "Broccoli",
+    "decimals": 18
+  },
+  "0xAaBb6066809a1B25e34Da5D130A84A15b47FDCD0": {
+    "name": "4",
+    "symbol": "4",
+    "decimals": 18
+  },
+  "0xB0316BeE4675FE8050B3f17316538916c8968F06": {
+    "name": "Esoteris",
+    "symbol": "ESO",
+    "decimals": 18
+  },
+  "0xEAAB06b9e5554265B4CE434Fff51B708296564B1": {
+    "name": "FR2000",
+    "symbol": "FR2",
+    "decimals": 18
+  },
+  "0xd5eaAaC47bD1993d661bc087E15dfb079a7f3C19": {
+    "name": "Koma Inu",
+    "symbol": "KOMA",
+    "decimals": 18
+  },
+  "0x93Fd286fA1092945c15F81120EED3DF3d5f7A09A": {
+    "name": "MARS COIN",
+    "symbol": "MARS",
+    "decimals": 18
+  },
+  "0x2F29Bc0FFAF9bff337b31CBe6CB5Fb3bf12e5840": {
+    "name": "Dola USD Stablecoin",
+    "symbol": "DOLA",
+    "decimals": 18
+  },
+  "0x93d1f350921b6bAe46fd1A9f1661d36ca5780010": {
+    "name": "EZYC Token",
+    "symbol": "EZYC",
+    "decimals": 18
+  },
+  "0x3fE5859d6c236CDC3a8D1436E0f547f8276cd657": {
+    "name": "BORONMINING",
+    "symbol": "BORN",
+    "decimals": 8
+  },
+  "0x8BF3D3529932ee26a7A8f6D8bFC866Cb9465e5Bd": {
+    "name": "Sekuya",
+    "symbol": "SKYA",
+    "decimals": 18
+  },
+  "0xc6b05EC6a7b1C6f5482ff080fB909D2A92671382": {
+    "name": "Kanye West Coin",
+    "symbol": "YzY",
+    "decimals": 18
+  },
+  "0x779d747dEF2846f341fF91929A1558D78D23b8bE": {
+    "name": "Elon coin",
+    "symbol": "Elon",
+    "decimals": 8
+  },
+  "0x1aC8df5C63CeED06257D550Ada9F3098a6A9caec": {
+    "name": "Tether USD Bridged ZED20",
+    "symbol": "USDT.z",
+    "decimals": 18
+  },
+  "0xaFCC12e4040615E7Afe9fb4330eB3D9120acAC05": {
+    "name": "PirateCash",
+    "symbol": "PIRATE",
+    "decimals": 8
+  },
+  "0xF78D2e7936F5Fe18308A3B2951A93b6c4a41F5e2": {
+    "name": "MANTRA DAO",
+    "symbol": "OM",
+    "decimals": 18
+  },
+  "0x65FF6472024c70E94e061AB9DDB4Af6EB9Bbfc60": {
+    "name": "CARROT COIN",
+    "symbol": "CARROT",
+    "decimals": 18
+  },
+  "0x0c38755251a05335E12372d4C38F5Fd2B8928B89": {
+    "name": "BNB Turbo",
+    "symbol": "BNBTURBO",
+    "decimals": 18
+  },
+  "0xD672A37E7F802204ad23e8DF1C392De19b667DbA": {
+    "name": "CZ'S CAT",
+    "symbol": "HEYI",
+    "decimals": 18
+  },
+  "0x9E021D904dc20d337739a14D487d79C99aD07598": {
+    "name": "Airborne Token",
+    "symbol": "ABT",
+    "decimals": 18
+  },
+  "0x84c995Edb4505B9044395e9d99804D3Be558D50A": {
+    "name": "MAGABABY",
+    "symbol": "MBX",
+    "decimals": 18
+  },
+  "0x56A23ba1B29cDf0CCc5059174CE489Fbb812D7B4": {
+    "name": "YEEZY",
+    "symbol": "ye",
+    "decimals": 18
+  },
+  "0xe93da37413d99B304f55ec3826032a40aE657F8d": {
+    "name": "Meupass",
+    "symbol": "MPS",
+    "decimals": 18
+  },
+  "0x69b14e8D3CEBfDD8196Bfe530954A0C226E5008E": {
+    "name": "SpacePi Token",
+    "symbol": "SpacePi",
+    "decimals": 9
+  },
+  "0x55D6043859Dbe45e0a2571Ea64b3855062FD86d8": {
+    "name": "BitcoinBR | btcbr.info",
+    "symbol": "BTCBR",
+    "decimals": 18
+  },
+  "0x4aAAD68BE1A2Ac9886B72b9DaE474F3eDd2132D9": {
+    "name": "BTCPi Token",
+    "symbol": "BTCPi",
+    "decimals": 18
+  },
+  "0x157634F0E8AdE0365A5da62B563820312b1E0451": {
+    "name": "TheNewEra",
+    "symbol": "TNE",
+    "decimals": 18
+  },
+  "0x5D6B11549927BC7905d2fCa2cb6d96CBdb0bD725": {
+    "name": "Biao",
+    "symbol": "BIAO",
+    "decimals": 18
+  },
+  "0x89deF4E0B4fF0cf8009dE186bfcF139a8f1CfB74": {
+    "name": "VINE COIN",
+    "symbol": "VINE",
+    "decimals": 18
+  },
+  "0xf7d6B5362B58486B9FfE6d083CF2F1D27dAC239D": {
+    "name": "BlackLivesMatter",
+    "symbol": "BLM",
+    "decimals": 18
+  },
+  "0x4E0F32e8EE0E696A662e9575cfFb1c4Dc5a26a92": {
+    "name": "W GOLD X on BSC",
+    "symbol": "WGOLDX",
+    "decimals": 18
+  },
+  "0xB02773efAA81A73A4c04Bb5de7AB1c42F06ecb73": {
+    "name": "SolarPup",
+    "symbol": "SLUP",
+    "decimals": 18
+  },
+  "0x7083609fCE4d1d8Dc0C979AAb8c869Ea2C873402": {
+    "name": "Polkadot Token",
+    "symbol": "DOT",
+    "decimals": 18
+  },
+  "0xdc2Bb0574c02965D888b66CF9B39fA0f234D6e4f": {
+    "name": "TetherCoin",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "0xf5b228a930f172D7666Af2C52D690e3F7C744972": {
+    "name": "AED",
+    "symbol": "AED",
+    "decimals": 18
+  },
+  "0xd300F90b91969A5585eeea56F893cB4b9A0135EF": {
+    "name": "Pi Gold",
+    "symbol": "PIG",
+    "decimals": 18
+  },
+  "0x4cEDF268e147cdB9079e48a463e02454aE438cad": {
+    "name": "BEP20TestT",
+    "symbol": "BPTT",
+    "decimals": 18
+  },
+  "0x7efA41d210df06e899953887e0Aa4854Ec1Cf721": {
+    "name": "BEP20Test",
+    "symbol": "BPT",
+    "decimals": 18
+  },
+  "0x4BE35Ec329343d7d9F548d42B0F8c17FFfe07db4": {
+    "name": "Tether USD Bridged ZED20",
+    "symbol": "USDT.z",
+    "decimals": 18
+  },
+  "0x0d87c4896D714957Cfc235013E17049faF530DD1": {
+    "name": "Custom USDT",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "0x43532299ec115E6ef7e7e4C66Fa4E0f9898eA0f7": {
+    "name": "AmericanDoge",
+    "symbol": "AMD",
+    "decimals": 18
+  },
+  "0x2d2567DeC25c9795117228aDC7FD58116D2E310C": {
+    "name": "SquadSwap",
+    "symbol": "SQUAD",
+    "decimals": 18
+  },
+  "0x8dcaAfaD28937c22A697A89787cbFbE322B37896": {
+    "name": "LAMAN",
+    "symbol": "LMN",
+    "decimals": 18
+  },
+  "0x53E562b9B7E5E94b81f10e96Ee70Ad06df3D2657": {
+    "name": "BabySwap Token",
+    "symbol": "BABY",
+    "decimals": 18
+  },
+  "0x24281Bf3C66314206376E3419A07609C64EEAA1E": {
+    "name": "SHITCOIN",
+    "symbol": "SHIT",
+    "decimals": 18
+  },
+  "0xA697e272a73744b343528C3Bc4702F2565b2F422": {
+    "name": "Bonk",
+    "symbol": "Bonk",
+    "decimals": 5
+  },
+  "0xbb1ffb44d0064bECFb77e6e189e22fdb668561E9": {
+    "name": "Biaoqing",
+    "symbol": "BIAO",
+    "decimals": 18
+  },
+  "0x1B2f14D0b738DFc4b6CffBB17586a2c668D4E523": {
+    "name": "fainoord",
+    "symbol": "FIN",
+    "decimals": 8
+  },
+  "0x52171FFA4ceDa60ff9795e1F111adB14c3d7025e": {
+    "name": "Unitech",
+    "symbol": "UTC",
+    "decimals": 18
+  },
+  "0x184cff0e719826b966025F93e05d8C8b0a79b3F9": {
+    "name": "Trias Token",
+    "symbol": "TRIAS",
+    "decimals": 18
+  },
+  "0xa4838122c683f732289805FC3C207Febd55BabDD": {
+    "name": "Trias Token",
+    "symbol": "TRIAS",
+    "decimals": 18
+  },
+  "0xD8c9f52560bb8B512994a21Adb297460dA33A257": {
+    "name": "White Light",
+    "symbol": "WHT",
+    "decimals": 4
+  },
+  "0x80109daE24e49E415E8E6a066d96d3bDBF8f401f": {
+    "name": "BitcoinBR",
+    "symbol": "BTCBR",
+    "decimals": 18
+  },
+  "0x1A77Af0A2CFa55F8D324716aC5853ddDbb7F4484": {
+    "name": "Aiso",
+    "symbol": "AI",
+    "decimals": 18
+  },
+  "0xaD8BcBDa64B522579523258B83386C6BC70F7805": {
+    "name": "WORLDTRADE",
+    "symbol": "WTD",
+    "decimals": 18
+  },
+  "0x1465E3e365A1EcACfE769f1a3F891d33B4e20175": {
+    "name": "VINE COIN",
+    "symbol": "VINE",
+    "decimals": 18
+  },
+  "0x9cAF0fe09a65b043a3ee4eB227Ae474dBafB0922": {
+    "name": "My favorite Cash",
+    "symbol": "MFC",
+    "decimals": 18
+  },
+  "0x72f614D4Fa7195841f563BEEc13e3B5d14148CC8": {
+    "name": "MAstralFire",
+    "symbol": "MASF",
+    "decimals": 18
+  },
+  "0x5f0Da599BB2ccCfcf6Fdfd7D81743B6020864350": {
+    "name": "Maker",
+    "symbol": "MKR",
+    "decimals": 18
+  },
+  "0x4781C5482F7a66D0F706663Bf4D73f6d3b92D4a6": {
+    "name": "MAGABABY",
+    "symbol": "MBX",
+    "decimals": 18
+  },
+  "0x947950BcC74888a40Ffa2593C5798F11Fc9124C4": {
+    "name": "SushiToken",
+    "symbol": "SUSHI",
+    "decimals": 18
+  },
+  "0xdcccdBd130bc6334FC5C5535fF275d9D1B47A148": {
+    "name": "TEST",
+    "symbol": "TEST",
+    "decimals": 18
+  },
+  "0x960d9c1E998dBdd3e78d62C7DafdF6f1D40A64b4": {
+    "name": "VINE COIN",
+    "symbol": "VINE",
+    "decimals": 18
+  },
+  "0xD6135a9f246db809fe14f0108A767842014c3403": {
+    "name": "Anti Spiral",
+    "symbol": "ANTI",
+    "decimals": 18
+  },
+  "0xE0097D58b4c6429C62DB7362613a91B5a3e5DC1C": {
+    "name": "VINE COIN",
+    "symbol": "VINE",
+    "decimals": 18
+  },
+  "0xC9706C82B47682D4Ac8864b0BB4BACa64e141fA6": {
+    "name": "RUSSIA",
+    "symbol": "RUS.",
+    "decimals": 18
+  },
+  "0x9D0bF0F440403F247286634207Cd3b01575141E2": {
+    "name": "KUSD",
+    "symbol": "KUSD",
+    "decimals": 18
+  },
+  "0x6D1054C3102E842314e250b9e9C4Be327b8DaaE2": {
+    "name": "unknown",
+    "symbol": "UNKNOWN",
+    "decimals": 9
+  },
+  "0xfe7DAE490Ea7F4216d0d6ca9752C26503E3C06CB": {
+    "name": "CZ's Tokenomics",
+    "symbol": "CZT",
+    "decimals": 18
+  },
+  "0x11cd72f7A4B699c67f225ca8aBb20bC9F8DB90c7": {
+    "name": "Osaka Protocol",
+    "symbol": "OSAK",
+    "decimals": 18
+  },
+  "0x02806435d4B7c1dF6FC2df629488a1623b589396": {
+    "name": "Iotec",
+    "symbol": "IOT",
+    "decimals": 18
+  },
+  "0x9cb73F20164e399958261c289Eb5F9846f4D1404": {
+    "name": "Belt.fi 4Belt",
+    "symbol": "4Belt",
+    "decimals": 18
+  },
+  "0x524bC91Dc82d6b90EF29F76A3ECAaBAffFD490Bc": {
+    "name": "Tether USD",
+    "symbol": "USDT",
+    "decimals": 6
+  },
+  "0xaf20f5f19698f1D19351028cd7103B63D30DE7d7": {
+    "name": "Wagmi",
+    "symbol": "WAGMI",
+    "decimals": 18
+  },
+  "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE": {
+    "name": "Pancake LPs",
+    "symbol": "Cake-LP",
+    "decimals": 18
+  },
+  "0x58F876857a02D6762E0101bb5C46A8c1ED44Dc16": {
+    "name": "Pancake LPs",
+    "symbol": "Cake-LP",
+    "decimals": 18
+  },
+  "0xfD5840Cd36d94D7229439859C0112a4185BC0255": {
+    "name": "Venus USDT",
+    "symbol": "vUSDT",
+    "decimals": 8
+  },
+  "0xA40640458FBc27b6EefEdeA1E9C9E17d4ceE7a21": {
+    "name": "Anchored Coins EUR",
+    "symbol": "AEUR",
+    "decimals": 18
+  },
+  "0x4C84250e355eA4EA9FdA14e9046780049b8eec69": {
+    "name": "CZ Crazy Idea Test Token",
+    "symbol": "TEST",
+    "decimals": 18
+  },
+  "0x772F317ec695ce20290b56466b3f48501ba81352": {
+    "name": "DotDot Tokenized EPX Lock",
+    "symbol": "dEPX",
+    "decimals": 18
+  },
+  "0xAf41054C1487b0e5E2B9250C0332eCBCe6CE9d71": {
+    "name": "Ellipsis X",
+    "symbol": "EPX",
+    "decimals": 18
+  },
+  "0x1E43c8Af7d99135107AA79f33edf03e1b8a28c49": {
+    "name": "Pokia",
+    "symbol": "POK",
+    "decimals": 18
+  },
+  "0x754928aF6730eAeF9dec2DE287F509C737431318": {
+    "name": "VINE COIN",
+    "symbol": "VINE",
+    "decimals": 18
+  },
+  "0x2297aEbD383787A160DD0d9F71508148769342E3": {
+    "name": "Bitcoin",
+    "symbol": "BTC.b",
+    "decimals": 8
+  },
+  "0x43359676E1A3F9FbB5de095333f8e9c1B46dFA44": {
+    "name": "Wrapped BTC",
+    "symbol": "WBTC",
+    "decimals": 8
+  },
+  "0x8B9ABDD229ec0C4A28E01b91aacdC5dAAFc25C2b": {
+    "name": "Ronaldinho Coin",
+    "symbol": "STAR10",
+    "decimals": 18
+  },
+  "0x4aa9E14703Eae08077F39ED35ebc8A1F124Fcb4B": {
+    "name": "Bitcoin Brazil",
+    "symbol": "BTCBR",
+    "decimals": 18
+  },
+  "0xAF134c384A1E3e41E89AFd5C0e9d9aD4D0DC81C6": {
+    "name": "BurmCoin",
+    "symbol": "BC",
+    "decimals": 18
+  },
+  "0xfCA7EDF7dD7Df18978FeCdfa4Ea23947035bB848": {
+    "name": "Tether USD",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "0xF88fC5dB66F04c1a489a8e1ED8069F8d43b5063a": {
+    "name": "YCC",
+    "symbol": "YCC",
+    "decimals": 18
+  },
+  "0xC72E4bAE4872a784a6Dde8E0573ED592bd4AD0A1": {
+    "name": "RaiStone",
+    "symbol": "RAI",
+    "decimals": 18
+  },
+  "0x9C67EE6D0f3f12969aBC92595b06Cc1c93a60313": {
+    "name": "DAPF Invest Token",
+    "symbol": "DAPF",
+    "decimals": 6
+  },
+  "0xBF79Ee02419DbD4bDCb386B757EC3ea734d63C56": {
+    "name": "Nuristani Crafts",
+    "symbol": "NCF",
+    "decimals": 18
+  },
+  "0xc27A719105A987b4c34116223CAE8bd8F4B5def4": {
+    "name": "ACEToken",
+    "symbol": "ACE",
+    "decimals": 18
+  },
+  "0x73A7A42791304E206B727d2ec69A9Ea04fA7116E": {
+    "name": "Kasuteira Token",
+    "symbol": "KASU",
+    "decimals": 18
+  },
+  "0xba5A1fB0e5b4Ad71118e9c622f60F234B3e90E7A": {
+    "name": "USIT",
+    "symbol": "USIT",
+    "decimals": 18
+  },
+  "0xa2B726B1145A4773F68593CF171187d8EBe4d495": {
+    "name": "Injective Protocol",
+    "symbol": "INJ",
+    "decimals": 18
+  },
+  "0x1957D1531D8dA06FA3beef7fa1C1CCd82a72B150": {
+    "name": "KmiCoin",
+    "symbol": "KMI",
+    "decimals": 18
+  },
+  "0x39F2e6074217711aDee72C214AD06Da9AE2e827a": {
+    "name": "China PM Association",
+    "symbol": "CNPM",
+    "decimals": 18
+  },
+  "0x9F62C7c78e7c8630C7a9a30e8dA5FefdE412b066": {
+    "name": "XAI74K",
+    "symbol": "XAI74K",
+    "decimals": 18
+  },
+  "0x6a424e92C26D2F728B4815524089005e63237286": {
+    "name": "Teller USD",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "0x734c5F3f8F6ad9697b26eCC6388678aaFd3dB3B2": {
+    "name": "METAMUSK",
+    "symbol": "METAMUSK",
+    "decimals": 18
+  },
+  "0xCdC3A010A3473c0C4b2cB03D8489D6BA387B83CD": {
+    "name": "liveThe",
+    "symbol": "liveThe",
+    "decimals": 18
+  },
+  "0xd60018772eFFD880a7391d3DA7c098702CC7ED2F": {
+    "name": "PI Network",
+    "symbol": "PI",
+    "decimals": 10
+  },
+  "0xf5280eeCEc4573515b08aF7f03027444BcfB1eAd": {
+    "name": "Tther USD",
+    "symbol": "USDT",
+    "decimals": 6
+  },
+  "0x4C62371830a3948586b1D11Bf932CF1293B4fa53": {
+    "name": "BetaX",
+    "symbol": "BTX",
+    "decimals": 18
+  },
+  "0xE846D164B88eD2e1209609fea3cf7a3D89D70D2D": {
+    "name": "Hawk",
+    "symbol": "Hawk",
+    "decimals": 18
+  },
+  "0x2a459DD33f05Ed8EA9584505Cf04698BE5654e6d": {
+    "name": "Wazirx",
+    "symbol": "WRX",
+    "decimals": 18
+  },
+  "0x7f792db54B0e580Cdc755178443f0430Cf799aCa": {
+    "name": "Volt Inu",
+    "symbol": "VOLT",
+    "decimals": 9
+  },
+  "0x90C97F71E18723b0Cf0dfa30ee176Ab653E89F40": {
+    "name": "Frax",
+    "symbol": "FRAX",
+    "decimals": 18
+  },
+  "0xe880F10813DDb7eA55519882BD57B66dCa5d39E1": {
+    "name": "BNB",
+    "symbol": "BNB",
+    "decimals": 18
+  },
+  "0x74801D0C7E780Add6149Fc7e6722cE4bf2568c99": {
+    "name": "Pixiu Token",
+    "symbol": "PIXIU",
+    "decimals": 18
+  },
+  "0x5e8e3846096aFE343bF01E76a8A8725eeAD9f1Cf": {
+    "name": "Pixiu Token",
+    "symbol": "PIXIU",
+    "decimals": 18
+  },
+  "0x41c3A7Db7d7ddb55446B3D1c0BC2F5Ee05787378": {
+    "name": "LUMOS COIN",
+    "symbol": "LUMOS",
+    "decimals": 18
+  },
+  "0x35bCCFb938e720588176aad737faf82B5aaA397D": {
+    "name": "MARSS COIN",
+    "symbol": "MARSS",
+    "decimals": 18
+  },
+  "0xE37DbF20A4fFf3B88233e456355dc49B76B6fe19": {
+    "name": "Love Earn Enjoy",
+    "symbol": "LEE",
+    "decimals": 18
+  },
+  "0x4a05989d8563582B69Fb967C051173faf8E54302": {
+    "name": "Cappicoin",
+    "symbol": "CPC",
+    "decimals": 18
+  },
+  "0xDC816B6bd4786720e91Eb17D4DaBf0E1eEf5eE91": {
+    "name": "FARCANA",
+    "symbol": "FAR",
+    "decimals": 18
+  },
+  "0xdD2027fcA129005B6255295ceB7e281365e50B0e": {
+    "name": "PintoToken",
+    "symbol": "PTTO",
+    "decimals": 18
+  },
+  "0xbC1bF42ca69C8832f622bF30354737E5ff4C241C": {
+    "name": "Testnet",
+    "symbol": "TSTA",
+    "decimals": 18
+  },
+  "0xED880BdEC53b5b0c7ca0301Ac5ac858C795e457f": {
+    "name": "Tetheer USDT",
+    "symbol": "USDT",
+    "decimals": 6
+  },
+  "0xEcaCea3fd73d54148759F3F10279dE499a2c6698": {
+    "name": "Tether USD",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "0xAF558b832C290C29f59Ddf317e6E010fb5758f27": {
+    "name": "Satoshi Gold",
+    "symbol": "GOLD",
+    "decimals": 18
+  },
+  "0x5ED286D80E7Edb8ae5597607211DC913E75EE553": {
+    "name": "Pi Network Free",
+    "symbol": "Pi",
+    "decimals": 10
+  },
+  "0x41db04B9f2345a89df94F9a98570E9709bAc7c31": {
+    "name": "EmpireX",
+    "symbol": "EPX",
+    "decimals": 18
+  },
+  "0xEaab3EBc0cBFf376EefBCa833b8480588b3cd7f0": {
+    "name": "GLOBAL BITCOIN",
+    "symbol": "GCBTC",
+    "decimals": 18
+  },
+  "0xdDABB31304C9C6626851aAC4553116CEF5510FDa": {
+    "name": "BTCKEY",
+    "symbol": "BTCK",
+    "decimals": 18
+  },
+  "0x6BbfeAc095e458B9fA4F6b06bEEA346Df11726CD": {
+    "name": "WEPE",
+    "symbol": "WEPE",
+    "decimals": 18
+  },
+  "0x672147dD47674757C457eB155BAA382cc10705Dd": {
+    "name": "USD Coin (PoS)",
+    "symbol": "USDC",
+    "decimals": 6
+  },
+  "0xB04906e95AB5D797aDA81508115611fee694c2b3": {
+    "name": "USD Coin",
+    "symbol": "USDC",
+    "decimals": 6
+  },
+  "0x49d5cC521F75e13fa8eb4E89E9D381352C897c96": {
+    "name": "unknown",
+    "symbol": "UNKNOWN",
+    "decimals": 6
+  },
+  "0x77776b40C3d75cb07ce54dEA4b2Fd1D07F865222": {
+    "name": "BounceBit USD",
+    "symbol": "BBUSD",
+    "decimals": 18
+  },
+  "0x6c6D604D3f07aBE287C1A3dF0281e999A83495C0": {
+    "name": "Wrapped ROSE",
+    "symbol": "wROSE",
+    "decimals": 18
+  },
+  "0xf5e0ADda6Fb191A332A787DEeDFD2cFFC72Dba0c": {
+    "name": "KinzaWBNB",
+    "symbol": "kWBNB",
+    "decimals": 18
+  },
+  "0xA1C7f76CbCdB87B17aBF825eC2b5A1Eb823e26F1": {
+    "name": "asset Tether USD",
+    "symbol": "kUSDT",
+    "decimals": 18
+  },
+  "0x986854779804799C1d68867F5E03e601E781e41b": {
+    "name": "Lido DAO Token",
+    "symbol": "LDO",
+    "decimals": 18
+  },
+  "0xa050FFb3eEb8200eEB7F61ce34FF644420FD3522": {
+    "name": "ARB",
+    "symbol": "Arbitrum",
+    "decimals": 18
+  },
+  "0x170C84E3b1D282f9628229836086716141995200": {
+    "name": "Optimism",
+    "symbol": "OP",
+    "decimals": 18
+  },
+  "0xd7D069493685A581d27824Fc46EdA46B7EfC0063": {
+    "name": "Interest Bearing BNB",
+    "symbol": "ibBNB",
+    "decimals": 18
+  },
+  "0x51bd63F240fB13870550423D208452cA87c44444": {
+    "name": "beltBTC",
+    "symbol": "beltBTC",
+    "decimals": 18
+  },
+  "0xeE6D2E1A287444B1d22851bDFb4aCD9738184673": {
+    "name": "Raavana Token",
+    "symbol": "RAONE",
+    "decimals": 18
+  },
+  "0x0dcD05357B83BF100e668F152bf14Bf96b679Cd1": {
+    "name": "PepeMusk",
+    "symbol": "PEPEMUSK",
+    "decimals": 18
+  },
+  "0x7A9c2849a966e8Aac08536F94F09Ba4145011A91": {
+    "name": "NAF DeFi",
+    "symbol": "NAF",
+    "decimals": 8
+  },
+  "0xbEc041bC90CaE81596df063C3eEE4E858fc3903d": {
+    "name": "LiLGcoin",
+    "symbol": "LGX",
+    "decimals": 16
+  },
+  "0x5e19c102861644d3616b2C28988fe3C0422f778F": {
+    "name": "MoldvaVirus Token",
+    "symbol": "MDV",
+    "decimals": 18
+  },
+  "0x96412902aa9aFf61E13f085e70D3152C6ef2a817": {
+    "name": "Wrapped AVAX",
+    "symbol": "WAVAX",
+    "decimals": 18
+  },
+  "0xc93821AD388F22abDD4306E476090e376c951C41": {
+    "name": "Monad. Coin",
+    "symbol": "MND",
+    "decimals": 18
+  },
+  "0xd691d9a68C887BDF34DA8c36f63487333ACfD103": {
+    "name": "Maverick Token",
+    "symbol": "MAV",
+    "decimals": 18
+  },
+  "0x04e2c522E49A44AA07E198431112e8F52168E9D5": {
+    "name": "LastChip",
+    "symbol": "LCP",
+    "decimals": 18
+  },
+  "0xecCCD636dA5b8113653597F470Cf9963Ea5Cc9ff": {
+    "name": "Tradesmark",
+    "symbol": "TM",
+    "decimals": 18
+  },
+  "0x63d2322E5f66287CDD97Addb826EaE98ebE63fB7": {
+    "name": "AXOS",
+    "symbol": "AXO",
+    "decimals": 18
+  },
+  "0x7d814b9eD370Ec0a502EdC3267393bF62d891B62": {
+    "name": "Bubblemaps",
+    "symbol": "BMT",
+    "decimals": 18
+  },
+  "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c": {
+    "name": "Wrapped BTC",
+    "symbol": "WBTC",
+    "decimals": 8
+  },
+  "0xA898171E681597E8EC1918f0d42408281514108F": {
+    "name": "YourToken",
+    "symbol": "YT",
+    "decimals": 18
+  },
+  "0x297f87c61Af495ACdA565BB24958531e720C12c2": {
+    "name": "USDB",
+    "symbol": "USDB",
+    "decimals": 18
+  },
+  "0xF864E4927aAecFc806edeF670Cc4898309649497": {
+    "name": "Flash USDT",
+    "symbol": "fUSDT",
+    "decimals": 18
+  },
+  "0x5C85D6C6825aB4032337F11Ee92a72DF936b46F6": {
+    "name": "mubarak",
+    "symbol": "mubarak",
+    "decimals": 18
+  },
+  "0x38dc5dcFBeB66c354Cbef34229337A8219D2FC56": {
+    "name": "Empire Master Links",
+    "symbol": "IMPA",
+    "decimals": 18
+  },
+  "0x1700A425e7E09c23fF7941560E5e8d094453B561": {
+    "name": "Country",
+    "symbol": "CYZ",
+    "decimals": 18
+  },
+  "0x4d0305E4f667641837D8bDedDA8e25fD2319d9D6": {
+    "name": "Tether-Peg USD",
+    "symbol": "P-USDt",
+    "decimals": 6
+  },
+  "0xE171b1dC8803AE103430b09a84Eb0fA171821c95": {
+    "name": "MGX",
+    "symbol": "MGX",
+    "decimals": 18
+  },
+  "0x67080CAFDF5981fe35e3277BaB86bC0c0B12C4F3": {
+    "name": "USD Stablecoin",
+    "symbol": "USD",
+    "decimals": 18
+  },
+  "0xE5B00a710372B9a5145D98ab4ed1f4cFbB87581D": {
+    "name": "Smart Coin",
+    "symbol": "SC",
+    "decimals": 18
+  },
+  "0xdf6D195cE89674805C997Ae5ac99a887846e766A": {
+    "name": "Synexis",
+    "symbol": "SYX",
+    "decimals": 18
+  },
+  "0xC64B6aF2D11AE5F908Ea12F1C3D1888eB8Ee5639": {
+    "name": "Mashallah",
+    "symbol": "Mashallah",
+    "decimals": 18
+  },
+  "0x81db1DD6933b8EF76A0d4Bf3A586aEf3634c31ad": {
+    "name": "RD2S",
+    "symbol": "RD2S",
+    "decimals": 18
+  },
+  "0xfE0b1D861261783D5748873F58541a0D4575c88e": {
+    "name": "TRUMP",
+    "symbol": "TRUMP",
+    "decimals": 18
+  },
+  "0x0CF7b78a8D741771eA269B4708998a85489186c9": {
+    "name": "STARSHIPCOIN",
+    "symbol": "STACOIN",
+    "decimals": 18
+  },
+  "0x11b047eA549f73742271B885cdcAE97D286FA06f": {
+    "name": "Bortechine",
+    "symbol": "BTCE",
+    "decimals": 18
+  },
+  "0x56ab0EAc844113c3a9d324672460E6D214E282A1": {
+    "name": "RoniCoin",
+    "symbol": "CR7",
+    "decimals": 18
+  },
+  "0x88cEd44054114BD1D60598bd09Cc4C8f08D1C347": {
+    "name": "kallol",
+    "symbol": "kaloll",
+    "decimals": 18
+  },
+  "0x82268f767cBCB4689f35Af804A9d3075D7858F3d": {
+    "name": "Tether USD Bridged ZED30",
+    "symbol": "USDT.z",
+    "decimals": 18
+  },
+  "0xc878552413Db3a853acd80B001cd6CcFCBC2A7ae": {
+    "name": "TOCO",
+    "symbol": "TOCO",
+    "decimals": 18
+  },
+  "0xd43265dE372279538EB511089056f34c41b55732": {
+    "name": "cutedoge",
+    "symbol": "cute",
+    "decimals": 18
+  },
+  "0x6665B556A5e46A314d45334368fD56A65A5979FA": {
+    "name": "Cryptohost Bridged USD",
+    "symbol": "CUSD",
+    "decimals": 18
+  },
+  "0x36Ed2e1050dE7803ed8328D660E21A34F3d59d0B": {
+    "name": "ETERNITY",
+    "symbol": "TYC",
+    "decimals": 18
+  },
+  "0x07715EE7219B07b8e01CC7d2787f4e5e75860383": {
+    "name": "Stake DAO Token",
+    "symbol": "SDT",
+    "decimals": 18
+  },
+  "0xd4CB328A82bDf5f03eB737f37Fa6B370aef3e888": {
+    "name": "Cream",
+    "symbol": "CREAM",
+    "decimals": 18
+  },
+  "0x2aa69E8D25C045B659787BC1f03ce47a388DB6E8": {
+    "name": "Kusama",
+    "symbol": "KSM",
+    "decimals": 18
+  },
+  "0x4d5AC5cc4f8aBdf2EC2Cb986C00C382369f787D4": {
+    "name": "Illuvium",
+    "symbol": "ILV",
+    "decimals": 18
+  },
+  "0x72fF5742319eF07061836F5C924aC6D72c919080": {
+    "name": "Gifto",
+    "symbol": "GFT",
+    "decimals": 18
+  },
+  "0x2Bbbdf97295F73175b12CC087cF446765931e1C3": {
+    "name": "Wrapped liquid staked Ether 2.0",
+    "symbol": "wstETH",
+    "decimals": 18
+  },
+  "0x6f51A1674BEFDD77f7ab1246b83AdB9f13613762": {
+    "name": "Seedify NFT Space",
+    "symbol": "SNFTS",
+    "decimals": 18
+  },
+  "0x0fAD86Cc1b412b330494E350Bf1dC1994AC55c9e": {
+    "name": "Atlantis Coin",
+    "symbol": "ATC",
+    "decimals": 2
+  },
+  "0xc836d8dC361E44DbE64c4862D55BA041F88Ddd39": {
+    "name": "Wrapped Matic",
+    "symbol": "WMATIC",
+    "decimals": 18
+  },
+  "0x092f16f617Ba5adEfB3D85eCEA442c1F76959F9c": {
+    "name": "DrumBeatrax",
+    "symbol": "DBX",
+    "decimals": 18
+  },
+  "0xA94EC12d618C68f0c3ac96B302f786543e8c115f": {
+    "name": "Bonded ETH",
+    "symbol": "BETH",
+    "decimals": 6
+  },
+  "0x9b87A9e7be3753c4360f04Eb4e79434e896603b9": {
+    "name": "Spotty",
+    "symbol": "Spotty",
+    "decimals": 18
+  },
+  "0x7f2AD87564CD41DC48f100A2252eADF51Abdf557": {
+    "name": "BNBDOG",
+    "symbol": "BNBDOG",
+    "decimals": 18
+  },
+  "0x3D6dcfFf7C6EE0b69ae623d07e487F2c4CF64beC": {
+    "name": "ESUN",
+    "symbol": "ESUN",
+    "decimals": 18
+  },
+  "0x926EB1d4aa5197CA9835F1695F0041d3fEe5523D": {
+    "name": "Phoenix",
+    "symbol": "Phoenix",
+    "decimals": 18
+  },
+  "0xE8f2738dfa126149e00A53d1748E0271F51fB690": {
+    "name": "SMR",
+    "symbol": "SMR",
+    "decimals": 18
+  },
+  "0x866E3e5c0083d435448E659d1c0574485254714A": {
+    "name": "SILKROAD",
+    "symbol": "SILR",
+    "decimals": 18
+  },
+  "0x01Cd850E36bBd3B7752FfE9D219606A78c0848Dc": {
+    "name": "David gold",
+    "symbol": "dgd",
+    "decimals": 18
+  },
+  "0x3aFE9c0D36977479C7B2937B08765CE30E4f902B": {
+    "name": "NEZHAMEME",
+    "symbol": "NEZHAMEME",
+    "decimals": 18
+  },
+  "0xd8Af49cf483b24Ca93b05f91b8f7d2d899A03eaC": {
+    "name": "David black",
+    "symbol": "dllk",
+    "decimals": 18
+  },
+  "0xD5482EbF4F6F24836F689040A2D448C0d22Ba983": {
+    "name": "Barakah",
+    "symbol": "BARAKAH",
+    "decimals": 18
+  },
+  "0xb03A84E4A5cBc8862b0Bb633fFEe34D5Ace3e93b": {
+    "name": "strong dragon",
+    "symbol": "sdn",
+    "decimals": 18
+  },
+  "0x45f8CBB218BF2e31Bd3fFB13DbaB97dE8eB20428": {
+    "name": "YORUQ",
+    "symbol": "YRQ",
+    "decimals": 18
+  },
+  "0xaD1aD45028AB44592Aa2a4973bF57Bf41BD4528E": {
+    "name": "EJICOIN",
+    "symbol": "EJI",
+    "decimals": 18
+  },
+  "0x64D1335B7B942385a60C50E57F647d1982f0c4C8": {
+    "name": "L1X",
+    "symbol": "L1X",
+    "decimals": 18
+  },
+  "0xe0dcb0Cb58C0A9588A9c13C1701022eC3710cBD2": {
+    "name": "alphacoinulthraverse",
+    "symbol": "APH",
+    "decimals": 18
+  },
+  "0x5b8fCae88a2B4f26eb21DBfD9053b8A4615BFFF2": {
+    "name": "MUBARAK",
+    "symbol": "MUBARAK",
+    "decimals": 18
+  },
+  "0x4bdC50829003cc017443bF9bfb3aC82F3f0c4AD4": {
+    "name": "CLP Coin",
+    "symbol": "CLPC",
+    "decimals": 0
+  },
+  "0x385f490c56932563bAD469C59dC1B79EC84fBDEc": {
+    "name": "PTT",
+    "symbol": "PTT",
+    "decimals": 18
+  },
+  "0x200F73AbA0D6F8919086F64035eF900669ea2De2": {
+    "name": "Cross-Chain DAO",
+    "symbol": "CCDAO",
+    "decimals": 18
+  },
+  "0x8051A61319B7FF7010a200E39b30b9a084dbCB5f": {
+    "name": "camel",
+    "symbol": "camel",
+    "decimals": 18
+  },
+  "0xCAAE2A2F939F51d97CdFa9A86e79e3F085b799f3": {
+    "name": "Tutorial",
+    "symbol": "TUT",
+    "decimals": 18
+  },
+  "0x5B6AD3E9384e9C3d74ad39bD624Dc77b84fb2306": {
+    "name": "RXRToken",
+    "symbol": "RXR",
+    "decimals": 18
+  },
+  "0x3199A64Bc8aaBDFd9A3937a346CC59c3d81D8a9a": {
+    "name": "Mubarakah",
+    "symbol": "Mubarakah",
+    "decimals": 18
+  },
+  "0xA07c5b74C9B40447a954e1466938b865b6BBea36": {
+    "name": "Venus BNB",
+    "symbol": "vBNB",
+    "decimals": 8
+  },
+  "0x422cBee1289AAE4422eDD8fF56F6578701Bb2878": {
+    "name": "DDDD",
+    "symbol": "DDDD",
+    "decimals": 18
+  },
+  "0x1F47099D83F5191F050c78a03EFF87e21a2F4be9": {
+    "name": "timur",
+    "symbol": "tmr",
+    "decimals": 18
+  },
+  "0x9B00a09492a626678E5A3009982191586C444Df9": {
+    "name": "Aave BNB Smart Chain WBNB",
+    "symbol": "aBnbWBNB",
+    "decimals": 18
+  },
+  "0x847c5FE7eAd076E1698Ef37377dEF1B3b6B461a7": {
+    "name": "Maru the cat",
+    "symbol": "MARU",
+    "decimals": 18
+  },
+  "0x0eD7e52944161450477ee417DE9Cd3a859b14fD0": {
+    "name": "Pancake LPs",
+    "symbol": "Cake-LP",
+    "decimals": 18
+  },
+  "0x3b8cb670714c72De253CC0Ab8c1B51246C805f83": {
+    "name": "SUPERH3",
+    "symbol": "SUPERH3",
+    "decimals": 18
+  },
+  "0x1415E784282e11F3972D98b28A4A07f89b82170d": {
+    "name": "Queenyi Mubarak",
+    "symbol": "QMubarak",
+    "decimals": 18
+  },
+  "0xe7f99D2dfe5cB6192D7e3412D147393A1ee6f0e3": {
+    "name": "Watson",
+    "symbol": "WAT",
+    "decimals": 18
+  },
+  "0x51363F073b1E4920fdA7AA9E9d84BA97EdE1560e": {
+    "name": "Build On BNB",
+    "symbol": "BOB",
+    "decimals": 18
+  },
+  "0xe7AE7a429cE4914D193899Dfe1A8EC94f5291A2E": {
+    "name": "AnyOpusRP",
+    "symbol": "RPo",
+    "decimals": 18
+  },
+  "0xE67feefC1c3C9725397a303B6Fcb5c099411e7b4": {
+    "name": "AGTI",
+    "symbol": "AGTI",
+    "decimals": 0
+  },
+  "0x7e41121d045D81FfAbde12d429E119542394298B": {
+    "name": "YourToken",
+    "symbol": "YTK",
+    "decimals": 9
+  },
+  "0x073D8226f87aDBe6011c884e120DC278AB0ab448": {
+    "name": "Tokendex Coin",
+    "symbol": "TDC",
+    "decimals": 18
+  },
+  "0xd9686470C7b0D4C9B50FA5c852eD4B89DECaABBF": {
+    "name": "Tether USD",
+    "symbol": "USDT",
+    "decimals": 6
+  },
+  "0x476CD415Fdae92734B81c9305E46Cb0005885CD5": {
+    "name": "ABEX",
+    "symbol": "ABX",
+    "decimals": 18
+  },
+  "0x900650C66c8D317DF5CaCc2Ea0D2F39549bA8632": {
+    "name": "Atok",
+    "symbol": "ATOK",
+    "decimals": 18
+  },
+  "0x1FA0f5ed24a1a2b43741E88F8FEc19633e67082B": {
+    "name": "DIAM",
+    "symbol": "DIAM",
+    "decimals": 18
+  },
+  "0x1859D9E12E773bD51fa5b777F8a45Af99148b2BE": {
+    "name": "URDT",
+    "symbol": "URD",
+    "decimals": 18
+  },
+  "0xE8f6F1E426cEdD378c65cc998Cb2b49d4f8F6465": {
+    "name": "MoldovaVirusCoin",
+    "symbol": "MVC",
+    "decimals": 18
+  },
+  "0xFf7d6A96ae471BbCD7713aF9CB1fEeB16cf56B41": {
+    "name": "Bedrock",
+    "symbol": "BR",
+    "decimals": 18
+  },
+  "0x996D1b997203a024E205069a304161ba618d1c61": {
+    "name": "Tell A Tale",
+    "symbol": "TAT",
+    "decimals": 18
+  },
+  "0x581D63faC5a6A8573e4699B9d4996868c0E189D8": {
+    "name": "NAILONG",
+    "symbol": "NAILONG",
+    "decimals": 18
+  },
+  "0x8f9aE35cD7593e5Db1B03E5f6C619941D5828A5E": {
+    "name": "RockefellerToken",
+    "symbol": "RCKF",
+    "decimals": 18
+  },
+  "0x6F6A1B9FC3D355fc147a7d0b0a599411fE16A8f4": {
+    "name": "Patlu",
+    "symbol": "PATLU",
+    "decimals": 18
+  },
+  "0xE6345D2AD09953Fc34E8804aD344bbc1236CED60": {
+    "name": "USDT TTHER",
+    "symbol": "USD",
+    "decimals": 18
+  },
+  "0x5D1C1C3A2E498D872dCA538214F475699aFB744a": {
+    "name": "just buy 1¥ of this",
+    "symbol": "1¥",
+    "decimals": 18
+  },
+  "0x0Eb3a705fc54725037CC9e008bDede697f62F335": {
+    "name": "Cosmos Token",
+    "symbol": "ATOM",
+    "decimals": 18
+  },
+  "0xeF433eBb8bA7a486ce21B854f093b9A3f4e696bc": {
+    "name": "TUK Token",
+    "symbol": "TUK",
+    "decimals": 18
+  },
+  "0x4fa7C69a7B69f8Bc48233024D546bc299d6B03bf": {
+    "name": "quq",
+    "symbol": "quq",
+    "decimals": 18
+  },
+  "0x653346a1Fa17f22b329F3a3ad7Ba20a1e5dF798b": {
+    "name": "ChigmaOnBNB",
+    "symbol": "CHIGMA",
+    "decimals": 18
+  },
+  "0xCce1b333901C438f19fa4e551cAe1bDC441c47d8": {
+    "name": "PREASE",
+    "symbol": "PREASE",
+    "decimals": 18
+  },
+  "0x8b7fc107a8FE96281Fe8BCA52E1A43e608Fc8c0E": {
+    "name": "CCP2 Token",
+    "symbol": "CCP2",
+    "decimals": 18
+  },
+  "0xd5369a3CaC0f4448A9A96bb98AF9c887c92fC37B": {
+    "name": "Bubb",
+    "symbol": "BUBB",
+    "decimals": 18
+  },
+  "0xc146c17B1a29FAdd6F1f754A7557fD10e8A47ee8": {
+    "name": "Binance",
+    "symbol": "Binance",
+    "decimals": 18
+  },
+  "0xF083F395efa7a338eBe9Fdb5Aa4049E7D1f6e9A2": {
+    "name": "MUSK",
+    "symbol": "MUSK",
+    "decimals": 18
+  },
+  "0xbF3eb53d961F66ef22F264b125D6c8c12A5bB802": {
+    "name": "ZHOUSHUREN",
+    "symbol": "LUXUN",
+    "decimals": 18
+  },
+  "0x9Ea12B889e61CdB5F486E9c9F4D08A6D8D1cDBAF": {
+    "name": "69Bird",
+    "symbol": "BRD",
+    "decimals": 18
+  },
+  "0x231F8692d12c12222030d68E436AaCef024170c7": {
+    "name": "Tasty USD",
+    "symbol": "TUSDT",
+    "decimals": 6
+  },
+  "0x1BdD6ABd96C43731aEbCB1A68c566F0255B4EB3F": {
+    "name": "Rap Keo Group",
+    "symbol": "RKG",
+    "decimals": 18
+  },
+  "0x59E69094398AfbEA632F8Bd63033BdD2443a3Be1": {
+    "name": "Wise Monkey",
+    "symbol": "MONKY",
+    "decimals": 18
+  },
+  "0x352Cb5E19b12FC216548a2677bD0fce83BaE434B": {
+    "name": "BitTorrent",
+    "symbol": "BTT",
+    "decimals": 18
+  },
+  "0xFDF1F1B672d35d67Fb349924721055a4116b34f0": {
+    "name": "USD Token",
+    "symbol": "USD",
+    "decimals": 18
+  },
+  "0x86fA9e40a3121AF467354D3315c39Ae0F2b29A5c": {
+    "name": "Wrapped SOLANA (BSC Bridge)",
+    "symbol": "wSOL",
+    "decimals": 6
+  },
+  "0x997A58129890bBdA032231A52eD1ddC845fc18e1": {
+    "name": "SIREN",
+    "symbol": "SIREN",
+    "decimals": 18
+  },
+  "0xBB629C94b6046d7Cd3AD96D16CA3A4AD29c377E9": {
+    "name": "Hundred Million",
+    "symbol": "$100M",
+    "decimals": 18
+  },
+  "0x9c6b51b6E42108Cee1C493bA391A88fB5d4C9925": {
+    "name": "Particle Network   0x59264f02D301281f3393e1385c0aEFd446Eb0F00",
+    "symbol": "PARTI",
+    "decimals": 18
+  },
+  "0xbFF89e7CF0a91eDd8Eab2fcc755Eb4F3107eAe6c": {
+    "name": "Travida Travel Coin",
+    "symbol": "TTC",
+    "decimals": 18
+  },
+  "0x4953d28b12D862250Cc96163A9C46Ae2B8ef52c5": {
+    "name": "Teller USD",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "0xc87D92A5B18fe924Ae111cD17b2C99d7aCB5f821": {
+    "name": "Bombloong",
+    "symbol": "BOMBLOONG",
+    "decimals": 18
+  },
+  "0xF21768cCBC73Ea5B6fd3C687208a7c2def2d966e": {
+    "name": "Reef.finance",
+    "symbol": "REEF",
+    "decimals": 18
+  },
+  "0x59264f02D301281f3393e1385c0aEFd446Eb0F00": {
+    "name": "PARTI Token",
+    "symbol": "PARTI",
+    "decimals": 18
+  },
+  "0x520e8e91713285e9Cd94ed4Cb1f4C2c8dc90C4E3": {
+    "name": "Multi Agents",
+    "symbol": "MUA",
+    "decimals": 18
+  },
+  "0x00e0f2F06Db33d6be9Ef4fB9a55A541Ad8E9bEaC": {
+    "name": "TETHER",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "0x387308Ce117A8816101f33872813928BDC01a573": {
+    "name": "MINIDOGE",
+    "symbol": "Minidoge",
+    "decimals": 18
+  },
+  "0x998305efDC264b9674178899FFfBb44a47134a76": {
+    "name": "Gaimin Token",
+    "symbol": "GMRX",
+    "decimals": 18
+  },
+  "0x4CABb5a82b1fA1922E52265AB6b3a64EA50EEB76": {
+    "name": "Alpha Coin",
+    "symbol": "APC",
+    "decimals": 18
+  },
+  "0xDe04da55B74435d7B9f2C5c62D9F1b53929b09AA": {
+    "name": "AICell",
+    "symbol": "AICell",
+    "decimals": 18
+  },
+  "0xa89e2871A850E0e6fD8F0018eC1fc62FA75440d4": {
+    "name": "Ready to Fight",
+    "symbol": "RTF",
+    "decimals": 18
+  },
+  "0xA6Cbc214C926b3B2Bda28e70f244DDcEb5086989": {
+    "name": "AI Meta Token",
+    "symbol": "AIMeta",
+    "decimals": 18
+  },
+  "0xA4FA8fDf8dfed1C215fE462D1fFEB550731D8e98": {
+    "name": "EELON",
+    "symbol": "EELON",
+    "decimals": 18
+  },
+  "0x503Fa24B7972677F00C4618e5FBe237780C1df53": {
+    "name": "KiloEx Token",
+    "symbol": "KILO",
+    "decimals": 18
+  },
+  "0x64274835D88F5c0215da8AADd9A5f2D2A2569381": {
+    "name": "xPufETH",
+    "symbol": "xPufETH",
+    "decimals": 18
+  },
+  "0xc9DE725a4Be9ab74b136c29D4731D6beBD7122e8": {
+    "name": "HowToPay",
+    "symbol": "HTP",
+    "decimals": 18
+  },
+  "0xae0fb8fA517b0A0129d891986994090B9d50625d": {
+    "name": "Binance Penguin",
+    "symbol": "KOVALSKY",
+    "decimals": 18
+  },
+  "0x91AB1369BCD0E2C48083faa0E2cB665EBd2c4BDa": {
+    "name": "TetherUSD",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "0x999999990237e901c537BBD768e09562be02Efa5": {
+    "name": "Unishop.ai",
+    "symbol": "Unishop.ai",
+    "decimals": 18
+  },
+  "0x19a7FcEF284E78973b74204EA15Df3257b4C8388": {
+    "name": "URDT",
+    "symbol": "URD",
+    "decimals": 18
+  },
+  "0x800537E1504BBAD5f2d648863B6DdcA73a99ABBA": {
+    "name": "Revolutions",
+    "symbol": "RLS",
+    "decimals": 18
+  },
+  "0x3B0a9bF9C431811a4d9a453A8f8f0A1e46d8F200": {
+    "name": "Kawakami Inu",
+    "symbol": "KAWA",
+    "decimals": 9
+  },
+  "0xafb1aCce434a4CF8d1b93c14bA6a29181cF13e3B": {
+    "name": "WrappedLockBNB",
+    "symbol": "WLoBNB",
+    "decimals": 8
+  },
+  "0x8A972Ed397bEd7C0Cbc84cc3EFbC760bb07F80bb": {
+    "name": "EURC",
+    "symbol": "EURC",
+    "decimals": 18
+  },
+  "0x795D2710E383F33fbEbe980a155b29757b6703f3": {
+    "name": "GhibliCZ",
+    "symbol": "Ghibli",
+    "decimals": 18
+  },
+  "0xB3a998BC34fA4F463c08F079affB17A82aad5356": {
+    "name": "Popcat",
+    "symbol": "POPCAT",
+    "decimals": 18
+  },
+  "0x422B5a7a73E3330c53D623Ac408873cB56318605": {
+    "name": "StreetDogCoin",
+    "symbol": "STDOG",
+    "decimals": 18
+  },
+  "0xCA7661Ba64A7667E3006c421C181502d545D1911": {
+    "name": "ARAW",
+    "symbol": "ARAW",
+    "decimals": 18
+  },
+  "0xd7B8d941f302D5D5e5fa22DE3Ea0FEA7fd004559": {
+    "name": "ARAW",
+    "symbol": "ARAW",
+    "decimals": 18
+  },
+  "0x4055b31Dd51d36f50201869981cB602e891ca2Bd": {
+    "name": "USDT.Z",
+    "symbol": "Usd",
+    "decimals": 18
+  },
+  "0x73384e19AE47FcC8B51569eD850390C2Fec4655F": {
+    "name": "Bitcoin BR",
+    "symbol": "BTCBR",
+    "decimals": 18
+  },
+  "0x3710B976AfBc8af29F7779Bbde4A7b8b6101a34a": {
+    "name": "Sigma Meme",
+    "symbol": "SIGMA",
+    "decimals": 18
+  },
+  "0x6e4a971B81CA58045a2AA982EaA3d50C4Ac38F42": {
+    "name": "Bridge",
+    "symbol": "BRG",
+    "decimals": 18
+  },
+  "0xA7B1eDBDF73895266A06BB97b691aE72e328C873": {
+    "name": "Tether USD",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "0xcCe08BeFb7640357166932399311a434e54799c5": {
+    "name": "Muppets",
+    "symbol": "MUPPETS",
+    "decimals": 18
+  },
+  "0xfCE365afCfa9913a3a7bA427D906aE3Fa220E69F": {
+    "name": "BUCKSnBURGS",
+    "symbol": "BFX",
+    "decimals": 18
+  },
+  "0x025333Ae7c3a4f2a04C0c8F0dc507D2A88b624E9": {
+    "name": "BRABOCOIN",
+    "symbol": "$BRABO",
+    "decimals": 18
+  },
+  "0x1876280A993656C66d9771324fffDE914C238B79": {
+    "name": "Jenan",
+    "symbol": "Jenan",
+    "decimals": 18
+  },
+  "0x0428d4bD1C02802FDba179A8805bA3c36daBa46C": {
+    "name": "OpenEuroCurrency",
+    "symbol": "EUR",
+    "decimals": 18
+  },
+  "0xe819C2Ae87f6Bb322f1571f41C2fBD2c15fEc40B": {
+    "name": "ABC",
+    "symbol": "ABC",
+    "decimals": 18
+  },
+  "0xB0FAf5D97f7D09782d82Ae434cf9Ee2fF0B01d4c": {
+    "name": "ARAW",
+    "symbol": "ARAW",
+    "decimals": 18
+  },
+  "0x83750D6254f83C320c015df1aEeC663977AeCA48": {
+    "name": "YELLOW",
+    "symbol": "YELLOW",
+    "decimals": 18
+  },
+  "0x5EA29eEe799aA7cC379FdE5cf370BC24f2Ea7c81": {
+    "name": "Keep3r BSC Network",
+    "symbol": "KP3RB",
+    "decimals": 18
+  },
+  "0x6893225680fa58281f321dbb5ac52bcF683Ef141": {
+    "name": "Matic",
+    "symbol": "MATIC",
+    "decimals": 18
+  },
+  "0x336f374198c872Ba760e85af9c6331C3c5A535d3": {
+    "name": "LIF3",
+    "symbol": "LIF3",
+    "decimals": 18
+  },
+  "0xF70B6D6AcD652612f24F7DD2CA2F1727eB20793a": {
+    "name": "LSHARE",
+    "symbol": "LSHARE",
+    "decimals": 18
+  },
+  "0xb7C8969df0076bEe6922789AaB4bC73aAa8d45D2": {
+    "name": "Movly",
+    "symbol": "MOVLY",
+    "decimals": 18
+  },
+  "0xAB824B47806fEA52276fEF231e5E2d5Fb3D4Cf4E": {
+    "name": "❖BNB𝕏☕| btcbr.info",
+    "symbol": "BNB𝕏",
+    "decimals": 9
+  },
+  "0xfAa5C17a8a63F279157e97766c96D489d322b8B1": {
+    "name": "USDTETHEREUM",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "0x2919B42E28Ba205b56712425d09D98D3BDeB7b1a": {
+    "name": "Wrapped BitcoinBR",
+    "symbol": "WBTCBR",
+    "decimals": 18
+  },
+  "0x306fD3e7b169Aa4ee19412323e1a5995B8c1a1f4": {
+    "name": "Black Agnus",
+    "symbol": "FTW",
+    "decimals": 18
+  },
+  "0x62b3a5F169CC5ED717D35F396061CC108b8cdCb8": {
+    "name": "worldcion from ZEDX",
+    "symbol": "WLD",
+    "decimals": 8
+  },
+  "0x48F96464d70469B4C7aa186b9012504E9873d308": {
+    "name": "https://pancakeswap.finance/ from ZEDX",
+    "symbol": "cake",
+    "decimals": 8
+  },
+  "0x245072F5F901eA8F860DBbFF97BAE8C2c3bA4F7b": {
+    "name": "BTC from ZEDX",
+    "symbol": "BTC",
+    "decimals": 8
+  },
+  "0xBe1Ea2306Ecbd2c3689de12597dD4de6695339A2": {
+    "name": "YUMETOTO AREA",
+    "symbol": "YTA",
+    "decimals": 18
+  },
+  "0xefB471129D510d8c26e0b07c22a7F038Db1d6348": {
+    "name": "YUMETOTO ARE",
+    "symbol": "YTE",
+    "decimals": 18
+  },
+  "0x8C907e0a72C3d55627E853f4ec6a96b0C8771145": {
+    "name": "ZigCoin",
+    "symbol": "ZIG",
+    "decimals": 18
+  },
+  "0x037098D2599157AB091C21d242bA73ec6d4b6729": {
+    "name": "PNTOKEN",
+    "symbol": "PNT",
+    "decimals": 18
+  },
+  "0x34fCDD3Db8465269e6bcF52E7268162E3B797bEd": {
+    "name": "MBX TOKEN",
+    "symbol": "MBX",
+    "decimals": 18
+  },
+  "0x77734e70b6E88b4d82fE632a168EDf6e700912b6": {
+    "name": "Astherus BNB",
+    "symbol": "asBNB",
+    "decimals": 18
+  },
+  "0xAB3dBcD9B096C3fF76275038bf58eAC10D22C61f": {
+    "name": "YUSD",
+    "symbol": "YUSD",
+    "decimals": 18
+  },
+  "0xB7C0007ab75350c582d5eAb1862b872B5cF53F0C": {
+    "name": "pumpBTC Governance token",
+    "symbol": "PUMP",
+    "decimals": 18
+  },
+  "0x06FF79816AE7Bbd32f516941603eCe4D3A914870": {
+    "name": "Fencma",
+    "symbol": "FEM",
+    "decimals": 18
+  },
+  "0x184b72289c0992BDf96751354680985a7C4825d6": {
+    "name": "Astherus BTC",
+    "symbol": "asBTC",
+    "decimals": 18
+  },
+  "0xf7A0d79b9F315ba7b7aaA86e9cD75De987c82fD4": {
+    "name": "BlockNova",
+    "symbol": "BNA",
+    "decimals": 18
+  },
+  "0x4719d2e52692FB9Db443dE283f45f67e3fA86bea": {
+    "name": "BTCSWIS",
+    "symbol": "BTCWS",
+    "decimals": 18
+  },
+  "0xbbB2aaEB8c9dA72bb7faDB42A9c84AACF26974Fd": {
+    "name": "Small Pancake Token",
+    "symbol": "SCAKE",
+    "decimals": 18
+  },
+  "0xbC7e6296EdF9543a09A2C90749d6Df1d34322A5F": {
+    "name": "USDT",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "0xAD29AbB318791D579433D831ed122aFeAf29dcfe": {
+    "name": "Fantom",
+    "symbol": "FTM",
+    "decimals": 18
+  },
+  "0x41dF31fF0a7C35Eb9b12752f2A5C87C3a9C109f8": {
+    "name": "cPen",
+    "symbol": "CPEN",
+    "decimals": 18
+  },
+  "0xdAf1695c41327b61B9b9965Ac6A5843A3198cf07": {
+    "name": "StakeStone",
+    "symbol": "STO",
+    "decimals": 18
+  },
+  "0x81eeDE58f6D2F6104c0Ea6df0dC26fFf00aA646e": {
+    "name": "BattleKoin",
+    "symbol": "BKT",
+    "decimals": 18
+  },
+  "0xA2235b09275Aa3f1240df525C153E3d7f321ca19": {
+    "name": "MAK Coin",
+    "symbol": "MAK",
+    "decimals": 8
+  },
+  "0x3b31305606d2af48369cfb76997D9c22B27144eB": {
+    "name": "BLOCKNOVE",
+    "symbol": "BNa",
+    "decimals": 18
+  },
+  "0xF6ab5aCE1aDD002D9143a55589dDb5BBa2814467": {
+    "name": "Bitchemical",
+    "symbol": "BCHEM",
+    "decimals": 9
+  },
+  "0x9F854f52b6dbb88Ce174D873e08842BB43A55e33": {
+    "name": "Tether DEBA",
+    "symbol": "DBA",
+    "decimals": 18
+  },
+  "0xa9251ca9DE909CB71783723713B21E4233fbf1B1": {
+    "name": "Aave BNB Smart Chain USDT",
+    "symbol": "aBnbUSDT",
+    "decimals": 18
+  },
+  "0x4d1806C26A728f2e1b82b4549b9E074DBE5940B9": {
+    "name": "Cool Wallet AAVEv3 USDT",
+    "symbol": "cwAaveUSDT",
+    "decimals": 18
+  },
+  "0x9aA83081AA06AF7208Dcc7A4cB72C94d057D2cda": {
+    "name": "Tether USD-LP",
+    "symbol": "S*USDT",
+    "decimals": 6
+  },
+  "0x68C6c27fB0e02285829e69240BE16f32C5f8bEFe": {
+    "name": "Tether USD-LP",
+    "symbol": "S*USDT",
+    "decimals": 6
+  },
+  "0x98a5737749490856b401DB5Dc27F522fC314A4e1": {
+    "name": "BUSD Token-LP",
+    "symbol": "S*BUSD",
+    "decimals": 6
+  },
+  "0x158Da805682BdC8ee32d52833aD41E74bb951E59": {
+    "name": "Interest Bearing USDT",
+    "symbol": "ibUSDT",
+    "decimals": 18
+  },
+  "0x7C9e73d4C71dae564d41F78d56439bB4ba87592f": {
+    "name": "Interest Bearing BUSD",
+    "symbol": "ibBUSD",
+    "decimals": 18
+  },
+  "0x97e5d50Fe0632A95b9cf1853E744E02f7D816677": {
+    "name": "Moo CakeV2",
+    "symbol": "mooCakeV2",
+    "decimals": 18
+  },
+  "0xf833afA46fCD100e62365a0fDb0734b7c4537811": {
+    "name": "Allbridge LP",
+    "symbol": "LP-USDT",
+    "decimals": 3
+  },
+  "0x4b30fcAA7945fE9fDEFD2895aae539ba102Ed6F6": {
+    "name": "Lista collateral BNB",
+    "symbol": "clisBNB",
+    "decimals": 18
+  },
+  "0x917AF46B3C3c6e1Bb7286B9F59637Fb7C65851Fb": {
+    "name": "Astherus asUSDF",
+    "symbol": "asUSDF",
+    "decimals": 18
+  },
+  "0x6BE4741AB0aD233e4315a10bc783a7B923386b71": {
+    "name": "Moo Venus BNB",
+    "symbol": "mooVenusBNB",
+    "decimals": 18
+  },
+  "0xb26642B6690E4c4c9A6dAd6115ac149c700C7dfE": {
+    "name": "Moo CakeV2 CAKE-BNB",
+    "symbol": "mooCakeV2CAKE-BNB",
+    "decimals": 18
+  },
+  "0x95c78222B3D6e262426483D42CfA53685A67Ab9D": {
+    "name": "Venus BUSD",
+    "symbol": "vBUSD",
+    "decimals": 8
+  },
+  "0xB11A912CD93DcffA8b609b4C021E89723ceb7FE8": {
+    "name": "Valas BNB",
+    "symbol": "valBNB",
+    "decimals": 18
+  },
+  "0x6894CDe390a3f51155ea41Ed24a33A4827d3063D": {
+    "name": "Simons Cat",
+    "symbol": "CAT",
+    "decimals": 18
+  },
+  "0x4a1C76B8e8B347E1852352eA931bfe649fc64444": {
+    "name": "DOGE ROCKET",
+    "symbol": "ROCKET",
+    "decimals": 18
+  },
+  "0x9840652DC04fb9db2C43853633f0F62BE6f00f98": {
+    "name": "ChainGPT",
+    "symbol": "CGPT",
+    "decimals": 18
+  },
+  "0x3d473C3eF4Cd4C909b020f48477a2EE2617A8e3C": {
+    "name": "Rigo Token",
+    "symbol": "GRG",
+    "decimals": 18
+  },
+  "0x48Ff45b0714464789c8A2fe532B29a4fF5C5C36D": {
+    "name": "YogaHubToken",
+    "symbol": "YHT",
+    "decimals": 18
+  },
+  "0xAA20E8Cb61299df2357561C2AC2e1172bC68bc25": {
+    "name": "beltETH",
+    "symbol": "beltETH",
+    "decimals": 18
+  },
+  "0xa8Bb71facdd46445644C277F9499Dd22f6F0A30C": {
+    "name": "beltBNB",
+    "symbol": "beltBNB",
+    "decimals": 18
+  },
+  "0x9171Bf7c050aC8B4cf7835e51F7b4841DFB2cCD0": {
+    "name": "beltBUSD",
+    "symbol": "beltBUSD",
+    "decimals": 18
+  },
+  "0x55E1B1e49B969C018F2722445Cd2dD9818dDCC25": {
+    "name": "beltUSDT",
+    "symbol": "beltUSDT",
+    "decimals": 18
+  },
+  "0x7a59bf07D529A5FdBab67D597d63d7D5a83E61E5": {
+    "name": "bMultiUSDC",
+    "symbol": "bMultiUSDC",
+    "decimals": 18
+  },
+  "0x9A86fc508a423AE8a243445dBA7eD5364118AB1D": {
+    "name": "beltDAI",
+    "symbol": "beltDAI",
+    "decimals": 18
+  },
+  "0xf91101AF143DD0436cFA79987BbfAc823F93FfDb": {
+    "name": "EVT",
+    "symbol": "USDE",
+    "decimals": 2
+  },
+  "0x12f31B73D812C6Bb0d735a218c086d44D5fe5f89": {
+    "name": "EURA (previously agEUR)",
+    "symbol": "EURA",
+    "decimals": 18
+  },
+  "0x3413a030EF81a3dD5a302F4B4D11d911e12ed337": {
+    "name": "Dai Stablecoin",
+    "symbol": "DAI",
+    "decimals": 18
+  },
+  "0x882C173bC7Ff3b7786CA16dfeD3DFFfb9Ee7847B": {
+    "name": "Venus BTC",
+    "symbol": "vBTC",
+    "decimals": 8
+  },
+  "0x86aC3974e2BD0d60825230fa6F355fF11409df5c": {
+    "name": "Venus CAKE",
+    "symbol": "vCAKE",
+    "decimals": 8
+  },
+  "0xf508fCD89b8bd15579dc79A6827cB4686A3592c8": {
+    "name": "Venus ETH",
+    "symbol": "vETH",
+    "decimals": 8
+  },
+  "0xf841cb62c19fCd4fF5CD0AaB5939f3140BaaC3Ea": {
+    "name": "Venus SolvBTC",
+    "symbol": "vSolvBTC",
+    "decimals": 8
+  },
+  "0x88D7e9B65dC24Cf54f5eDEF929225FC3E1580C25": {
+    "name": "JumpToken",
+    "symbol": "JMPT",
+    "decimals": 18
+  },
+  "0xA3435254691e72dAD6361F56A0D80D8E5DEfA219": {
+    "name": "AfrimexGold Token",
+    "symbol": "AFRMX",
+    "decimals": 18
+  },
+  "0xcA1c644704feBf4ab81f85daca488d1623C28e63": {
+    "name": "ABRA",
+    "symbol": "ABRA",
+    "decimals": 18
+  },
+  "0x238faD9F5981c216591C72a0946e7798daaCcadc": {
+    "name": "PepeCEO",
+    "symbol": "PepeCEO",
+    "decimals": 18
+  },
+  "0x559e10189ECE533Bf0C289961eEff1Bb41755cb3": {
+    "name": "Dirham world halal",
+    "symbol": "DWH",
+    "decimals": 18
+  },
+  "0xF648542f94aE6B9905129da16fAbc0f6D2094723": {
+    "name": "Suzz",
+    "symbol": "SUZZ",
+    "decimals": 18
+  },
+  "0x8C2E6D5fd74df02932bA8c2c7fda35fe8EE0a87E": {
+    "name": "NickNameNick",
+    "symbol": "NNN",
+    "decimals": 18
+  },
+  "0xf7A2A10b9f4AA9fBF057620f0da2169FfBC1e134": {
+    "name": "Aiden",
+    "symbol": "ADN",
+    "decimals": 18
+  },
+  "0xFEbfA339E44c28E2aa9E62Ea1027C9CB4e378605": {
+    "name": "Non-Playable Coin",
+    "symbol": "NPC",
+    "decimals": 18
+  },
+  "0x00901a076785e0906d1028c7d6372d247bec7d61": {
+    "name": "Aave BNB Smart Chain USDC",
+    "symbol": "aBnbUSDC",
+    "decimals": 18
+  },
+  "0xD343968e46690D6C89A88a36a5B8CE5Fb5D65AC4": {
+    "name": "(PoS) Tether USD",
+    "symbol": "USDT",
+    "decimals": 6
+  },
+  "0x56a7ddc4e848EbF43845854205ad71D5D5F72d3D": {
+    "name": "Aave BNB Smart Chain BTCB",
+    "symbol": "aBnbBTCB",
+    "decimals": 18
+  },
+  "0xecA88125a5ADbe82614ffC12D0DB554E2e2867C8": {
+    "name": "Venus USDC",
+    "symbol": "vUSDC",
+    "decimals": 8
+  },
+  "0xfc780a061b9C212DD7C3AfeF2943B9CdCeca4260": {
+    "name": "ID",
+    "symbol": "ID",
+    "decimals": 18
+  },
+  "0x9721496DBdB0528ea9A489C55404a294EEB2D81d": {
+    "name": "Tether USD",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "0xEB5E787D44d7aff5E2483ace16D7C5e7E780d4B3": {
+    "name": "Unified Novel Crypto Coin",
+    "symbol": "UNCC",
+    "decimals": 18
+  },
+  "0x5218277AF00E3190d204Ea7285AD209DaFE50C0e": {
+    "name": "Samsung",
+    "symbol": "SMS",
+    "decimals": 18
+  },
+  "0x1188d953aFC697C031851169EEf640F23ac8529C": {
+    "name": "Bounce Token",
+    "symbol": "Auction",
+    "decimals": 18
+  },
+  "0x189F6e18cd236D24AdD84317849a3fe4977DAe3a": {
+    "name": "Toukali",
+    "symbol": "TKS",
+    "decimals": 6
+  },
+  "0x302cD8973bE5CA2334B4ff7e7b01BA41455559b3": {
+    "name": "Ethereum PoW",
+    "symbol": "ETHW",
+    "decimals": 18
+  },
+  "0x6f9ebD8Fbd837134b2FDab475cef743348C009E0": {
+    "name": "SweatCostToken",
+    "symbol": "SCT",
+    "decimals": 18
+  },
+  "0xE17A478572d7CA33130b06E068aFCE6B9E7f978b": {
+    "name": "tttt",
+    "symbol": "tttt",
+    "decimals": 18
+  },
+  "0x5D5A4f19b0439DC4112A36d7e8494fEB9315fffC": {
+    "name": "Tether",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "0x1e8Cb73190D06fb9f31Dc03DBC766aaa008F6d13": {
+    "name": "UniShit Token",
+    "symbol": "UST",
+    "decimals": 4
+  },
+  "0x49b4af8d1B90Ba15bb168f30a86a648b1aec4444": {
+    "name": "CZ BINANCE NEW DOG",
+    "symbol": "ICHIRO",
+    "decimals": 18
+  },
+  "0xAe21E69184B1d716811Dd4c256f3716021fF6350": {
+    "name": "approve Token Test",
+    "symbol": "att",
+    "decimals": 18
+  },
+  "0xb19831a71E839DFe7113a9789A911cd19CC5A9dB": {
+    "name": "Ethereum Token",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "0x20eE7B720f4E4c4FFcB00C4065cdae55271aECCa": {
+    "name": "APENFT",
+    "symbol": "NFT",
+    "decimals": 6
+  },
+  "0x0402BCd7bF2e23a730030Ff9772A8E28735e4444": {
+    "name": "Trump Cat",
+    "symbol": "TCAT",
+    "decimals": 18
+  },
+  "0xf8075705f19c063491260d7ea6Dff587906FC341": {
+    "name": "KaneWest",
+    "symbol": "KW",
+    "decimals": 18
+  },
+  "0x84407299dA77916F9fc31Ff663FeD4Ee29f7cB42": {
+    "name": "ADISKTI",
+    "symbol": "ADI",
+    "decimals": 7
+  },
+  "0x9e5C046fE4Eaff9a6ea1A9Ab52489C3954F20aD4": {
+    "name": "QUANTICS",
+    "symbol": "QCS",
+    "decimals": 9
+  },
+  "0x9c4a515cd72D27A4710571Aca94858a53D9278D5": {
+    "name": "VIDT DAO",
+    "symbol": "VIDT",
+    "decimals": 18
+  },
+  "0xf2fD9CEd4Ad16Ac25fAb203f3F439B40e5937725": {
+    "name": "Islamic Dinar",
+    "symbol": "ISD",
+    "decimals": 2
+  },
+  "0x96236A72D5F45Eb64353f789DD5D884607AeC067": {
+    "name": "Treasure NFT",
+    "symbol": "TUFT",
+    "decimals": 18
+  },
+  "0x9240c44eE90D058b0b17AbABE0f74Ab1A205ae04": {
+    "name": "Ents",
+    "symbol": "ENTS",
+    "decimals": 18
+  },
+  "0xE64E30276C2F826FEbd3784958d6Da7B55DfbaD3": {
+    "name": "SwftCoin",
+    "symbol": "SWFTC",
+    "decimals": 18
+  },
+  "0xB76a6EfE6bF66c903e1866fBa51af488aC9e4F6b": {
+    "name": "Moneylife",
+    "symbol": "MNL",
+    "decimals": 10
+  },
+  "0x6d6200bFFE767Ff8915b1345215A2F7101966119": {
+    "name": "APP META",
+    "symbol": "APP",
+    "decimals": 18
+  },
+  "0x56c7675fAB25228A49c666A374A3c7BB94434444": {
+    "name": "NORMIES",
+    "symbol": "NORMIES",
+    "decimals": 18
+  },
+  "0x37919106aF0CcB4A02Bd901ce08698646F7EA97d": {
+    "name": "Banana For Scale",
+    "symbol": "BANANAS",
+    "decimals": 18
+  },
+  "0x9C27c4072738CF4b7B0B7071af0ad5666BdDC096": {
+    "name": "NianNian",
+    "symbol": "NianNian",
+    "decimals": 18
+  },
+  "0x2CE0265E79e31Ff221F2eBaedA149F8382C20218": {
+    "name": "WalletConnect Token",
+    "symbol": "WCT",
+    "decimals": 6
+  },
+  "0xE6282DAb4aCf91bf255A25Fe326b367dA647DDA7": {
+    "name": "TetherUS",
+    "symbol": "WUSDT",
+    "decimals": 18
+  },
+  "0x9eCaf80c1303CCA8791aFBc0AD405c8a35e8d9f1": {
+    "name": "KERNEL",
+    "symbol": "KERNEL",
+    "decimals": 18
+  },
+  "0xAB6dB09EBA09af77C215133241939c6c8f250128": {
+    "name": "WUSDT",
+    "symbol": "WUSDT",
+    "decimals": 18
+  },
+  "0x338a59DBFe304a05370164c23015F203B0a8b8A2": {
+    "name": "SweatCostToken",
+    "symbol": "STCT",
+    "decimals": 18
+  },
+  "0x073761656dC0654F729A4aF0ccE8C9B39b47A18b": {
+    "name": "Celia Token",
+    "symbol": "CELIA",
+    "decimals": 18
+  },
+  "0x473Abe567032FEC7947e699f887ac1d791B373D1": {
+    "name": "REDX COIN",
+    "symbol": "REDX COIN",
+    "decimals": 18
+  },
+  "0x71b76BBA6D913bACa78ac26B9168f0e2dA9e1B5A": {
+    "name": "Luxa",
+    "symbol": "LUXA",
+    "decimals": 18
+  },
+  "0xd55578730450e9cC9554C47cC055d557e2AF4444": {
+    "name": "Shong Inu",
+    "symbol": "SHONG",
+    "decimals": 18
+  },
+  "0x39538953485F00029e20dE096e5ecE9E58aB10E5": {
+    "name": "German Shepherd",
+    "symbol": "SHEP",
+    "decimals": 18
+  },
+  "0x435B18D310394a9E5251A17b435f16cf59ac8c91": {
+    "name": "Bob Token",
+    "symbol": "$BOB",
+    "decimals": 18
+  },
+  "0x1FEF3Aef2DB4e440E305de812fC79AA3b4256D4D": {
+    "name": "EURC",
+    "symbol": "EURC",
+    "decimals": 18
+  },
+  "0x4A595Cf10d3B736F0153cb2bE9F319d42FE5B917": {
+    "name": "TestToken",
+    "symbol": "TK",
+    "decimals": 18
+  },
+  "0x00dFb4C414A0Fc7876f5E00df7192A9f848b42e9": {
+    "name": "Carpool Life Economy",
+    "symbol": "CPLE",
+    "decimals": 18
+  },
+  "0xd8002d4bd1d50136A731c141e3206D516E6D3b3d": {
+    "name": "GOMBLE",
+    "symbol": "GM",
+    "decimals": 18
+  },
+  "0xc1040CCCb5227b6D64Cfbe1B5FDd26E3417b207E": {
+    "name": "Bitcoin BR Token",
+    "symbol": "BTCBR",
+    "decimals": 18
+  },
+  "0x1F18df0f2d2302047856cd6A2fa47D0573e3c362": {
+    "name": "AntiHoneypot",
+    "symbol": "AHPT",
+    "decimals": 18
+  },
+  "0x948f5F272F180Ad9A51320cf487bdF07b0a2A7F0": {
+    "name": "CycleX",
+    "symbol": "CX",
+    "decimals": 18
+  },
+  "0xA40Aec652FDA117A8444aa24b6dee44db5c698E2": {
+    "name": "XLM COIN",
+    "symbol": "XLM COIN",
+    "decimals": 18
+  },
+  "0x5Cc8DC1826B2C41F37069de50f2146f43eDeb12c": {
+    "name": "XLM COIN",
+    "symbol": "XLM COIN",
+    "decimals": 18
+  },
+  "0xa2E3356610840701BDf5611a53974510Ae27E2e1": {
+    "name": "Wrapped Binance Beacon ETH",
+    "symbol": "wBETH",
+    "decimals": 18
+  },
+  "0x57332Ea826027d5C30E4B8aD6e4Cb48742d7Dc47": {
+    "name": "EURC",
+    "symbol": "EURC",
+    "decimals": 18
+  },
+  "0xDc0353AB108417edA73bd913bFeb1FE8c41df940": {
+    "name": "AI Isaac",
+    "symbol": "AIISAAC",
+    "decimals": 18
+  },
+  "0x74CFD109898fe125737e8081D2A8DF4F318305cC": {
+    "name": "Bitcoin ELON",
+    "symbol": "BTCELON",
+    "decimals": 18
+  },
+  "0x51ae27b619C09eC04AfC677775212f74C283D678": {
+    "name": "Deploy Meme",
+    "symbol": "DEM",
+    "decimals": 18
+  },
+  "0xa818dEEBD4a2e3f8C81DB10d2Ac3b7A3B4a85595": {
+    "name": "Sabor da Terra",
+    "symbol": "SDT",
+    "decimals": 18
+  },
+  "0xc50B8241Ac1eaFEAd1D6261ac9f12e3fA724Ab96": {
+    "name": "KNC COIN",
+    "symbol": "KNC",
+    "decimals": 18
+  },
+  "0xa9E331283f4D2987BdCF20d29731930bF50CE380": {
+    "name": "USD",
+    "symbol": "USD",
+    "decimals": 18
+  },
+  "0xc62f86e30676B111abEafEFB93440BfeE0F0c24a": {
+    "name": "Digital EUR",
+    "symbol": "€",
+    "decimals": 6
+  },
+  "0xFB733220499371947Fd4D4300ED4eC4a54919D61": {
+    "name": "AMAZON SHOPPING",
+    "symbol": "AMZC",
+    "decimals": 18
+  },
+  "0xc7452E70a54FE0Fb4055D8AaaDc7bC12a2fB2A06": {
+    "name": "ARC Market",
+    "symbol": "sARC",
+    "decimals": 18
+  },
+  "0x7788A3538C5fc7F9c7C8A74EAC4c898fC8d87d92": {
+    "name": "Staked USDX",
+    "symbol": "sUSDX",
+    "decimals": 18
+  },
+  "0xFBb272A8B185136600525FAb36ccEe793504aA81": {
+    "name": "behnad ansari",
+    "symbol": "bas",
+    "decimals": 18
+  },
+  "0x3AeE7602b612de36088F3ffEd8c8f10E86EbF2bF": {
+    "name": "Lorenzo Governance Token",
+    "symbol": "BANK",
+    "decimals": 18
+  },
+  "0x721f9C23880e20fD907755c7aDeb1116EE3B1a65": {
+    "name": "Alice Token",
+    "symbol": "ALICE",
+    "decimals": 18
+  },
+  "0x2972B04B2A6B1a7db7e7bD697107F2f9552612C6": {
+    "name": "Tariff Coin",
+    "symbol": "TRF",
+    "decimals": 18
+  },
+  "0xF0B1a6880E441F433A3828b3aDeF4Ea685fd4031": {
+    "name": "YOROCOIN",
+    "symbol": "YRC",
+    "decimals": 18
+  },
+  "0x4E22aB2BBcB3E7F74249C87F62BB35ef92C3d964": {
+    "name": "BLACK PHOENIX",
+    "symbol": "BPX",
+    "decimals": 18
+  },
+  "0xc4fd194fF4E3e978950E0AF1210aF0Ad21432B17": {
+    "name": "Tether USDT",
+    "symbol": "FUSDT",
+    "decimals": 18
+  },
+  "0xADf2B70621758489a8a13a60989876498bfB609D": {
+    "name": "KNC COIN",
+    "symbol": "KNC",
+    "decimals": 18
+  },
+  "0x1F497FDB0832C0fC545d423668707267359bCE5c": {
+    "name": "KNC COIN",
+    "symbol": "KNC",
+    "decimals": 18
+  },
+  "0xd29EaCE1FcFF9e9252B4A54f5Cbe858ceeFE959c": {
+    "name": "Dogelon Moon",
+    "symbol": "ELON",
+    "decimals": 18
+  },
+  "0xdb5642fC3Ffd7a8BdC2C837197736c54B120872d": {
+    "name": "Payslink Token",
+    "symbol": "PAYS",
+    "decimals": 18
+  },
+  "0x9971ADfB7252E43eB81e3eAd39608F4446e06cba": {
+    "name": "amazon prime",
+    "symbol": "amazon",
+    "decimals": 9
+  },
+  "0xA71B97cE4Af4489207eE48854a8EE4ab0090b73c": {
+    "name": "4TH",
+    "symbol": "4TH",
+    "decimals": 18
+  },
+  "0xD3Cd6B9c95E392D542da77de804324b8EcdD7E28": {
+    "name": "Banana For Scale",
+    "symbol": "BANANAS31",
+    "decimals": 6
+  },
+  "0x2e058A179eFe9725F9d7cFe60520251741FE4A06": {
+    "name": "Staked RWA",
+    "symbol": "sRWA",
+    "decimals": 9
+  },
+  "0x527939d5c33bD19A7f0b35da399bc1D1d27Fa8e2": {
+    "name": "RIDR1",
+    "symbol": "RDC",
+    "decimals": 18
+  },
+  "0x7fFB592FF8aBa46f58DC68834E384A9330445221": {
+    "name": "Snorp",
+    "symbol": "SNORP",
+    "decimals": 18
+  },
+  "0x3910db0600eA925F63C36DdB1351aB6E2c6eb102": {
+    "name": "Spartan Protocol Token V2",
+    "symbol": "SPARTA",
+    "decimals": 18
+  },
+  "0x6CDd08dE79231a1957f205a3fe5cF9DBf4B0c454": {
+    "name": "Baby Neiro",
+    "symbol": "BabyNeiro",
+    "decimals": 9
+  },
+  "0x8772902c523A2493EBd9307479c11D7dF86A4e9e": {
+    "name": "Hatch Token",
+    "symbol": "$HATCH",
+    "decimals": 18
+  },
+  "0x9eC02756A559700d8D9e79ECe56809f7bcC5dC27": {
+    "name": "why",
+    "symbol": "WHY",
+    "decimals": 18
+  },
+  "0x92aa03137385F18539301349dcfC9EbC923fFb10": {
+    "name": "SKYAI",
+    "symbol": "SKYAI",
+    "decimals": 18
+  },
+  "0xBeaB351F7e70A14fBb791A19671a7cc403c86601": {
+    "name": "KCS COIN",
+    "symbol": "KCS",
+    "decimals": 18
+  },
+  "0x4d7Fa587Ec8e50bd0E9cD837cb4DA796f47218a1": {
+    "name": "SAFE(AnWang)",
+    "symbol": "SAFE",
+    "decimals": 18
+  },
+  "0xFE8bF5B8F5e4eb5f9BC2be16303f7dAB8CF56aA8": {
+    "name": "BIBI",
+    "symbol": "BIBI",
+    "decimals": 18
+  },
+  "0x94a8b4EE5CD64C79D0Ee816f467EA73009f51aA0": {
+    "name": "Realio Network",
+    "symbol": "RIO",
+    "decimals": 18
+  },
+  "0xDc06717F367e57A16e06CcE0c4761604460da8Fc": {
+    "name": "BNB Card",
+    "symbol": "BNB Card",
+    "decimals": 18
+  },
+  "0xB380d044C3b135e6139A7A888eB5eB2a7Aad2e6A": {
+    "name": "Tether",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "0xbF273530bAa3F94A9D7395378DBBB614a319f59F": {
+    "name": "TimePostOffice",
+    "symbol": "TPO",
+    "decimals": 18
+  },
+  "0x3Dc8e2d80b6215a1BCcAe4d38715C3520581E77c": {
+    "name": "Balance",
+    "symbol": "EPT",
+    "decimals": 18
+  },
+  "0xDeC1faa2b6C9c2Cf1A7fB36dC712aDf58587249e": {
+    "name": "BigEl",
+    "symbol": "BigEl",
+    "decimals": 18
+  },
+  "0x7b46D4e61c33357641c25687034dB4df7a18b629": {
+    "name": "XML COIN",
+    "symbol": "XML COIN",
+    "decimals": 18
+  },
+  "0x7CA27614f4Dc22B556C4B4eF39765bAA3DE06096": {
+    "name": "ModalAI",
+    "symbol": "ModalAI",
+    "decimals": 18
+  },
+  "0x29A5DaF6E3FDF964DEf07706eA1ABee7EC03D021": {
+    "name": "Trillioner",
+    "symbol": "TLC",
+    "decimals": 18
+  },
+  "0x78650B139471520656b9E7aA7A5e9276814a38e9": {
+    "name": "StandardBTCHashrateToken",
+    "symbol": "BTCST",
+    "decimals": 17
+  },
+  "0x4f161eB257Cd81A73E4EF2F9BC8140853Ef8ce9E": {
+    "name": "Pete",
+    "symbol": "PETE",
+    "decimals": 8
+  },
+  "0xC9d23ED2ADB0f551369946BD377f8644cE1ca5c4": {
+    "name": "Hyperlane",
+    "symbol": "HYPER",
+    "decimals": 18
+  },
+  "0x6E9804a08092D8ba4E69DaCF422Df12459F2599E": {
+    "name": "Staked HYPER",
+    "symbol": "stHYPER",
+    "decimals": 18
+  },
+  "0x57169402DA9C6cF7CbDcd9d7e759d090d67c819f": {
+    "name": "Wydad Athletic Club",
+    "symbol": "WAC",
+    "decimals": 18
+  },
+  "0x5b65cd9feb54F1Df3D0C60576003344079f8Dc06": {
+    "name": "Uniwhale Token",
+    "symbol": "UNW",
+    "decimals": 18
+  },
+  "0x06eBe5F8FF16579371b8D643911196466Ec28e68": {
+    "name": "Tethera USD",
+    "symbol": "USTD",
+    "decimals": 18
+  },
+  "0x5eAc29aD69093281C6440E6ac196bE4AAB07c4dE": {
+    "name": "NAVIX",
+    "symbol": "NAVIX",
+    "decimals": 18
+  },
+  "0x66E3DaA0C86e0Ad56302D36Af0e7C1BA24442244": {
+    "name": "AILayer Token",
+    "symbol": "AIL",
+    "decimals": 18
+  },
+  "0x7ADd55f6220A63C5E1fda057EfDf5600c02dDF3F": {
+    "name": "JLaunchpad",
+    "symbol": "JLP",
+    "decimals": 18
+  },
+  "0xdfEc425d9e135A10CB91dD03A4E71d368086773F": {
+    "name": "Karum Coin",
+    "symbol": "KARUM",
+    "decimals": 18
+  },
+  "0xe6d82Bbe75041E42E51d755e922cE1BA91af9c4d": {
+    "name": "USD Coin",
+    "symbol": "USDC",
+    "decimals": 6
+  },
+  "0x1d5B5cbC103e32f12EEEfE097B2A61BdB6B11671": {
+    "name": "QAV",
+    "symbol": "QAV",
+    "decimals": 18
+  },
+  "0xcbF24882Cd3411e89A4D10C668A9CBb93bdfea1A": {
+    "name": "<.>",
+    "symbol": "<.>",
+    "decimals": 4
+  },
+  "0x60724AA934062699A7553e1873b6a0f4Db7D6eFE": {
+    "name": "Granum",
+    "symbol": "CGTU",
+    "decimals": 18
+  },
+  "0x9C651CF61e4ed79ECfA3a6CFF4eF6866863e9603": {
+    "name": "TickBase",
+    "symbol": "TB",
+    "decimals": 18
+  },
+  "0xb8821C9714AD9a466076Dd87c5D567092E358383": {
+    "name": "ESPINAL TOKEN",
+    "symbol": "ESPI",
+    "decimals": 18
+  },
+  "0x74d9E429DF1A4dF44194e6d1441E4398aa02008d": {
+    "name": "Tether USD",
+    "symbol": "TUSDT",
+    "decimals": 18
+  },
+  "0xf1bE8ecC990cBcb90e166b71E368299f0116d421": {
+    "name": "Interest Bearing ALPACA",
+    "symbol": "ibALPACA",
+    "decimals": 18
+  },
+  "0x55ad16Bd573B3365f43A9dAeB0Cc66A73821b4a5": {
+    "name": "OKZOO",
+    "symbol": "AIOT",
+    "decimals": 18
+  },
+  "0x8Ea43e15b1a616a19903F6A87498F7dCa1efae0f": {
+    "name": "xAI",
+    "symbol": "xAI",
+    "decimals": 9
+  },
+  "0x71c3131470C447A3Ed63CBE299472b4Eb2313257": {
+    "name": "Violet",
+    "symbol": "VTC",
+    "decimals": 9
+  },
+  "0xecC9A1d97FF88f5a786C521Bf4a14A2D3F6c50f7": {
+    "name": "Binance Hat",
+    "symbol": "BH",
+    "decimals": 18
+  },
+  "0x8F0528cE5eF7B51152A59745bEfDD91D97091d2F": {
+    "name": "AlpacaToken",
+    "symbol": "ALPACA",
+    "decimals": 18
+  },
+  "0xC41dD553125ca202D9fbE133c38CfD1fFD0C2444": {
+    "name": "wabucu",
+    "symbol": "WBC",
+    "decimals": 18
+  },
+  "0xFb29A8894a0B0c52334a00a47521682ea9Cac093": {
+    "name": "ナナナ Banana Republic from P",
+    "symbol": "Nanana",
+    "decimals": 18
+  },
+  "0x868FCEd65edBF0056c4163515dD840e9f287A4c3": {
+    "name": "Sign",
+    "symbol": "SIGN",
+    "decimals": 18
+  },
+  "0xD16Ea217678eC31Be4a720E18d26dfFd6C1b9755": {
+    "name": "USDT.z",
+    "symbol": "USDTz",
+    "decimals": 18
+  },
+  "0x4268B8F0B87b6Eae5d897996E6b845ddbD99Adf3": {
+    "name": "Axelar Wrapped USDC",
+    "symbol": "axlUSDC",
+    "decimals": 6
+  },
+  "0x0173295183685F27C84db046B5F0bea3e683c24b": {
+    "name": "Cat",
+    "symbol": "CAT",
+    "decimals": 18
+  },
+  "0x2c44b726ADF1963cA47Af88B284C06f30380fC78": {
+    "name": "ConstitutionDAO",
+    "symbol": "PEOPLE",
+    "decimals": 18
+  },
+  "0x7da101e45CFb3fFA1F475ad301D25D7896ed6825": {
+    "name": "Tether",
+    "symbol": "USDT",
+    "decimals": 6
+  },
+  "0x7b4Bf9fEcCfF207eF2CB7101Ceb15b8516021AcD": {
+    "name": "MilkyWay",
+    "symbol": "MILK",
+    "decimals": 6
+  },
+  "0xe158996c9639e4a48Bc58bb8d627Fbe587A23aF5": {
+    "name": "Droplet",
+    "symbol": "DROP",
+    "decimals": 18
+  },
+  "0x0AA6D40A2eb98581EBa4D9Be803b89e8E9bC46d2": {
+    "name": ".",
+    "symbol": "</3",
+    "decimals": 4
+  },
+  "0xD279E8f1fE8F893e4b1CB18fAAeb4fc2a0d14444": {
+    "name": "MiniBonk",
+    "symbol": "MiniBonk",
+    "decimals": 18
+  },
+  "0x3D9bE0aC1001cd81c32464276D863d2FFdCa4967": {
+    "name": "Haedal",
+    "symbol": "HAEDAL",
+    "decimals": 9
+  },
+  "0x965D6274401D68d92e31DBb9f9616571Ff20d9DA": {
+    "name": "ByteConio",
+    "symbol": "BYC",
+    "decimals": 18
+  },
+  "0x5b330Fd7EA69D8A6D78722A0297A2c8cDd424352": {
+    "name": "Tether USD",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "0x307670528B8d962AF7a38baE01CDe7AfE784DaAD": {
+    "name": "Jxrcoin",
+    "symbol": "JXR",
+    "decimals": 18
+  },
+  "0x86a53fcd199212FEa44FA7e16EB1f28812be911D": {
+    "name": "Inflation Hedging Coin",
+    "symbol": "IHC",
+    "decimals": 18
+  },
+  "0xE849188F76c0dA93b5eD310a1F72127914b3A7b9": {
+    "name": "ArdMoney",
+    "symbol": "ARDM",
+    "decimals": 18
+  },
+  "0x2D279FDECdf7f5705F5ff0bD80F8D9a305Ea87F4": {
+    "name": "Mont",
+    "symbol": "MONT",
+    "decimals": 18
+  },
+  "0x316cDCbA08FCF49EEF0726D9eaBd981744e2b8cB": {
+    "name": "Bitcoin",
+    "symbol": "BTC",
+    "decimals": 18
+  },
+  "0x783c3f003f172c6Ac5AC700218a357d2D66Ee2a2": {
+    "name": "BSquared Token",
+    "symbol": "B2",
+    "decimals": 18
+  },
+  "0x0b33542240d6fA323c796749F6D6869fdB7F13cA": {
+    "name": "Ethereum Meta",
+    "symbol": "ETHM",
+    "decimals": 18
+  },
+  "0x80Eede496655FB9047dd39d9f418d5483ED600df": {
+    "name": "Frax USD",
+    "symbol": "frxUSD",
+    "decimals": 18
+  }
+}

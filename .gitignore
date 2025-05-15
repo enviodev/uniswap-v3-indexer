@@ -21,7 +21,6 @@
 lib/*
 *.mlast
 *.mliast
-.cache
 .vscode
 .merlin
 .bsb.lock

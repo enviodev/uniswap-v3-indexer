@@ -1,0 +1,52 @@
+{
+  "0x4300000000000000000000000000000000000003": {
+    "name": "USDB",
+    "symbol": "USDB",
+    "decimals": 18
+  },
+  "0x4300000000000000000000000000000000000004": {
+    "name": "Wrapped Ether",
+    "symbol": "WETH",
+    "decimals": 18
+  },
+  "0xb1a5700fA2358173Fe465e6eA4Ff52E36e88E2ad": {
+    "name": "Blast",
+    "symbol": "BLAST",
+    "decimals": 18
+  },
+  "0x6B173c94002eB298870A313f44F3865B97b3792f": {
+    "name": "Serhii",
+    "symbol": "SI",
+    "decimals": 6
+  },
+  "0xca21959A59069D600E87b3C787A61c228DC13358": {
+    "name": "Serhey",
+    "symbol": "SEY",
+    "decimals": 6
+  },
+  "0x53168b4e9A05B183A305dcFf9Ec65cF6CB8FcD9b": {
+    "name": "Serhii",
+    "symbol": "SI",
+    "decimals": 6
+  },
+  "0x9A4bCCA798f533E6D4b4048834b41AC6ecF955c3": {
+    "name": "Serhey",
+    "symbol": "SEY",
+    "decimals": 6
+  },
+  "0x13136d65966586BFae6331527166A38f82326b2C": {
+    "name": "Serhii",
+    "symbol": "SI",
+    "decimals": 6
+  },
+  "0x6AcD984e8C2189a25A0FA0e7CbA38C282618B36b": {
+    "name": "Serhey",
+    "symbol": "SEY",
+    "decimals": 6
+  },
+  "0x092D76d6603543a5e604Ee388e50CAa3a46E4dbD": {
+    "name": "AiFrUiT Unicorn",
+    "symbol": "AIUNI",
+    "decimals": 18
+  }
+}
