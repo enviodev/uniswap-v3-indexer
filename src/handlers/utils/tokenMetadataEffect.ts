@@ -148,17 +148,17 @@ export const getTokenMetadataEffect = experimental_createEffect(
       const contract = getContract({
         address: address as `0x${string}`,
         abi: ERC20_ABI,
-        publicClient: clients[chainId],
+        client: clients[chainId],
       });
 
       // Use Promise.all to execute all calls in parallel
       // They will be automatically batched thanks to the batch option
       const promises = [
-        contract.read.name().catch(() => null),
-        contract.read.NAME().catch(() => null),
-        contract.read.symbol().catch(() => null),
-        contract.read.SYMBOL().catch(() => null),
-        contract.read.decimals().catch(() => 18),
+        contract.read.name({}).catch(() => null),
+        contract.read.NAME({}).catch(() => null),
+        contract.read.symbol({}).catch(() => null),
+        contract.read.SYMBOL({}).catch(() => null),
+        contract.read.decimals({}).catch(() => 18),
       ];
 
       const results = await Promise.all(promises);
