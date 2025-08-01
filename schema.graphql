@@ -47,7 +47,7 @@ type Token {
   # token decimals
   decimals: BigInt! @config(precision: 78) @index
   # is token whitelisted?
-  isWhitelisted: Boolean!
+  isWhitelisted: Boolean! @index
   # volume in token units
   volume: BigDecimal!
   # volume in derived USD
@@ -80,15 +80,15 @@ type Pool {
   # pool address
   id: ID!
   # creation
-  createdAtTimestamp: BigInt!
+  createdAtTimestamp: BigInt! @index
   # block pool was created at
-  createdAtBlockNumber: BigInt!
+  createdAtBlockNumber: BigInt! @index
   # token0
   token0: Token! @index
   # token1
   token1: Token! @index
   # fee amount
-  feeTier: BigInt!
+  feeTier: BigInt! @index
   # in range liquidity
   liquidity: BigInt!
   # current price tracker
@@ -149,7 +149,7 @@ type Tick {
   # pool address
   poolAddress: String @index
   # tick index
-  tickIdx: BigInt!
+  tickIdx: BigInt! @index
   # pointer to pool
   pool: Pool! @index
   # total liquidity pool has as tick lower or upper
@@ -161,7 +161,7 @@ type Tick {
   # calculated price of token1 of tick within this pool - constant
   price1: BigDecimal!
   # created time
-  createdAtTimestamp: BigInt!
+  createdAtTimestamp: BigInt! @index
   # created block
   createdAtBlockNumber: BigInt! @index
 }
@@ -170,9 +170,9 @@ type Transaction {
   # txn hash
   id: ID!
   # block txn was included in
-  blockNumber: BigInt!
+  blockNumber: BigInt! @index
   # timestamp txn was confirmed
-  timestamp: BigInt!
+  timestamp: BigInt! @index
   # gas used during txn execution
   gasUsed: BigInt!
   gasPrice: BigInt!
@@ -189,7 +189,7 @@ type Mint {
   # which txn the mint was included in
   transaction: Transaction!
   # time of txn
-  timestamp: BigInt!
+  timestamp: BigInt! @index
   # pool position is within
   pool: Pool! @index
   # allow indexing by tokens
@@ -211,9 +211,9 @@ type Mint {
   # derived amount based on available prices of tokens
   amountUSD: BigDecimal
   # lower tick of the position
-  tickLower: BigInt!
+  tickLower: BigInt! @index
   # upper tick of the position
-  tickUpper: BigInt!
+  tickUpper: BigInt! @index
   # order within the txn
   logIndex: BigInt
 }
@@ -230,7 +230,7 @@ type Burn {
   # allow indexing by tokens
   token1: Token! @index
   # need this to pull recent txns for specific token or pool
-  timestamp: BigInt!
+  timestamp: BigInt! @index
   # owner of position where liquidity was burned
   owner: Bytes @index
   # txn origin
@@ -244,9 +244,9 @@ type Burn {
   # derived amount based on available prices of tokens
   amountUSD: BigDecimal
   # lower tick of position
-  tickLower: BigInt!
+  tickLower: BigInt! @index
   # upper tick of position
-  tickUpper: BigInt!
+  tickUpper: BigInt! @index
   # position within the transactions
   logIndex: BigInt
 }
@@ -257,7 +257,7 @@ type Swap {
   # pointer to transaction
   transaction: Transaction!
   # timestamp of transaction
-  timestamp: BigInt!
+  timestamp: BigInt! @index
   # pool swap occured within
   pool: Pool! @index
   # allow indexing by tokens
@@ -279,7 +279,7 @@ type Swap {
   # The sqrt(price) of the pool after the swap, as a Q64.96
   sqrtPriceX96: BigInt!
   # the tick after the swap
-  tick: BigInt!
+  tick: BigInt! @index
   # index within the txn
   logIndex: BigInt
 }
@@ -290,7 +290,7 @@ type Collect {
   # pointer to txn
   transaction: Transaction!
   # timestamp of event
-  timestamp: BigInt!
+  timestamp: BigInt! @index
   # pool collect occured within
   pool: Pool! @index
   # owner of position collect was performed on
@@ -302,9 +302,9 @@ type Collect {
   # derived amount based on available prices of tokens
   amountUSD: BigDecimal
   # lower tick of position
-  tickLower: BigInt!
+  tickLower: BigInt! @index
   # uppper tick of position
-  tickUpper: BigInt!
+  tickUpper: BigInt! @index
   # index within the txn
   logIndex: BigInt
 }
@@ -374,7 +374,7 @@ type PoolHourData {
   # format: <pool address>-<timestamp>
   id: ID!
   # unix timestamp for start of hour
-  periodStartUnix: Int!
+  periodStartUnix: Int! @index
   # pointer to pool
   pool: Pool! @index
   # in range liquidity at end of period
@@ -444,7 +444,7 @@ type TokenHourData {
   # token address concatendated with date
   id: ID!
   # unix timestamp for start of hour
-  periodStartUnix: Int!
+  periodStartUnix: Int! @index
   # pointer to token
   token: Token! @index
   # volume in token units
