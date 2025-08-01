@@ -2,7 +2,6 @@
 name: uni_v3
 rollback_on_reorg: true
 unordered_multichain_mode: true
-
 contracts:
   - name: UniswapV3Factory
     handler: src/EventHandlers.ts
@@ -55,3 +54,51 @@ networks:
   #     - name: UniswapV3Factory
   #       address: 0x1F98431c8aD98523631AE4a59f267346ea31F984
   #     - name: UniswapV3Pool
+# # - id: 8453 # base
+# #   start_block: 0
+# #   contracts:
+# #   - name: UniswapV3Factory
+# #     address: 0x33128a8fc17869897dce68ed026d694621f6fdfd
+# #   - name: UniswapV3Pool
+# - id: 137 # polygon
+#   start_block: 0
+#   contracts:
+#   - name: UniswapV3Factory
+#     address: 0x1F98431c8aD98523631AE4a59f267346ea31F984
+#   - name: UniswapV3Pool
+# - id: 56 # bsc
+#   start_block: 0
+#   contracts:
+#   - name: UniswapV3Factory
+#     address: 0xdb1d10011ad0ff90774d0c6bb92e5c5c8b4461f7
+#   - name: UniswapV3Pool
+# - id: 43114 # avalanche
+#   start_block: 0
+#   contracts:
+#   - name: UniswapV3Factory
+#     address: 0x740b1c1de25031C31FF4fC9A62f554A55cdC1baD
+#   - name: UniswapV3Pool
+# - id: 81457 # blast
+#   start_block: 0
+#   contracts:
+#   - name: UniswapV3Factory
+#     address: 0x792edade80af5fc680d96a2ed80a44247d2cf6fd
+#   - name: UniswapV3Pool
+# # - id: 7777777 # Zora
+# #   start_block: 0
+# #   contracts:
+# #   - name: UniswapV3Factory
+# #     address: 0x7145f8aeef1f6510e92164038e1b6f8cb2c42cbb
+# #   - name: UniswapV3Pool
+# # - id: 480 # World // don't have a hypersync instance for world chain
+# #   start_block: 0
+# #   contracts:
+# #   - name: UniswapV3Factory
+# #     address: 0x7a5028bda40e7b173c278c5342087826455ea25a
+# #   - name: UniswapV3Pool
+# - id: 130 # Uni
+#   start_block: 0
+#   contracts:
+#   - name: UniswapV3Factory
+#     address: 0x1f98400000000000000000000000000000000003
+#   - name: UniswapV3Pool

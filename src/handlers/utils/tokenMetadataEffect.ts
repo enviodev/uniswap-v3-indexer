@@ -1,8 +1,5 @@
 import { experimental_createEffect, S } from "envio";
 import { createPublicClient, http, getContract, type PublicClient } from "viem";
-import { existsSync, mkdirSync } from "fs";
-import { readFile, writeFile } from "fs/promises";
-import { join } from "path";
 import { ADDRESS_ZERO } from "./constants";
 import { getChainConfig } from "./chains";
 import * as dotenv from "dotenv";
@@ -13,8 +10,7 @@ const ERC20_ABI = [
   {
     inputs: [],
     name: "name",
-    outputs: [{ type: "string" }],
-    stateMutability: "view",
+    outputs: [{ type: "string" }], stateMutability: "view",
     type: "function",
   },
   {
@@ -47,86 +43,37 @@ const ERC20_ABI = [
   },
 ] as const;
 
-// Create .cache directory if it doesn't exist
-const CACHE_DIR = join(__dirname, "../../../.cache");
-if (!existsSync(CACHE_DIR)) {
-  mkdirSync(CACHE_DIR, { recursive: true });
-}
-
-// Function to get cache path for a specific chain
-const getCachePath = (chainId: number): string => {
-  return join(CACHE_DIR, `tokenMetadata_${chainId}.json`);
-};
-
-// Cache of metadata per chainId
-const metadataCaches: Record<number, Record<string, any>> = {};
-
-// Load cache for a specific chain
-const loadCache = async (chainId: number): Promise<Record<string, any>> => {
-  if (!metadataCaches[chainId]) {
-    const cachePath = getCachePath(chainId);
-    if (existsSync(cachePath)) {
-      try {
-        metadataCaches[chainId] = JSON.parse(await readFile(cachePath, "utf8"));
-      } catch (e) {
-        console.error(
-          `Error loading token metadata cache for chain ${chainId}:`,
-          e
-        );
-        metadataCaches[chainId] = {};
-      }
-    } else {
-      metadataCaches[chainId] = {};
-    }
-  }
-  return metadataCaches[chainId];
-};
-
-// Save cache for a specific chain
-const saveCache = async (chainId: number): Promise<void> => {
-  const cachePath = getCachePath(chainId);
-  try {
-    await writeFile(
-      cachePath,
-      JSON.stringify(metadataCaches[chainId], null, 2)
-    );
-  } catch (e) {
-    console.error(`Error saving token metadata cache for chain ${chainId}:`, e);
-  }
-};
-
-// Helper function to get RPC URL for a chain
 const getRpcUrl = (chainId: number): string => {
   switch (chainId) {
     case 1:
-      return process.env.MAINNET_RPC_URL || "https://eth.drpc.org";
+      return process.env.ENVIO_MAINNET_RPC_URL || "https://eth.drpc.org";
     case 42161:
-      return process.env.ARBITRUM_RPC_URL || "https://arbitrum.drpc.org";
+      return process.env.ENVIO_ARBITRUM_RPC_URL || "https://arbitrum.drpc.org";
     case 10:
-      return process.env.OPTIMISM_RPC_URL || "https://optimism.drpc.org";
+      return process.env.ENVIO_OPTIMISM_RPC_URL || "https://optimism.drpc.org";
     case 8453:
-      return process.env.BASE_RPC_URL || "https://base.drpc.org";
+      return process.env.ENVIO_BASE_RPC_URL || "https://base.drpc.org";
     case 137:
-      return process.env.POLYGON_RPC_URL || "https://polygon.drpc.org";
+      return process.env.ENVIO_POLYGON_RPC_URL || "https://polygon.drpc.org";
     case 43114:
-      return process.env.AVALANCHE_RPC_URL || "https://avalanche.drpc.org";
+      return process.env.ENVIO_AVALANCHE_RPC_URL || "https://avalanche.drpc.org";
     case 56:
-      return process.env.BSC_RPC_URL || "https://bsc.drpc.org";
+      return process.env.ENVIO_BSC_RPC_URL || "https://bsc.drpc.org";
     case 81457:
-      return process.env.BLAST_RPC_URL || "https://blast.drpc.org";
+      return process.env.ENVIO_BLAST_RPC_URL || "https://blast.drpc.org";
     case 7777777:
-      return process.env.ZORA_RPC_URL || "https://zora.drpc.org";
+      return process.env.ENVIO_ZORA_RPC_URL || "https://zora.drpc.org";
     case 1868:
-      return process.env.SONIEUM_RPC_URL || "https://sonieum.drpc.org";
+      return process.env.ENVIO_SONIEUM_RPC_URL || "https://sonieum.drpc.org";
     case 130:
-      return process.env.UNICHAIN_RPC_URL || "https://unichain.drpc.org";
+      return process.env.ENVIO_UNICHAIN_RPC_URL || "https://unichain.drpc.org";
     case 57073:
-      return process.env.INK_RPC_URL || "https://ink.drpc.org";
+      return process.env.ENVIO_INK_RPC_URL || "https://ink.drpc.org";
+    // Add generic fallback for any chain
     default:
       throw new Error(`No RPC URL configured for chainId ${chainId}`);
   }
 };
-
 // Cache of clients per chainId
 const clients: Record<number, PublicClient> = {};
 
@@ -149,22 +96,13 @@ export const getTokenMetadataEffect = experimental_createEffect(
       symbol: S.string,
       decimals: S.number,
     },
+    cache: true,
   },
   async ({ input, context }) => {
     const { address, chainId } = input;
     // Normalize address only for comparisons, not for cache keys
     const normalizedAddress = address.toLowerCase();
 
-    // Load cache for this chain
-    const metadataCache = await loadCache(chainId);
-
-    // Check cache first - use original address (with checksum) as cache key
-    if (metadataCache[address]) {
-      context.log.info(
-        `Using cached metadata for token ${address} on chain ${chainId}`
-      );
-      return metadataCache[address];
-    }
 
     try {
       // Handle native token
@@ -176,9 +114,6 @@ export const getTokenMetadataEffect = experimental_createEffect(
           decimals: Number(chainConfig.nativeTokenDetails.decimals),
         };
 
-        // Update cache - use original address as key
-        metadataCache[address] = result;
-        await saveCache(chainId);
 
         return result;
       }
@@ -195,10 +130,6 @@ export const getTokenMetadataEffect = experimental_createEffect(
           symbol: tokenOverride.symbol,
           decimals: Number(tokenOverride.decimals),
         };
-
-        // Update cache - use original address as key
-        metadataCache[address] = result;
-        await saveCache(chainId);
 
         return result;
       }
@@ -217,7 +148,7 @@ export const getTokenMetadataEffect = experimental_createEffect(
       const contract = getContract({
         address: address as `0x${string}`,
         abi: ERC20_ABI,
-        client: clients[chainId],
+        publicClient: clients[chainId],
       });
 
       // Use Promise.all to execute all calls in parallel
@@ -275,13 +206,10 @@ export const getTokenMetadataEffect = experimental_createEffect(
         decimals: typeof decimalsResult === "number" ? decimalsResult : 18,
       };
 
-      context.log.info(
-        `Fetched metadata for token ${address} on chain ${chainId}`
-      );
+      // context.log.info(
+      //   `Fetched metadata for token ${address} on chain ${chainId}`
+      // );
 
-      // Update cache - use original address as key
-      metadataCache[address] = result;
-      await saveCache(chainId);
 
       return result;
     } catch (error) {
