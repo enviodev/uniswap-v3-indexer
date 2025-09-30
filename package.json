@@ -22,7 +22,7 @@
     "typescript": "5.2.2"
   },
   "dependencies": {
-    "envio": "2.26.0",
+    "envio": "2.29.2",
     "viem": "^2.0.0",
     "dotenv": "^16.0.0"
   },

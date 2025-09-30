@@ -2,6 +2,7 @@
 name: uni_v3
 rollback_on_reorg: true
 unordered_multichain_mode: true
+preload_handlers: true
 contracts:
   - name: UniswapV3Factory
     handler: src/EventHandlers.ts
