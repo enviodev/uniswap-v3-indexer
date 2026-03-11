@@ -4,7 +4,7 @@
 All the entities in this indexer that use valid evm addresses as their IDs are in lowercase to avoid confusion. They are also prefixed with the chain ID in the form `<chain id>-<address>` to avoid possible id clashes, as this is a multi-chain indexer.
 
 > [!NOTE]
-> The GraphQL query structure of Envio and Subgraph has differences. Check this [link](https://docs.sablier.com/api/caveats) to read more about it. Also, unlike Subgraph, tokens in this indexer doesn't have a `totalSupply` field as it cannot be updated reliably.
+> The GraphQL query structure of Envio and Subgraph has differences. Check this [link](https://docs.envio.dev/docs/HyperIndex/query-conversion) to read more about it. Also, unlike Subgraph, tokens in this indexer doesn't have a `totalSupply` field as it cannot be updated reliably.
 
 ## Sample Queries
 
