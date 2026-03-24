@@ -1,4 +1,4 @@
-import { experimental_createEffect, S } from "envio";
+import { createEffect, S } from "envio";
 import { createPublicClient, http, getContract, type PublicClient } from "viem";
 import { ADDRESS_ZERO } from "./constants";
 import { getChainConfig } from "./chains";
@@ -84,7 +84,7 @@ function sanitizeString(str: string): string {
 }
 
 // Create the token metadata effect
-export const getTokenMetadataEffect = experimental_createEffect(
+export const getTokenMetadataEffect = createEffect(
   {
     name: "getTokenMetadata",
     input: {
@@ -96,6 +96,7 @@ export const getTokenMetadataEffect = experimental_createEffect(
       symbol: S.string,
       decimals: S.number,
     },
+    rateLimit: false,
     cache: true,
   },
   async ({ input, context }) => {
@@ -205,11 +206,6 @@ export const getTokenMetadataEffect = experimental_createEffect(
         symbol: symbol || "UNKNOWN",
         decimals: typeof decimalsResult === "number" ? decimalsResult : 18,
       };
-
-      // context.log.info(
-      //   `Fetched metadata for token ${address} on chain ${chainId}`
-      // );
-
 
       return result;
     } catch (error) {

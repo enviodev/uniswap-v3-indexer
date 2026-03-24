@@ -1,7 +1,6 @@
 # yaml-language-server: $schema=./node_modules/envio/evm.schema.json
 name: uni_v3
 rollback_on_reorg: true
-unordered_multichain_mode: true
 contracts:
   - name: UniswapV3Factory
     handler: src/EventHandlers.ts
@@ -35,7 +34,7 @@ contracts:
             - gasPrice
             - from
 
-networks:
+chains:
   - id: 1 # Ethereum Mainnet
     start_block: 0
     contracts:

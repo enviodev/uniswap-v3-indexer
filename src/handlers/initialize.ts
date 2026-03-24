@@ -3,94 +3,82 @@ import { CHAIN_CONFIGS } from "./utils/chains";
 import { findNativePerToken, getNativePriceInUSD } from "./utils/pricing";
 import { updatePoolDayData, updatePoolHourData } from "./utils/intervalUpdates";
 
-UniswapV3Pool.Initialize.handlerWithLoader({
-    loader: async ({event, context}) => {
-        const poolId = `${event.chainId}-${event.srcAddress.toLowerCase()}`;
-        const pool = await context.Pool.get(poolId);
-        if (!pool) return;
+UniswapV3Pool.Initialize.handler(async ({ event, context }) => {
+    const poolId = `${event.chainId}-${event.srcAddress.toLowerCase()}`;
+    const pool = await context.Pool.get(poolId);
+    if (!pool) return;
 
-        const res = await Promise.all([
-            context.Bundle.get(event.chainId.toString()),
-            context.Token.get(pool.token0_id),
-            context.Token.get(pool.token1_id)
-        ]);
+    const [bundleRO, token0RO, token1RO] = await Promise.all([
+        context.Bundle.get(event.chainId.toString()),
+        context.Token.get(pool.token0_id),
+        context.Token.get(pool.token1_id)
+    ]);
 
-        return [pool, ...res];
-    },
+    if (!bundleRO || !token0RO || !token1RO) return;
 
-    handler: async ({event, context, loaderReturn}) => {
-        if (!loaderReturn) return;
+    const {
+        stablecoinWrappedNativePoolId,
+        stablecoinIsToken0,
+        wrappedNativeAddress,
+        stablecoinAddresses,
+        minimumNativeLocked,
+    } = CHAIN_CONFIGS[event.chainId];
 
-        for (const entity of loaderReturn) {
-            if (!entity) return;
-        }
+    // update pool sqrt price and tick
+    let updatedPool: Pool = {
+        ...pool,
+        sqrtPrice: event.params.sqrtPriceX96,
+        tick: event.params.tick
+    };
 
-        let [pool, bundle, token0, token1] = loaderReturn as [Pool, Bundle, Token, Token];
+    context.Pool.set(updatedPool);
 
-        const {
+    // update ETH price now that prices could have changed
+    let bundle: Bundle = {
+        ...bundleRO,
+        ethPriceUSD: await getNativePriceInUSD(
+            context,
+            event.chainId,
             stablecoinWrappedNativePoolId,
-            stablecoinIsToken0,
+            stablecoinIsToken0
+        )
+    };
+
+    context.Bundle.set(bundle);
+
+    updatePoolDayData(event.block.timestamp, updatedPool, context);
+    updatePoolHourData(event.block.timestamp, updatedPool, context);
+
+    // update token prices
+    const [derivedETH_t0, derivedETH_t1] = await Promise.all([
+        findNativePerToken(
+            context,
+            token0RO,
+            bundle,
             wrappedNativeAddress,
             stablecoinAddresses,
             minimumNativeLocked,
-        } = CHAIN_CONFIGS[event.chainId];
-    
-        // update pool sqrt price and tick
-        pool = {
-            ...pool,
-            sqrtPrice: event.params.sqrtPriceX96,
-            tick: event.params.tick
-        };
-        
-        context.Pool.set(pool);
-    
-        // update ETH price now that prices could have changed
-        bundle = {
-            ...bundle,
-            ethPriceUSD: await getNativePriceInUSD(
-                context, 
-                event.chainId, 
-                stablecoinWrappedNativePoolId, 
-                stablecoinIsToken0
-            )
-        };
-    
-        context.Bundle.set(bundle);
-    
-        updatePoolDayData(event.block.timestamp, pool, context);
-        updatePoolHourData(event.block.timestamp, pool, context);
-    
-        // update token prices
-        const [derivedETH_t0, derivedETH_t1] = await Promise.all([
-            findNativePerToken(
-                context,
-                token0,
-                bundle,
-                wrappedNativeAddress,
-                stablecoinAddresses,
-                minimumNativeLocked,
-            ),
-            findNativePerToken(
-                context,
-                token1,
-                bundle,
-                wrappedNativeAddress,
-                stablecoinAddresses,
-                minimumNativeLocked,
-            )
-        ]);
+        ),
+        findNativePerToken(
+            context,
+            token1RO,
+            bundle,
+            wrappedNativeAddress,
+            stablecoinAddresses,
+            minimumNativeLocked,
+        )
+    ]);
 
-        token0 = {
-            ...token0,
-            derivedETH: derivedETH_t0
-        };
+    const token0: Token = {
+        ...token0RO,
+        derivedETH: derivedETH_t0
+    };
 
-        token1 = {
-            ...token1,
-            derivedETH: derivedETH_t1
-        };
+    const token1: Token = {
+        ...token1RO,
+        derivedETH: derivedETH_t1
+    };
 
-        context.Token.set(token0);
-        context.Token.set(token1);
-    }
+    context.Token.set(token0);
+    context.Token.set(token1);
 });

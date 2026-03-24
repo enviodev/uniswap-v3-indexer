@@ -8,16 +8,13 @@ UniswapV3Factory.PoolCreated.contractRegister(({ event, context }) => {
   context.addUniswapV3Pool(event.params.pool);
 });
 
-UniswapV3Factory.PoolCreated.handlerWithLoader({
-  loader: async ({ event, context }) => {
-    const { factoryAddress } = CHAIN_CONFIGS[event.chainId];
-    const { token0Address, token1Address } = {
-      token0Address: event.params.token0,
-      token1Address: event.params.token1,
-    };
+UniswapV3Factory.PoolCreated.handler(async ({ event, context }) => {
+    const { factoryAddress, poolsToSkip, whitelistTokens } =
+      CHAIN_CONFIGS[event.chainId];
+    const token0Address = event.params.token0;
+    const token1Address = event.params.token1;
 
-    // Fetch token metadata using the effect API
-    // This will automatically batch similar calls
+    // Fetch all data (preload optimization handles batching)
     const [factory, token0RO, token1RO, token0Metadata, token1Metadata] =
       await Promise.all([
         context.Factory.get(`${event.chainId}-${factoryAddress.toLowerCase()}`),
@@ -33,42 +30,17 @@ UniswapV3Factory.PoolCreated.handlerWithLoader({
         }),
       ]);
 
-    return {
-      factory,
-      token0RO,
-      token1RO,
-      token0Metadata,
-      token1Metadata,
-      token0Address,
-      token1Address,
-    };
-  },
-
-  handler: async ({ event, context, loaderReturn }) => {
-    const {
-      factory: factoryRO,
-      token0RO,
-      token1RO,
-      token0Metadata,
-      token1Metadata,
-      token0Address,
-      token1Address,
-    } = loaderReturn;
-
-    const { factoryAddress, poolsToSkip, whitelistTokens } =
-      CHAIN_CONFIGS[event.chainId];
-
     // temp fix
     if (isAddressInList(event.params.pool, poolsToSkip)) {
       return;
     }
 
-    let factory;
+    let factoryEntity;
 
-    if (factoryRO) {
-      factory = { ...factoryRO };
+    if (factory) {
+      factoryEntity = { ...factory };
     } else {
-      factory = {
+      factoryEntity = {
         id: `${event.chainId}-${factoryAddress.toLowerCase()}`,
         poolCount: ZERO_BI,
         numberOfSwaps: ZERO_BI,
@@ -94,10 +66,10 @@ UniswapV3Factory.PoolCreated.handlerWithLoader({
       context.Bundle.set(bundle);
     }
 
-    factory.poolCount = factory.poolCount + ONE_BI;
+    factoryEntity.poolCount = factoryEntity.poolCount + ONE_BI;
 
-    // Create token objects using the metadata we fetched in the loader
-    const tokens = [];
+    // Create token objects using the metadata we fetched
+    const tokens: Token[] = [];
 
     // Create token0
     if (token0RO) {
@@ -179,16 +151,15 @@ UniswapV3Factory.PoolCreated.handlerWithLoader({
 
     // update white listed pools
     if (tokens[0].isWhitelisted) {
-      tokens[1].whitelistPools.push(pool.id);
+      tokens[1] = { ...tokens[1], whitelistPools: [...tokens[1].whitelistPools, pool.id] };
     }
 
     if (tokens[1].isWhitelisted) {
-      tokens[0].whitelistPools.push(pool.id);
+      tokens[0] = { ...tokens[0], whitelistPools: [...tokens[0].whitelistPools, pool.id] };
     }
 
     context.Pool.set(pool);
     context.Token.set(tokens[0]);
     context.Token.set(tokens[1]);
-    context.Factory.set(factory);
-  },
+    context.Factory.set(factoryEntity);
 });
