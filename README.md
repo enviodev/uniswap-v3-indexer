@@ -79,15 +79,14 @@ pnpm codegen
 ```
 
 ```graphql
-# Get recent swaps
+# Get whitelisted tokens
 {
-  Swap(limit: 20, order_by: {timestamp: desc}) {
+  Token(where: {isWhitelisted: {_eq: true}}) {
     id
-    pool { id }
-    amount0
-    amount1
-    amountUSD
-    origin
+    name
+    symbol
+    decimals
+    poolCount
   }
 }
 ```
@@ -102,7 +101,7 @@ pnpm codegen
 
 - [HyperIndex Docs](https://docs.envio.dev/docs/HyperIndex/overview)
 - [Subgraph to HyperIndex query conversion](https://docs.envio.dev/docs/HyperIndex/query-conversion)
-- [Migrating from a Subgraph](https://docs.envio.dev/docs/HyperIndex/migrate-from-alchemy)
+- [Migrate from The Graph to Envio](https://docs.envio.dev/docs/HyperIndex/migration-guide)
 
 ## Support
 
