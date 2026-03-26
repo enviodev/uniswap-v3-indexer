@@ -4,11 +4,14 @@
 
 A multichain Uniswap V3 subgraph migration built with [Envio HyperIndex](https://docs.envio.dev/docs/HyperIndex/overview). Migrated from The Graph subgraph to HyperIndex for faster data access and multichain support.
 
-## What This Indexes
+## What's Indexed
 
-This indexer tracks all key events from Uniswap V3 `UniswapV3Factory` and `UniswapV3Pool` contracts:
+The GraphQL API exposes pool statistics, swap history, liquidity positions, fee data, and token metadata across all active chains. You can use this to power analytics dashboards, trading interfaces, liquidity trackers, and cross-chain Uniswap V3 data aggregations.
 
-**Events indexed:**
+## Events Indexed
+
+From `UniswapV3Factory` and `UniswapV3Pool` contracts:
+
 - `PoolCreated` - new pool deployments with token pair and fee tier
 - `Initialize` - pool initialization with price and tick
 - `Mint` - liquidity additions
@@ -16,7 +19,8 @@ This indexer tracks all key events from Uniswap V3 `UniswapV3Factory` and `Unisw
 - `Collect` - fee collection
 - `Swap` - all swaps with amounts, price, and liquidity
 
-**Active chains:**
+## Active Chains
+
 Ethereum Mainnet, Optimism
 
 > Additional chains (Arbitrum, Base, Polygon, BSC, Avalanche, Blast, Unichain) are available in the config and can be enabled.
@@ -26,7 +30,7 @@ Ethereum Mainnet, Optimism
 - All entity IDs that use EVM addresses are stored in lowercase
 - IDs are prefixed with the chain ID: `<chainId>-<address>` to avoid cross-chain clashes
 - Unlike the original subgraph, tokens do not have a `totalSupply` field (cannot be updated reliably via events)
-- GraphQL query structure differs from The Graph - see the [query conversion guide](https://docs.envio.dev/docs/HyperIndex/query-conversion)
+- GraphQL query structure differs from The Graph. See the [query conversion guide](https://docs.envio.dev/docs/HyperIndex/query-conversion)
 
 ## Prerequisites
 
