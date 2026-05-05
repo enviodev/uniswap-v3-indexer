@@ -2,7 +2,7 @@ import assert from "assert";
 import { 
     Bundle, Factory, Pool, Token, TestHelpers, BigDecimal,
     UniswapDayData, PoolDayData, PoolHourData, TokenDayData, TokenHourData
-} from 'generated';
+} from "envio";
 import { ADDRESS_ZERO, ZERO_BD, ZERO_BI } from '../src/handlers/utils/constants';
 import {
     updatePoolDayData,

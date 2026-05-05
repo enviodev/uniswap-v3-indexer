@@ -2,7 +2,7 @@ import assert from "assert";
 import { safeDiv } from '../src/handlers/utils';
 import { getNativePriceInUSD, findNativePerToken } from './testUtils.test';
 import { ZERO_BD, ZERO_BI, ONE_BD, ADDRESS_ZERO } from '../src/handlers/utils/constants';
-import { TestHelpers, Pool, Bundle, BigDecimal, Token } from "generated";
+import { TestHelpers, Pool, Bundle, BigDecimal, Token } from "envio";
 import {
     createAndStoreTestPool,
     createAndStoreTestToken,

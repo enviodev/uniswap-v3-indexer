@@ -1,11 +1,11 @@
-import { UniswapV3Pool, Token, Pool, Bundle, Factory, BigDecimal, Swap } from "generated";
+import { indexer, Token, Pool, Bundle, Factory, BigDecimal, Swap } from "envio";
 import { CHAIN_CONFIGS } from "./utils/chains";
 import { ONE_BI, ZERO_BI, ZERO_BD } from './utils/constants';
 import { convertTokenToDecimal, loadTransaction, safeDiv } from './utils/index';
 import * as pricing from './utils/pricing';
 import * as intervalUpdates from './utils/intervalUpdates';
 
-UniswapV3Pool.Swap.handler(async ({ event, context }) => {
+indexer.onEvent({ contract: "UniswapV3Pool", event: "Swap" }, async ({ event, context }) => {
     const {
         factoryAddress,
         stablecoinWrappedNativePoolId,

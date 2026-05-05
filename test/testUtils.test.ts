@@ -1,7 +1,7 @@
 import { safeDiv } from '../src/handlers/utils';
 import { isAddressInList } from '../src/handlers/utils/index';
 import { ZERO_BD, ZERO_BI, ONE_BD, ADDRESS_ZERO } from '../src/handlers/utils/constants';
-import { Bundle, BigDecimal, Token } from "generated";
+import { Bundle, BigDecimal, Token } from "envio";
 
 export function getNativePriceInUSD(
     mockDb: any,

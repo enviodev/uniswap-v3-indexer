@@ -1,7 +1,7 @@
 import assert from "assert";
 import { convertTokenToDecimal } from '../src/handlers/utils';
 import { ZERO_BD, ZERO_BI } from '../src/handlers/utils/constants';
-import { TestHelpers, Pool, Bundle, Collect, Token, Factory } from "generated";
+import { TestHelpers, Pool, Bundle, Collect, Token, Factory } from "envio";
 import {
     invokePoolCreatedWithMockedEthCalls,
     TEST_CONFIG,

@@ -1,10 +1,10 @@
-import { UniswapV3Pool, Token, Pool, Bundle, Factory, Burn, Tick } from "generated";
+import { indexer, Token, Pool, Bundle, Factory, Burn, Tick } from "envio";
 import { CHAIN_CONFIGS } from "./utils/chains";
 import { convertTokenToDecimal, loadTransaction } from './utils/index';
 import { ONE_BI, ZERO_BI } from './utils/constants';
 import * as intervalUpdates from './utils/intervalUpdates';
 
-UniswapV3Pool.Burn.handler(async ({ event, context }) => {
+indexer.onEvent({ contract: "UniswapV3Pool", event: "Burn" }, async ({ event, context }) => {
     const { factoryAddress } = CHAIN_CONFIGS[event.chainId];
     const poolId = `${event.chainId}-${event.srcAddress.toLowerCase()}`;
     
@@ -98,13 +98,15 @@ UniswapV3Pool.Burn.handler(async ({ event, context }) => {
         context.Tick.set(upperTick);
     }
 
-    intervalUpdates.updateUniswapDayData(timestamp, event.chainId, factory, context);
-    intervalUpdates.updatePoolDayData(timestamp, pool, context);
-    intervalUpdates.updatePoolHourData(timestamp, pool, context);
-    intervalUpdates.updateTokenDayData(timestamp, token0, bundle, context);
-    intervalUpdates.updateTokenDayData(timestamp, token1, bundle, context);
-    intervalUpdates.updateTokenHourData(timestamp, token0, bundle, context);
-    intervalUpdates.updateTokenHourData(timestamp, token1, bundle, context);
+    await Promise.all([
+        intervalUpdates.updateUniswapDayData(timestamp, event.chainId, factory, context),
+        intervalUpdates.updatePoolDayData(timestamp, pool, context),
+        intervalUpdates.updatePoolHourData(timestamp, pool, context),
+        intervalUpdates.updateTokenDayData(timestamp, token0, bundle, context),
+        intervalUpdates.updateTokenDayData(timestamp, token1, bundle, context),
+        intervalUpdates.updateTokenHourData(timestamp, token0, bundle, context),
+        intervalUpdates.updateTokenHourData(timestamp, token1, bundle, context),
+    ]);
 
     context.Token.set(token0);
     context.Token.set(token1);

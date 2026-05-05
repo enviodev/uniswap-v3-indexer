@@ -11,7 +11,7 @@ import {
   TokenDayData,
   TokenHourData,
   UniswapDayData,
-} from 'generated';
+} from "envio";
 
 export function updateUniswapDayData(
   timestamp: number,

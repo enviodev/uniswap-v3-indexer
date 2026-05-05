@@ -1,4 +1,4 @@
-import { UniswapV3Pool, Token, Pool, Bundle, Factory } from "generated";
+import { indexer, Token, Pool, Bundle, Factory } from "envio";
 import { CHAIN_CONFIGS } from "./utils/chains";
 import { ONE_BI, ZERO_BI } from './utils/constants';
 import { convertTokenToDecimal, loadTransaction } from './utils/index';
@@ -6,7 +6,7 @@ import { getTrackedAmountUSD } from './utils/pricing';
 import * as intervalUpdates from './utils/intervalUpdates';
 
 
-UniswapV3Pool.Collect.handler(async ({ event, context }) => {
+indexer.onEvent({ contract: "UniswapV3Pool", event: "Collect" }, async ({ event, context }) => {
     const poolId = `${event.chainId}-${event.srcAddress.toLowerCase()}`;
     const poolRO = await context.Pool.get(poolId);
     if (!poolRO) return;
@@ -96,13 +96,15 @@ UniswapV3Pool.Collect.handler(async ({ event, context }) => {
         logIndex: BigInt(event.logIndex)
     };
 
-    intervalUpdates.updateUniswapDayData(timestamp, event.chainId, factory, context);
-    intervalUpdates.updatePoolDayData(timestamp, pool, context);
-    intervalUpdates.updatePoolHourData(timestamp, pool, context);
-    intervalUpdates.updateTokenDayData(timestamp, token0, bundle, context);
-    intervalUpdates.updateTokenDayData(timestamp, token1, bundle, context);
-    intervalUpdates.updateTokenHourData(timestamp, token0, bundle, context);
-    intervalUpdates.updateTokenHourData(timestamp, token1, bundle, context);
+    await Promise.all([
+        intervalUpdates.updateUniswapDayData(timestamp, event.chainId, factory, context),
+        intervalUpdates.updatePoolDayData(timestamp, pool, context),
+        intervalUpdates.updatePoolHourData(timestamp, pool, context),
+        intervalUpdates.updateTokenDayData(timestamp, token0, bundle, context),
+        intervalUpdates.updateTokenDayData(timestamp, token1, bundle, context),
+        intervalUpdates.updateTokenHourData(timestamp, token0, bundle, context),
+        intervalUpdates.updateTokenHourData(timestamp, token1, bundle, context),
+    ]);
 
     context.Token.set(token0);
     context.Token.set(token1);

@@ -1,11 +1,11 @@
-import { UniswapV3Pool, Token, Pool, Bundle, Factory, Tick, BigDecimal } from "generated";
+import { indexer, Token, Pool, Bundle, Factory, Tick, BigDecimal } from "envio";
 import { convertTokenToDecimal, loadTransaction, fastExponentiation, safeDiv } from './utils/index';
 import { ONE_BI, ZERO_BI, ONE_BD } from './utils/constants';
 import { CHAIN_CONFIGS } from "./utils/chains";
 import * as intervalUpdates from './utils/intervalUpdates';
 
 
-UniswapV3Pool.Mint.handler(async ({ event, context }) => {
+indexer.onEvent({ contract: "UniswapV3Pool", event: "Mint" }, async ({ event, context }) => {
     const { factoryAddress } = CHAIN_CONFIGS[event.chainId];
     const poolId = `${event.chainId}-${event.srcAddress.toLowerCase()}`;
     const poolRO = await context.Pool.get(poolId);
@@ -151,13 +151,15 @@ UniswapV3Pool.Mint.handler(async ({ event, context }) => {
     // TODO: Update Tick's volume, fees, and liquidity provider count. Computing these on the tick
     // level requires reimplementing some of the swapping code from v3-core.
 
-    intervalUpdates.updateUniswapDayData(timestamp, event.chainId, factory, context);
-    intervalUpdates.updatePoolDayData(timestamp, pool, context);
-    intervalUpdates.updatePoolHourData(timestamp, pool, context);
-    intervalUpdates.updateTokenDayData(timestamp, token0, bundle, context);
-    intervalUpdates.updateTokenDayData(timestamp, token1, bundle, context);
-    intervalUpdates.updateTokenHourData(timestamp, token0, bundle, context);
-    intervalUpdates.updateTokenHourData(timestamp, token1, bundle, context);
+    await Promise.all([
+        intervalUpdates.updateUniswapDayData(timestamp, event.chainId, factory, context),
+        intervalUpdates.updatePoolDayData(timestamp, pool, context),
+        intervalUpdates.updatePoolHourData(timestamp, pool, context),
+        intervalUpdates.updateTokenDayData(timestamp, token0, bundle, context),
+        intervalUpdates.updateTokenDayData(timestamp, token1, bundle, context),
+        intervalUpdates.updateTokenHourData(timestamp, token0, bundle, context),
+        intervalUpdates.updateTokenHourData(timestamp, token1, bundle, context),
+    ]);
 
     context.Token.set(token0);
     context.Token.set(token1);

@@ -1,4 +1,4 @@
-import { Bundle, Token, BigDecimal, handlerContext } from "generated";
+import { Bundle, Token, BigDecimal } from "envio";
 import { ADDRESS_ZERO, ONE_BD, ZERO_BD, ZERO_BI } from "./constants";
 import { exponentToBigDecimal, safeDiv, isAddressInList } from "./index";
 import { NativeTokenDetails } from "./nativeTokenDetails";
@@ -25,7 +25,7 @@ export function sqrtPriceX96ToTokenPrices(
 }
 
 export async function getNativePriceInUSD(
-  context: handlerContext,
+  context: any,
   chainId: number,
   stablecoinWrappedNativePoolId: string,
   stablecoinIsToken0: boolean
@@ -46,7 +46,7 @@ export async function getNativePriceInUSD(
  * @todo update to be derived ETH (add stablecoin estimates)
  **/
 export async function findNativePerToken(
-  context: handlerContext,
+  context: any,
   token: Token,
   bundle: Bundle,
   wrappedNativeAddress: string,

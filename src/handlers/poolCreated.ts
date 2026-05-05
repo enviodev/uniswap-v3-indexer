@@ -1,14 +1,19 @@
-import { UniswapV3Factory, Bundle, Token, Pool } from "generated";
+import { indexer, Bundle, Token, Pool } from "envio";
 import { ZERO_BD, ZERO_BI, ONE_BI, ADDRESS_ZERO } from "./utils/constants";
 import { CHAIN_CONFIGS } from "./utils/chains";
 import { isAddressInList } from "./utils/index";
 import { getTokenMetadataEffect } from "./utils/tokenMetadataEffect";
 
-UniswapV3Factory.PoolCreated.contractRegister(({ event, context }) => {
-  context.addUniswapV3Pool(event.params.pool);
-});
+indexer.contractRegister(
+  { contract: "UniswapV3Factory", event: "PoolCreated" },
+  async ({ event, context }) => {
+    context.chain.UniswapV3Pool.add(event.params.pool);
+  }
+);
 
-UniswapV3Factory.PoolCreated.handler(async ({ event, context }) => {
+indexer.onEvent(
+  { contract: "UniswapV3Factory", event: "PoolCreated" },
+  async ({ event, context }) => {
   const { factoryAddress, poolsToSkip, whitelistTokens } = CHAIN_CONFIGS[event.chainId];
   const { token0Address, token1Address } = {
     token0Address: event.params.token0,
@@ -153,11 +158,11 @@ UniswapV3Factory.PoolCreated.handler(async ({ event, context }) => {
 
   // update white listed pools
   if (tokens[0].isWhitelisted) {
-    tokens[1].whitelistPools.push(pool.id);
+    tokens[1].whitelistPools = [...tokens[1].whitelistPools, pool.id];
   }
 
   if (tokens[1].isWhitelisted) {
-    tokens[0].whitelistPools.push(pool.id);
+    tokens[0].whitelistPools = [...tokens[0].whitelistPools, pool.id];
   }
 
   context.Pool.set(pool);

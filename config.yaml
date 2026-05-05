@@ -1,15 +1,11 @@
 # yaml-language-server: $schema=./node_modules/envio/evm.schema.json
 name: uni_v3
 rollback_on_reorg: true
-unordered_multichain_mode: true
-preload_handlers: true
 contracts:
   - name: UniswapV3Factory
-    handler: src/EventHandlers.ts
     events:
       - event: PoolCreated(address indexed token0, address indexed token1, uint24 indexed fee, int24 tickSpacing, address pool)
   - name: UniswapV3Pool
-    handler: src/EventHandlers.ts
     events:
       - event: Initialize(uint160 sqrtPriceX96, int24 tick)
       - event: Collect(address indexed owner, address recipient, int24 indexed tickLower, int24 indexed tickUpper, uint128 amount0, uint128 amount1)
@@ -36,7 +32,7 @@ contracts:
             - gasPrice
             - from
 
-networks:
+chains:
   - id: 1 # Ethereum Mainnet
     start_block: 0
     contracts:

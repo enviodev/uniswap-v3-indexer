@@ -1,11 +1,15 @@
 {
   "name": "uni_v3",
   "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "clean": "tsc --clean",
     "build": "tsc --build",
     "watch": "tsc --watch",
-    "mocha": "ts-mocha test/**/*.ts",
+    "mocha": "tsc --noEmit && NODE_OPTIONS='--no-warnings --import tsx' mocha --exit test/**/*.ts",
     "codegen": "envio codegen",
     "dev": "envio dev",
     "test": "pnpm mocha",
@@ -14,19 +18,15 @@
   "devDependencies": {
     "@types/chai": "^5.2.2",
     "@types/mocha": "^10.0.10",
-    "@types/node": "^24.6.0",
+    "@types/node": "^24.12.2",
     "chai": "^6.2.0",
     "mocha": "^11.7.3",
-    "ts-mocha": "^11.1.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
   },
   "dependencies": {
-    "envio": "^2.31.0",
+    "envio": "3.0.0-rc.0",
     "viem": "^2.37.9",
     "dotenv": "^17.2.3"
-  },
-  "optionalDependencies": {
-    "generated": "./generated"
   }
 }
