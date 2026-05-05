@@ -1,9 +1,9 @@
-import { UniswapV3Pool, Token, Pool, Bundle } from "generated";
+import { indexer, Token, Pool, Bundle } from "envio";
 import { CHAIN_CONFIGS } from "./utils/chains";
 import { findNativePerToken, getNativePriceInUSD } from "./utils/pricing";
 import { updatePoolDayData, updatePoolHourData } from "./utils/intervalUpdates";
 
-UniswapV3Pool.Initialize.handler(async ({event, context}) => {
+indexer.onEvent({ contract: "UniswapV3Pool", event: "Initialize" }, async ({event, context}) => {
     const poolId = `${event.chainId}-${event.srcAddress.toLowerCase()}`;
     let pool = await context.Pool.get(poolId);
     if (!pool) return;
@@ -46,8 +46,10 @@ UniswapV3Pool.Initialize.handler(async ({event, context}) => {
 
     context.Bundle.set(bundle);
 
-    updatePoolDayData(event.block.timestamp, pool, context);
-    updatePoolHourData(event.block.timestamp, pool, context);
+    await Promise.all([
+        updatePoolDayData(event.block.timestamp, pool, context),
+        updatePoolHourData(event.block.timestamp, pool, context),
+    ]);
 
     // update token prices
     const [derivedETH_t0, derivedETH_t1] = await Promise.all([

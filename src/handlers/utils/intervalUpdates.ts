@@ -2,7 +2,6 @@ import { ONE_BI, ZERO_BD, ZERO_BI } from './constants';
 import {
     Bundle,
     Factory,
-    handlerContext,
     Pool,
     PoolDayData,
     PoolHourData,
@@ -10,13 +9,13 @@ import {
     TokenDayData,
     TokenHourData,
     UniswapDayData,
-} from 'generated';
+} from 'envio';
 
 export async function updateUniswapDayData(
     timestamp: number,
     chainId: number,
     factory: Factory,
-    context: handlerContext
+    context: any
 ): Promise<UniswapDayData> {
     const dayNum = Math.floor(timestamp / 86400); // rounded
     const dayStartTimestamp = dayNum * 86400;
@@ -44,7 +43,7 @@ export async function updateUniswapDayData(
 export async function updatePoolDayData(
     timestamp: number, 
     pool: Pool, 
-    context: handlerContext
+    context: any
 ): Promise<PoolDayData> {
     const dayID = Math.floor(timestamp / 86400);
     const dayStartTimestamp = dayID * 86400;
@@ -98,7 +97,7 @@ export async function updatePoolDayData(
 export async function updatePoolHourData(
     timestamp: number, 
     pool: Pool,
-    context: handlerContext
+    context: any
 ): Promise<PoolHourData> {
     const hourIndex = Math.floor(timestamp / 3600); // get unique hour within unix history
     const hourStartUnix = hourIndex * 3600; // want the rounded effect
@@ -158,7 +157,7 @@ export async function updateTokenDayData(
     timestamp: number, 
     token: Token, 
     bundle: Bundle,
-    context: handlerContext
+    context: any
 ): Promise<TokenDayData> {
     const dayID = Math.floor(timestamp / 86400);
     const dayStartTimestamp = dayID * 86400;
@@ -206,7 +205,7 @@ export async function updateTokenHourData(
     timestamp: number,
     token: Token,
     bundle: Bundle,
-    context: handlerContext
+    context: any
 ): Promise<TokenHourData> {
     const hourIndex = Math.floor(timestamp / 3600); // get unique hour within unix history
     const hourStartUnix = hourIndex * 3600; // want the rounded effect

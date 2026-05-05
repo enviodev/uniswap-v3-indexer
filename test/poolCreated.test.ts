@@ -1,5 +1,5 @@
 import assert from "assert";
-import { TestHelpers, Pool, Token, Factory, Bundle } from 'generated';
+import { TestHelpers, Pool, Token, Factory, Bundle } from "envio";
 import { ZERO_BD, ZERO_BI, ADDRESS_ZERO } from '../src/handlers/utils/constants';
 import { getTokenMetadata } from '../src/handlers/utils/tokenMetadata';
 import {

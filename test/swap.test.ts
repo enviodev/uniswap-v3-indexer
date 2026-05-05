@@ -2,7 +2,7 @@ import assert from "assert";
 import { 
     Bundle, Token, TestHelpers, BigDecimal, Factory, Pool, Swap, 
     UniswapDayData, PoolDayData, PoolHourData, TokenDayData, TokenHourData
-} from 'generated';
+} from "envio";
 import { convertTokenToDecimal, safeDiv } from '../src/handlers/utils';
 import { ZERO_BD } from '../src/handlers/utils/constants';
 import {

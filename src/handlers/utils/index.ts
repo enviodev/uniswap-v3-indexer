@@ -1,4 +1,4 @@
-import { BigDecimal, handlerContext, Transaction } from "generated";
+import { BigDecimal, Transaction } from "envio";
 import { ZERO_BD, ONE_BD, ZERO_BI, ONE_BI } from "./constants";
 
 export function isAddressInList(address: string, list: string[]): boolean {
@@ -94,7 +94,7 @@ export async function loadTransaction(
     blockNumber: number,
     timestamp: number,
     gasPrice: bigint,
-    context: handlerContext
+    context: any
 ): Promise<Transaction> {
     const txRO = await context.Transaction.get(txHash);
     const transaction = txRO ? {...txRO} :

@@ -1,4 +1,4 @@
-import { BigDecimal } from "generated";
+import { BigDecimal } from "envio";
 
 export const ADDRESS_ZERO = '0x0000000000000000000000000000000000000000'
 

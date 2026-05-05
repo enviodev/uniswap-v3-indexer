@@ -41,11 +41,20 @@ Ethereum Mainnet, Optimism
 ## Quick Start
 
 ```bash
+# Copy environment template and set your HyperSync token
+cp .env.example .env
+
 # Install dependencies
 pnpm install
 
 # Run locally (starts indexer + GraphQL API at http://localhost:8080)
 pnpm dev
+```
+
+If you're migrating from Envio v2, run a one-time reset on first v3 start:
+
+```bash
+pnpm dev -r
 ```
 
 The GraphQL Playground is available at [http://localhost:8080](http://localhost:8080). Local password: `testing`.

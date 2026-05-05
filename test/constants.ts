@@ -1,4 +1,4 @@
-import { TestHelpers, Pool, BigDecimal, Token } from 'generated';
+import { TestHelpers, Pool, BigDecimal, Token } from "envio";
 import { ChainConfig } from '../src/handlers/utils/chains';
 import { ZERO_BD, ZERO_BI } from '../src/handlers/utils/constants';
 import { isAddressInList } from '../src/handlers/utils/index';

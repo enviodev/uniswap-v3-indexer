@@ -1,5 +1,5 @@
 import assert from "assert";
-import { TestHelpers, Bundle, Burn, Pool, BigDecimal, Factory, Tick, Token } from 'generated';
+import { TestHelpers, Bundle, Burn, Pool, BigDecimal, Factory, Tick, Token } from "envio";
 import { convertTokenToDecimal, fastExponentiation, safeDiv } from '../src/handlers/utils';
 import { ZERO_BD, ONE_BD, ZERO_BI, ONE_BI } from '../src/handlers/utils/constants';
 import {

@@ -1,7 +1,7 @@
 import assert from "assert";
 import { convertTokenToDecimal, fastExponentiation, safeDiv } from '../src/handlers/utils';
 import { ONE_BD } from '../src/handlers/utils/constants';
-import { TestHelpers, Pool, Bundle, BigDecimal, Mint, Token, Factory, Tick } from "generated";
+import { TestHelpers, Pool, Bundle, BigDecimal, Mint, Token, Factory, Tick } from "envio";
 import {
     invokePoolCreatedWithMockedEthCalls,
     TEST_CONFIG,
