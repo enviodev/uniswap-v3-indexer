@@ -194,6 +194,12 @@ export const CHAIN_CONFIGS: { [chainId: number]: ChainConfig } = {
     ],
     tokenOverrides: [
       {
+        address: "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", // REFERENCE_TOKEN
+        symbol: "WETH",
+        name: "Wrapped Ethereum",
+        decimals: BigInt(18),
+      },
+      {
         address: "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
         symbol: "USDC",
         name: "USD Coin",
