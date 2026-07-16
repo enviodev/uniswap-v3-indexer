@@ -1,5 +1,5 @@
 import { BigDecimal, Transaction } from "envio";
-import { ZERO_BD, ONE_BD, ZERO_BI, ONE_BI } from "./constants";
+import { ZERO_BD, ONE_BD, ZERO_BI } from "./constants";
 
 export function isAddressInList(address: string, list: string[]): boolean {
     address = address.toLowerCase();
@@ -9,7 +9,7 @@ export function isAddressInList(address: string, list: string[]): boolean {
             return true;
         }
     }
-    
+
     return false;
 }
 
@@ -28,12 +28,25 @@ export function safeDiv(amount0: BigDecimal, amount1: BigDecimal): BigDecimal {
     return amount1.eq(ZERO_BD) ? ZERO_BD : amount0.div(amount1);
 }
 
+// Cap BigDecimal precision at 40 decimal places. Postgres btree indexes have a
+// hard 2704-byte-per-row limit, so an unbounded BigDecimal (e.g. from a runaway
+// derivedETH on a manipulated oracle pool) can fail INSERTs on indexed numeric
+// columns. Apply at indexed-column writes and at price-source values that
+// propagate downstream (derivedETH, ethPriceUSD).
+export function sanitizeBD(value: BigDecimal): BigDecimal {
+    return new BigDecimal(value.toFixed(40));
+}
+
 /**
  * Implements exponentiation by squaring
  * (see https://en.wikipedia.org/wiki/Exponentiation_by_squaring )
  * to minimize the number of BigDecimal operations and their impact on performance.
+ *
+ * Caps intermediate precision at 40 digits to prevent BigDecimal digit
+ * explosion during squaring steps (without capping, the ~20 squaring levels
+ * for extreme ticks would produce megabyte-scale intermediates).
  */
-export function _fastExponentiation(
+export function fastExponentiation(
     value: BigDecimal,
     power: bigint
 ): BigDecimal {
@@ -42,11 +55,11 @@ export function _fastExponentiation(
         return safeDiv(ONE_BD, result);
     }
 
-    if (power === ZERO_BI) {
+    if (power === 0n) {
         return ONE_BD;
     }
 
-    if (power === ONE_BI) {
+    if (power === 1n) {
         return value;
     }
 
@@ -54,23 +67,15 @@ export function _fastExponentiation(
     const halfResult = fastExponentiation(value, halfPower);
 
     // Use the fact that x ^ (2n) = (x ^ n) * (x ^ n) and we can compute (x ^ n) only once.
-    let result = halfResult.times(halfResult);
+    // Cap precision after each multiplication to prevent digit explosion.
+    let result = new BigDecimal(halfResult.times(halfResult).toFixed(40));
 
     // For odd powers, x ^ (2n + 1) = (x ^ 2n) * x
-    if (power % 2n === ONE_BI) {
-        result = result.times(value);
+    if (power % 2n === 1n) {
+        result = new BigDecimal(result.times(value).toFixed(40));
     }
 
     return result;
-}
-
-// For fast testing. Not to be used in production.
-export function fastExponentiation(
-    value: BigDecimal,
-    power: bigint
-): BigDecimal {
-    const res = parseFloat(value.toString()) ** parseInt(power.toString());
-    return new BigDecimal(res.toString());
 }
 
 export const NULL_ETH_HEX_STRING =
@@ -86,11 +91,11 @@ export function convertTokenToDecimal(
 ): BigDecimal {
     const val = new BigDecimal(tokenAmount.toString());
     return (exchangeDecimals === ZERO_BI) ? val :
-            val.div(exponentToBigDecimal(exchangeDecimals)).dp(4);
+            val.div(exponentToBigDecimal(exchangeDecimals));
 }
 
 export async function loadTransaction(
-    txHash: string, 
+    txHash: string,
     blockNumber: number,
     timestamp: number,
     gasPrice: bigint,

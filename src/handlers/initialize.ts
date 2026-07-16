@@ -1,5 +1,6 @@
-import { indexer, Token, Pool, Bundle } from "envio";
+import { indexer, Token } from "envio";
 import { CHAIN_CONFIGS } from "./utils/chains";
+import { sanitizeBD } from "./utils/index";
 import { findNativePerToken, getNativePriceInUSD } from "./utils/pricing";
 import { updatePoolDayData, updatePoolHourData } from "./utils/intervalUpdates";
 
@@ -18,7 +19,6 @@ indexer.onEvent({ contract: "UniswapV3Pool", event: "Initialize" }, async ({even
 
     const {
         stablecoinWrappedNativePoolId,
-        stablecoinIsToken0,
         wrappedNativeAddress,
         stablecoinAddresses,
         minimumNativeLocked,
@@ -30,18 +30,18 @@ indexer.onEvent({ contract: "UniswapV3Pool", event: "Initialize" }, async ({even
         sqrtPrice: event.params.sqrtPriceX96,
         tick: event.params.tick
     };
-    
+
     context.Pool.set(pool);
 
     // update ETH price now that prices could have changed
     bundle = {
         ...bundle,
-        ethPriceUSD: await getNativePriceInUSD(
-            context, 
-            event.chainId, 
-            stablecoinWrappedNativePoolId, 
-            stablecoinIsToken0
-        )
+        ethPriceUSD: sanitizeBD(await getNativePriceInUSD(
+            context,
+            event.chainId,
+            stablecoinWrappedNativePoolId,
+            wrappedNativeAddress
+        ))
     };
 
     context.Bundle.set(bundle);
@@ -55,7 +55,7 @@ indexer.onEvent({ contract: "UniswapV3Pool", event: "Initialize" }, async ({even
     const [derivedETH_t0, derivedETH_t1] = await Promise.all([
         findNativePerToken(
             context,
-            token0,
+            token0 as Token,
             bundle,
             wrappedNativeAddress,
             stablecoinAddresses,
@@ -63,7 +63,7 @@ indexer.onEvent({ contract: "UniswapV3Pool", event: "Initialize" }, async ({even
         ),
         findNativePerToken(
             context,
-            token1,
+            token1 as Token,
             bundle,
             wrappedNativeAddress,
             stablecoinAddresses,
@@ -73,12 +73,12 @@ indexer.onEvent({ contract: "UniswapV3Pool", event: "Initialize" }, async ({even
 
     token0 = {
         ...token0,
-        derivedETH: derivedETH_t0
+        derivedETH: sanitizeBD(derivedETH_t0)
     };
 
     token1 = {
         ...token1,
-        derivedETH: derivedETH_t1
+        derivedETH: sanitizeBD(derivedETH_t1)
     };
 
     context.Token.set(token0);

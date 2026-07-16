@@ -11,6 +11,15 @@ import {
     UniswapDayData,
 } from 'envio';
 
+/**
+ * Tracks global aggregate data over daily windows.
+ *
+ * Note: unlike the subgraph (which re-loads the factory from the store and
+ * therefore sees the pre-event state until the handler saves), these helpers
+ * receive the handler's already-updated in-memory entities. Interval
+ * snapshots therefore reflect the event that triggered them immediately
+ * instead of lagging by one event — see README "known deviations".
+ */
 export async function updateUniswapDayData(
     timestamp: number,
     chainId: number,
@@ -20,8 +29,8 @@ export async function updateUniswapDayData(
     const dayNum = Math.floor(timestamp / 86400); // rounded
     const dayStartTimestamp = dayNum * 86400;
     const dayID = `${chainId}-${dayNum}`;
-    let uniswapDayDataRO = await context.UniswapDayData.get(dayID);
-    let uniswapDayData = uniswapDayDataRO ? {...uniswapDayDataRO} :
+    const uniswapDayDataRO = await context.UniswapDayData.get(dayID);
+    const uniswapDayData = uniswapDayDataRO ? {...uniswapDayDataRO} :
                         {
                           id: dayID,
                           date: dayStartTimestamp,
@@ -37,12 +46,12 @@ export async function updateUniswapDayData(
     uniswapDayData.txCount = factory.txCount;
 
     context.UniswapDayData.set(uniswapDayData);
-    return uniswapDayData;
+    return uniswapDayData as UniswapDayData;
 }
 
 export async function updatePoolDayData(
-    timestamp: number, 
-    pool: Pool, 
+    timestamp: number,
+    pool: Pool,
     context: any
 ): Promise<PoolDayData> {
     const dayID = Math.floor(timestamp / 86400);
@@ -60,7 +69,7 @@ export async function updatePoolDayData(
                         volumeUSD: ZERO_BD,
                         feesUSD: ZERO_BD,
                         txCount: ZERO_BI,
-                        openingPrice: pool.token0Price,
+                        open: pool.token0Price,
                         high: pool.token0Price,
                         low: pool.token0Price,
                         close: pool.token0Price,
@@ -76,7 +85,7 @@ export async function updatePoolDayData(
     if (pool.token0Price.gt(poolDayData.high)) {
         poolDayData.high = pool.token0Price;
     }
-    
+
     if (pool.token0Price.lt(poolDayData.low)) {
         poolDayData.low = pool.token0Price;
     }
@@ -89,47 +98,43 @@ export async function updatePoolDayData(
     poolDayData.tick = pool.tick;
     poolDayData.tvlUSD = pool.totalValueLockedUSD;
     poolDayData.txCount = poolDayData.txCount + ONE_BI;
-    
+
     context.PoolDayData.set(poolDayData);
     return poolDayData as PoolDayData;
 }
 
 export async function updatePoolHourData(
-    timestamp: number, 
+    timestamp: number,
     pool: Pool,
     context: any
 ): Promise<PoolHourData> {
     const hourIndex = Math.floor(timestamp / 3600); // get unique hour within unix history
     const hourStartUnix = hourIndex * 3600; // want the rounded effect
     const hourPoolID = `${pool.id}-${hourIndex}`;
-    let temp = await context.PoolHourData.get(hourPoolID);
+    const poolHourDataRO = await context.PoolHourData.get(hourPoolID);
+    const poolHourData = poolHourDataRO ? {...poolHourDataRO} :
+                      {
+                        id: hourPoolID,
+                        periodStartUnix: hourStartUnix,
+                        pool_id: pool.id,
+                        // things that dont get initialized always
+                        volumeToken0: ZERO_BD,
+                        volumeToken1: ZERO_BD,
+                        volumeUSD: ZERO_BD,
+                        txCount: ZERO_BI,
+                        feesUSD: ZERO_BD,
+                        open: pool.token0Price,
+                        high: pool.token0Price,
+                        low: pool.token0Price,
+                        close: pool.token0Price,
 
-    if (!temp) {
-        temp = {
-            id: hourPoolID,
-            periodStartUnix: hourStartUnix,
-            pool_id: pool.id,
-            // things that dont get initialized always
-            volumeToken0: ZERO_BD,
-            volumeToken1: ZERO_BD,
-            volumeUSD: ZERO_BD,
-            txCount: ZERO_BI,
-            feesUSD: ZERO_BD,
-            openingPrice: pool.token0Price,
-            high: pool.token0Price,
-            low: pool.token0Price,
-            close: pool.token0Price,
-
-            liquidity: ZERO_BI,
-            sqrtPrice: ZERO_BI,
-            token0Price: ZERO_BD,
-            token1Price: ZERO_BD,
-            tick: undefined,
-            tvlUSD: ZERO_BD,
-        };
-    }
-    
-    const poolHourData = {...temp};
+                        liquidity: pool.liquidity,
+                        sqrtPrice: pool.sqrtPrice,
+                        token0Price: pool.token0Price,
+                        token1Price: pool.token1Price,
+                        tick: pool.tick,
+                        tvlUSD: pool.totalValueLockedUSD,
+                      };
 
     if (pool.token0Price.gt(poolHourData.high)) {
         poolHourData.high = pool.token0Price;
@@ -149,13 +154,12 @@ export async function updatePoolHourData(
     poolHourData.txCount = poolHourData.txCount + ONE_BI;
 
     context.PoolHourData.set(poolHourData);
-    // test
     return poolHourData as PoolHourData;
 }
 
 export async function updateTokenDayData(
-    timestamp: number, 
-    token: Token, 
+    timestamp: number,
+    token: Token,
     bundle: Bundle,
     context: any
 ): Promise<TokenDayData> {
@@ -165,7 +169,7 @@ export async function updateTokenDayData(
     const tokenPrice = token.derivedETH.times(bundle.ethPriceUSD);
     const tokenDayDataRO = await context.TokenDayData.get(tokenDayID);
 
-    let tokenDayData = tokenDayDataRO ? {...tokenDayDataRO} :
+    const tokenDayData = tokenDayDataRO ? {...tokenDayDataRO} :
                         {
                             id: tokenDayID,
                             date: dayStartTimestamp,
@@ -179,7 +183,6 @@ export async function updateTokenDayData(
                             low: tokenPrice,
                             close: tokenPrice,
                             priceUSD: ZERO_BD,
-                            openingPrice: ZERO_BD,
                             totalValueLocked: ZERO_BD,
                             totalValueLockedUSD: ZERO_BD
                         };
@@ -226,7 +229,6 @@ export async function updateTokenHourData(
                           low: tokenPrice,
                           close: tokenPrice,
                           priceUSD: ZERO_BD,
-                          openingPrice: ZERO_BD,
                           totalValueLocked: ZERO_BD,
                           totalValueLockedUSD: ZERO_BD
                         };

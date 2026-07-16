@@ -46,6 +46,8 @@ type Token {
   name: String!
   # token decimals
   decimals: BigInt! @config(precision: 78) @index
+  # token total supply (fetched once at token creation, 0 if unavailable — matches subgraph)
+  totalSupply: BigInt!
   # is token whitelisted?
   isWhitelisted: Boolean! @index
   # volume in token units
@@ -360,7 +362,7 @@ type PoolDayData {
   # numebr of transactions during period
   txCount: BigInt!
   # opening price of token0
-  openingPrice: BigDecimal!
+  open: BigDecimal!
   # high price of token0
   high: BigDecimal!
   # low price of token0
@@ -400,7 +402,7 @@ type PoolHourData {
   # numebr of transactions during period
   txCount: BigInt!
   # opening price of token0
-  openingPrice: BigDecimal!
+  open: BigDecimal!
   # high price of token0
   high: BigDecimal!
   # low price of token0
@@ -431,7 +433,7 @@ type TokenDayData {
   # fees in USD
   feesUSD: BigDecimal!
   # opening price USD
-  openingPrice: BigDecimal!
+  open: BigDecimal!
   # high price USD
   high: BigDecimal!
   # low price USD
@@ -462,7 +464,7 @@ type TokenHourData {
   # fees in USD
   feesUSD: BigDecimal!
   # opening price USD
-  openingPrice: BigDecimal!
+  open: BigDecimal!
   # high price USD
   high: BigDecimal!
   # low price USD

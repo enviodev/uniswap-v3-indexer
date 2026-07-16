@@ -73,7 +73,7 @@ indexer.onEvent({ contract: "UniswapV3Pool", event: "Burn" }, async ({ event, co
         pool_id: pool.id,
         token0_id: pool.token0_id,
         token1_id: pool.token1_id,
-        owner: event.params.owner,
+        owner: event.params.owner.toLowerCase(),
         origin: event.transaction.from?.toLowerCase() || '',
         amount: event.params.amount,
         amount0: amount0,
@@ -89,10 +89,12 @@ indexer.onEvent({ contract: "UniswapV3Pool", event: "Burn" }, async ({ event, co
         const lowerTick = { ...lowerTickRO };
         const upperTick = { ...upperTickRO };
 
+        // exact mirror of mint: gross decreases on both ticks, net decreases
+        // on the lower tick and INCREASES on the upper tick
         lowerTick.liquidityGross = lowerTick.liquidityGross - amount;
         lowerTick.liquidityNet = lowerTick.liquidityNet - amount;
         upperTick.liquidityGross = upperTick.liquidityGross - amount;
-        upperTick.liquidityNet = upperTick.liquidityNet - amount;
+        upperTick.liquidityNet = upperTick.liquidityNet + amount;
 
         context.Tick.set(lowerTick);
         context.Tick.set(upperTick);

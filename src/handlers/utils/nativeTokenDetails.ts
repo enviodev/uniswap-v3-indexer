@@ -1,7 +1,5 @@
-export class NativeTokenDetails {
-    constructor(
-      public symbol: string,
-      public name: string,
-      public decimals: bigint
-    ) {}
-};
+export interface NativeTokenDetails {
+  symbol: string;
+  name: string;
+  decimals: bigint;
+}
