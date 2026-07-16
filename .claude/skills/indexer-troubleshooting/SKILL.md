@@ -2,7 +2,7 @@
 name: indexer-troubleshooting
 description: >-
   Use when the indexer fails to start, codegen errors, types are stale,
-  Docker or database issues, or something is not working.
+  Docker or database issues, RPC errors, or something is not working.
   Common error messages and fixes.
 metadata:
   managed-by: envio
@@ -44,7 +44,9 @@ rpc:
   - url: ${ENVIO_RPC_URL}
 ```
 
-## HyperSync Errors
+## RPC / HyperSync Errors
+
+**"rate limited" or timeout errors:** See `indexer-performance` skill for RPC tuning parameters.
 
 **Missing `ENVIO_API_TOKEN`:** Required for HyperSync. Get an Envio API token at https://envio.dev/app/api-tokens, then set it in `.env` or shell environment.
 
