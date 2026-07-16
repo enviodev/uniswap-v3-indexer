@@ -1,6 +1,6 @@
 import { indexer, Token, Pool, Bundle, Factory, Burn, Tick } from "envio";
 import { CHAIN_CONFIGS } from "./utils/chains";
-import { convertTokenToDecimal, loadTransaction } from './utils/index';
+import { convertTokenToDecimal, loadTransaction, sanitizeBD } from './utils/index';
 import { ONE_BI, ZERO_BI } from './utils/constants';
 import * as intervalUpdates from './utils/intervalUpdates';
 
@@ -78,7 +78,7 @@ indexer.onEvent({ contract: "UniswapV3Pool", event: "Burn" }, async ({ event, co
         amount: event.params.amount,
         amount0: amount0,
         amount1: amount1,
-        amountUSD: amountUSD,
+        amountUSD: sanitizeBD(amountUSD),
         tickLower: BigInt(event.params.tickLower),
         tickUpper: BigInt(event.params.tickUpper),
         logIndex: BigInt(event.logIndex)

@@ -1,5 +1,5 @@
 import { indexer, Token, Pool, Bundle, Factory, Tick, BigDecimal } from "envio";
-import { convertTokenToDecimal, loadTransaction, fastExponentiation, safeDiv } from './utils/index';
+import { convertTokenToDecimal, loadTransaction, fastExponentiation, safeDiv, sanitizeBD } from './utils/index';
 import { ONE_BI, ZERO_BI, ONE_BD } from './utils/constants';
 import { CHAIN_CONFIGS } from "./utils/chains";
 import * as intervalUpdates from './utils/intervalUpdates';
@@ -78,7 +78,7 @@ indexer.onEvent({ contract: "UniswapV3Pool", event: "Mint" }, async ({ event, co
     pool.totalValueLockedETH = pool.totalValueLockedToken0
         .times(token0.derivedETH)
         .plus(pool.totalValueLockedToken1.times(token1.derivedETH));
-    pool.totalValueLockedUSD = pool.totalValueLockedETH.times(bundle.ethPriceUSD);
+    pool.totalValueLockedUSD = sanitizeBD(pool.totalValueLockedETH.times(bundle.ethPriceUSD));
 
     // reset aggregates with new amounts
     factory.totalValueLockedETH = factory.totalValueLockedETH.plus(pool.totalValueLockedETH);
@@ -105,7 +105,7 @@ indexer.onEvent({ contract: "UniswapV3Pool", event: "Mint" }, async ({ event, co
         amount: event.params.amount,
         amount0: amount0,
         amount1: amount1,
-        amountUSD: amountUSD,
+        amountUSD: sanitizeBD(amountUSD),
         tickLower: event.params.tickLower,
         tickUpper: event.params.tickUpper,
         logIndex: BigInt(event.logIndex)

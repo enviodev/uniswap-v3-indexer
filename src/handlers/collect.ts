@@ -1,7 +1,7 @@
 import { indexer, Token, Pool, Bundle, Factory } from "envio";
 import { CHAIN_CONFIGS } from "./utils/chains";
 import { ONE_BI, ZERO_BI } from './utils/constants';
-import { convertTokenToDecimal, loadTransaction } from './utils/index';
+import { convertTokenToDecimal, loadTransaction, sanitizeBD } from './utils/index';
 import { getTrackedAmountUSD } from './utils/pricing';
 import * as intervalUpdates from './utils/intervalUpdates';
 
@@ -71,7 +71,7 @@ indexer.onEvent({ contract: "UniswapV3Pool", event: "Collect" }, async ({ event,
     pool.totalValueLockedETH = pool.totalValueLockedToken0
         .times(token0.derivedETH)
         .plus(pool.totalValueLockedToken1.times(token1.derivedETH));
-    pool.totalValueLockedUSD = pool.totalValueLockedETH.times(bundle.ethPriceUSD);
+    pool.totalValueLockedUSD = sanitizeBD(pool.totalValueLockedETH.times(bundle.ethPriceUSD));
 
     // Update aggregate fee collection values.
     pool.collectedFeesToken0 = pool.collectedFeesToken0.plus(collectedAmountToken0);
@@ -90,7 +90,7 @@ indexer.onEvent({ contract: "UniswapV3Pool", event: "Collect" }, async ({ event,
         owner: event.params.owner.toLowerCase(),
         amount0: collectedAmountToken0,
         amount1: collectedAmountToken1,
-        amountUSD: trackedCollectedAmountUSD,
+        amountUSD: sanitizeBD(trackedCollectedAmountUSD),
         tickLower: event.params.tickLower,
         tickUpper: event.params.tickUpper,
         logIndex: BigInt(event.logIndex)

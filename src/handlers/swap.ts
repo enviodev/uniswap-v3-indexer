@@ -94,7 +94,7 @@ indexer.onEvent({ contract: "UniswapV3Pool", event: "Swap" }, async ({ event, co
     // pool volume
     pool.volumeToken0 = pool.volumeToken0.plus(amount0Abs);
     pool.volumeToken1 = pool.volumeToken1.plus(amount1Abs);
-    pool.volumeUSD = pool.volumeUSD.plus(amountTotalUSDTracked);
+    pool.volumeUSD = sanitizeBD(pool.volumeUSD.plus(amountTotalUSDTracked));
     pool.untrackedVolumeUSD = pool.untrackedVolumeUSD.plus(amountTotalUSDUntracked);
     pool.feesUSD = pool.feesUSD.plus(feesUSD);
     pool.txCount = pool.txCount + ONE_BI;
@@ -161,7 +161,7 @@ indexer.onEvent({ contract: "UniswapV3Pool", event: "Swap" }, async ({ event, co
     pool.totalValueLockedETH = pool.totalValueLockedToken0
         .times(token0.derivedETH)
         .plus(pool.totalValueLockedToken1.times(token1.derivedETH));
-    pool.totalValueLockedUSD = pool.totalValueLockedETH.times(bundle.ethPriceUSD);
+    pool.totalValueLockedUSD = sanitizeBD(pool.totalValueLockedETH.times(bundle.ethPriceUSD));
 
     factory.totalValueLockedETH = factory.totalValueLockedETH.plus(pool.totalValueLockedETH);
     factory.totalValueLockedUSD = factory.totalValueLockedETH.times(bundle.ethPriceUSD);
@@ -190,7 +190,7 @@ indexer.onEvent({ contract: "UniswapV3Pool", event: "Swap" }, async ({ event, co
         recipient: event.params.recipient.toLowerCase(),
         amount0: amount0,
         amount1: amount1,
-        amountUSD: amountTotalUSDTracked,
+        amountUSD: sanitizeBD(amountTotalUSDTracked),
         tick: event.params.tick,
         sqrtPriceX96: event.params.sqrtPriceX96,
         logIndex: BigInt(event.logIndex)
