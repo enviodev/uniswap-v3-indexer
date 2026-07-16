@@ -1,6 +1,6 @@
 import { createEffect, S } from "envio";
 import { getContract } from "viem";
-import { getClient } from "./tokenMetadataEffect";
+import { getClient, withTransportRetry } from "./tokenMetadataEffect";
 
 const POOL_ABI = [
   {
@@ -73,12 +73,15 @@ export const getPoolBackfillDataEffect = createEffect(
         client,
       });
 
-    const [liquidity, feeTier, balance0, balance1] = await Promise.all([
-      pool.read.liquidity(blockTag),
-      pool.read.fee(blockTag),
-      erc20(token0).read.balanceOf([poolAddress as `0x${string}`], blockTag),
-      erc20(token1).read.balanceOf([poolAddress as `0x${string}`], blockTag),
-    ]);
+    const [liquidity, feeTier, balance0, balance1] = await withTransportRetry(
+      () =>
+        Promise.all([
+          pool.read.liquidity(blockTag),
+          pool.read.fee(blockTag),
+          erc20(token0).read.balanceOf([poolAddress as `0x${string}`], blockTag),
+          erc20(token1).read.balanceOf([poolAddress as `0x${string}`], blockTag),
+        ])
+    );
 
     return { liquidity, feeTier, balance0, balance1 };
   }

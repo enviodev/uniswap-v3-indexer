@@ -112,11 +112,41 @@ export const getClient = (chainId: number): PublicClient => {
       batch: {
         multicall: true,
       },
-      transport: http(getRpcUrl(chainId), { batch: true }),
+      transport: http(getRpcUrl(chainId), {
+        batch: true,
+        retryCount: 5,
+        timeout: 30_000,
+      }),
     });
   }
   return clients[chainId];
 };
+
+/**
+ * Retry a thunk on transport-level errors (RPC down, rate limits, timeouts)
+ * with exponential backoff. Reverts / missing functions are NOT transport
+ * errors and propagate immediately — they carry the subgraph's semantics
+ * ("this token has no decimals()"). Only after persistent transport failure
+ * does the error escape, which stalls indexing rather than recording wrong
+ * token properties.
+ */
+export async function withTransportRetry<T>(
+  fn: () => Promise<T>,
+  attempts = 8
+): Promise<T> {
+  let lastError: unknown;
+  for (let attempt = 0; attempt < attempts; attempt++) {
+    try {
+      return await fn();
+    } catch (e) {
+      if (!isTransportError(e)) throw e;
+      lastError = e;
+      const delayMs = Math.min(1000 * 2 ** attempt, 30_000);
+      await new Promise((resolve) => setTimeout(resolve, delayMs));
+    }
+  }
+  throw lastError;
+}
 
 // Remove null bytes and other control characters that break PostgreSQL
 function sanitizeString(str: string): string {
@@ -202,14 +232,15 @@ export const getTokenMetadataEffect = createEffect(
       client: getClient(chainId),
     });
 
-    const totalSupplyPromise = catchRevert(contract.read.totalSupply());
-
     if (staticDefinition) {
+      const staticTotalSupply = await withTransportRetry(() =>
+        catchRevert(contract.read.totalSupply())
+      );
       return {
         name: staticDefinition.name,
         symbol: staticDefinition.symbol,
         decimals: Number(staticDefinition.decimals),
-        totalSupply: (await totalSupplyPromise) ?? 0n,
+        totalSupply: staticTotalSupply ?? 0n,
       };
     }
 
@@ -220,14 +251,16 @@ export const getTokenMetadataEffect = createEffect(
       symbolBytes32Result,
       decimalsResult,
       totalSupplyResult,
-    ] = await Promise.all([
-      catchRevert(contract.read.name()),
-      catchRevert(contract.read.NAME()),
-      catchRevert(contract.read.symbol()),
-      catchRevert(contract.read.SYMBOL()),
-      catchRevert(contract.read.decimals()),
-      totalSupplyPromise,
-    ]);
+    ] = await withTransportRetry(() =>
+      Promise.all([
+        catchRevert(contract.read.name()),
+        catchRevert(contract.read.NAME()),
+        catchRevert(contract.read.symbol()),
+        catchRevert(contract.read.SYMBOL()),
+        catchRevert(contract.read.decimals()),
+        catchRevert(contract.read.totalSupply()),
+      ])
+    );
 
     // Subgraph parity: the bytes32 fallbacks ignore the sentinel value
     // 0x…0001 (isNullEthValue) that broken tokens return.
