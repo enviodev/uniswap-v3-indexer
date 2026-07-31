@@ -36,3 +36,9 @@ logs
 build
 .env
 *.tsbuildinfo
+
+# Envio effect cache. The bare `cache` rule above (for solidity build output)
+# also matches .envio/cache, so re-include the directory before its contents —
+# git will not descend into an excluded directory.
+!.envio/cache/
+!.envio/cache/*.tsv

@@ -66,7 +66,9 @@ describe("Uniswap V3 Indexer (mainnet replay)", () => {
       t.expect(uni.symbol).toBe("UNI");
       t.expect(uni.name).toBe("Uniswap");
       t.expect(uni.decimals).toBe(18n);
-      t.expect(uni.totalSupply).toBe(10n ** 27n); // fixed 1B supply
+      // Not fetched — hardcoded 0, matching the v4 indexer. The v3 subgraph
+      // reports the real supply (10n ** 27n for UNI); known parity gap.
+      t.expect(uni.totalSupply).toBe(0n);
       t.expect(uni.isWhitelisted).toBe(false);
       // WETH is whitelisted → this pool prices UNI, not the reverse
       t.expect(uni.whitelistPools).toContain(FIRST_POOL);

@@ -38,7 +38,9 @@ async function fetchToken(
     symbol: metadata.symbol,
     name: metadata.name,
     decimals: BigInt(metadata.decimals),
-    totalSupply: metadata.totalSupply,
+    // Not fetched — see tokenMetadataEffect. Matches the v4 indexer; known
+    // parity gap against the v3 subgraph, which reports the on-chain supply.
+    totalSupply: 0n,
     isWhitelisted: isAddressInList(tokenAddress, whitelistTokens),
     volume: ZERO_BD,
     volumeUSD: ZERO_BD,

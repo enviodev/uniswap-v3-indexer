@@ -51,13 +51,6 @@ const ERC20_ABI = [
     stateMutability: "view",
     type: "function",
   },
-  {
-    inputs: [],
-    name: "totalSupply",
-    outputs: [{ type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
 ] as const;
 
 const getRpcUrl = (chainId: number): string => {
@@ -196,7 +189,15 @@ const catchRevert = <T>(promise: Promise<T>): Promise<T | null> =>
 // - symbol/name fall back to bytes32 variants, then "unknown"/"UNKNOWN"
 // - decimals: null when unreadable or >= 255 (callers must then SKIP pool
 //   creation, exactly like handlePoolCreated bails on null decimals)
-// - totalSupply: 0 when unreadable
+//
+// totalSupply is deliberately NOT fetched here. The subgraph reads it via
+// fetchTokenTotalSupply, but nothing in this indexer (or the subgraph) derives
+// anything from it, so Token.totalSupply is written as 0 — matching the v4
+// indexer. Keeping this output to {name, symbol, decimals} also lets the shared
+// getTokenMetadata cache be reused across v3 and v4.
+//
+// KNOWN PARITY GAP: Token.totalSupply is 0 for every token, not the on-chain
+// value the v3 subgraph reports.
 export const getTokenMetadataEffect = createEffect(
   {
     name: "getTokenMetadata",
@@ -208,7 +209,6 @@ export const getTokenMetadataEffect = createEffect(
       name: S.string,
       symbol: S.string,
       decimals: S.nullable(S.number),
-      totalSupply: S.bigint,
     },
     rateLimit: false,
     cache: true,
@@ -218,8 +218,8 @@ export const getTokenMetadataEffect = createEffect(
     const normalizedAddress = address.toLowerCase();
 
     // Check for token overrides (subgraph STATIC_TOKEN_DEFINITIONS take
-    // priority over contract reads). totalSupply is still read on-chain, but
-    // never blocks metadata resolution.
+    // priority over contract reads). A static definition resolves the token
+    // entirely — no on-chain read is needed.
     const chainConfig = getChainConfig(chainId);
     const staticDefinition = getStaticDefinition(
       normalizedAddress,
@@ -233,14 +233,10 @@ export const getTokenMetadataEffect = createEffect(
     });
 
     if (staticDefinition) {
-      const staticTotalSupply = await withTransportRetry(() =>
-        catchRevert(contract.read.totalSupply())
-      );
       return {
         name: staticDefinition.name,
         symbol: staticDefinition.symbol,
         decimals: Number(staticDefinition.decimals),
-        totalSupply: staticTotalSupply ?? 0n,
       };
     }
 
@@ -250,7 +246,6 @@ export const getTokenMetadataEffect = createEffect(
       symbolResult,
       symbolBytes32Result,
       decimalsResult,
-      totalSupplyResult,
     ] = await withTransportRetry(() =>
       Promise.all([
         catchRevert(contract.read.name()),
@@ -258,7 +253,6 @@ export const getTokenMetadataEffect = createEffect(
         catchRevert(contract.read.symbol()),
         catchRevert(contract.read.SYMBOL()),
         catchRevert(contract.read.decimals()),
-        catchRevert(contract.read.totalSupply()),
       ])
     );
 
@@ -292,7 +286,6 @@ export const getTokenMetadataEffect = createEffect(
       name: name || "unknown",
       symbol: symbol || "UNKNOWN",
       decimals,
-      totalSupply: totalSupplyResult ?? 0n,
     };
   }
 );
