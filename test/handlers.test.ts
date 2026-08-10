@@ -371,22 +371,24 @@ describe("Swap handler", () => {
       swap.amountUSD.times(bd("0.003")).toFixed(4)
     );
 
-    // interval data captured the volume
-    const dayID = Math.floor((TIMESTAMP + 36) / 86400);
-    const poolDayData = await indexer.PoolDayData.getOrThrow(
-      `${POOL_ID}-${dayID}`
-    );
-    expect(poolDayData.volumeUSD.toFixed(2)).toBe("3732.53");
-    // the day bucket was opened by the mint, before the pool had a price —
-    // open records the price at bucket creation (subgraph parity), close
-    // tracks the latest price
-    expect(poolDayData.open.isZero()).toBe(true);
-    expect(poolDayData.close.toFixed(6)).toBe("3732.531944");
+    // --- DISABLED: day/hour interval aggregates are switched off in the
+    // handlers for the slim sync. Uncomment together with them.
+//     // interval data captured the volume
+//     const dayID = Math.floor((TIMESTAMP + 36) / 86400);
+//     const poolDayData = await indexer.PoolDayData.getOrThrow(
+//       `${POOL_ID}-${dayID}`
+//     );
+//     expect(poolDayData.volumeUSD.toFixed(2)).toBe("3732.53");
+//     // the day bucket was opened by the mint, before the pool had a price —
+//     // open records the price at bucket creation (subgraph parity), close
+//     // tracks the latest price
+//     expect(poolDayData.open.isZero()).toBe(true);
+//     expect(poolDayData.close.toFixed(6)).toBe("3732.531944");
 
-    const uniswapDayData = await indexer.UniswapDayData.getOrThrow(
-      `${CHAIN_ID}-${dayID}`
-    );
-    expect(uniswapDayData.volumeUSD.toFixed(2)).toBe("3732.53");
+//     const uniswapDayData = await indexer.UniswapDayData.getOrThrow(
+//       `${CHAIN_ID}-${dayID}`
+//     );
+//     expect(uniswapDayData.volumeUSD.toFixed(2)).toBe("3732.53");
   });
 });
 

@@ -126,57 +126,59 @@ describe("Uniswap V3 Indexer (mainnet replay)", () => {
   );
 });
 
-describe("Optimism pre-regenesis backfill", () => {
-  it(
-    "creates the POOL_MAPINGS pools on the first post-regenesis PoolCreated",
-    { timeout: 600_000 },
-    async (t) => {
-      const indexer = createTestIndexer();
+// --- DISABLED: Optimism is not in config.yaml for the Ethereum-only sync.
+// Restore chain 10 in config.yaml and uncomment this block together.
+// describe("Optimism pre-regenesis backfill", () => {
+//   it(
+//     "creates the POOL_MAPINGS pools on the first post-regenesis PoolCreated",
+//     { timeout: 600_000 },
+//     async (t) => {
+//       const indexer = createTestIndexer();
 
-      // 46549 is the first PoolCreated after the subgraph's OP start block
-      // (27446); the factory bootstrap + populateEmptyPools fire here, with
-      // liquidity/fee/balances read at this exact block over archive RPC.
-      await indexer.process({
-        chains: {
-          10: { startBlock: 27446, endBlock: 46549 },
-        },
-      });
+//       // 46549 is the first PoolCreated after the subgraph's OP start block
+//       // (27446); the factory bootstrap + populateEmptyPools fire here, with
+//       // liquidity/fee/balances read at this exact block over archive RPC.
+//       await indexer.process({
+//         chains: {
+//           10: { startBlock: 27446, endBlock: 46549 },
+//         },
+//       });
 
-      const factory = await indexer.Factory.getOrThrow(
-        "10-0x1f98431c8ad98523631ae4a59f267346ea31f984"
-      );
-      // backfilled pools do not count towards poolCount (subgraph parity)
-      t.expect(factory.poolCount).toBe(1n);
+//       const factory = await indexer.Factory.getOrThrow(
+//         "10-0x1f98431c8ad98523631ae4a59f267346ea31f984"
+//       );
+//       // backfilled pools do not count towards poolCount (subgraph parity)
+//       t.expect(factory.poolCount).toBe(1n);
 
-      const pools = await indexer.Pool.getAll();
-      // 103 mappings + the pool from the PoolCreated event itself (a mapping
-      // entry is only skipped if its token metadata is unreadable)
-      t.expect(pools.length).toBe(104);
+//       const pools = await indexer.Pool.getAll();
+//       // 103 mappings + the pool from the PoolCreated event itself (a mapping
+//       // entry is only skipped if its token metadata is unreadable)
+//       t.expect(pools.length).toBe(104);
 
-      // WETH/DAI 0.3% — liquidity/fee verified against archive state
-      const wethDai = await indexer.Pool.getOrThrow(
-        "10-0x03af20bdaaffb4cc0a521796a223f7d85e2aac31"
-      );
-      t.expect(wethDai.liquidity).toBe(587218525905507716872725n);
-      t.expect(wethDai.feeTier).toBe(3000n);
-      t.expect(wethDai.totalValueLockedToken0.gt(0), "WETH balance").toBe(true);
-      t.expect(wethDai.totalValueLockedToken1.gt(0), "DAI balance").toBe(true);
-      // pre-regenesis pools await their first post-regenesis swap for a price
-      t.expect(wethDai.sqrtPrice).toBe(0n);
-      t.expect(wethDai.tick).toBeUndefined();
+//       // WETH/DAI 0.3% — liquidity/fee verified against archive state
+//       const wethDai = await indexer.Pool.getOrThrow(
+//         "10-0x03af20bdaaffb4cc0a521796a223f7d85e2aac31"
+//       );
+//       t.expect(wethDai.liquidity).toBe(587218525905507716872725n);
+//       t.expect(wethDai.feeTier).toBe(3000n);
+//       t.expect(wethDai.totalValueLockedToken0.gt(0), "WETH balance").toBe(true);
+//       t.expect(wethDai.totalValueLockedToken1.gt(0), "DAI balance").toBe(true);
+//       // pre-regenesis pools await their first post-regenesis swap for a price
+//       t.expect(wethDai.sqrtPrice).toBe(0n);
+//       t.expect(wethDai.tick).toBeUndefined();
 
-      const weth = await indexer.Token.getOrThrow(
-        "10-0x4200000000000000000000000000000000000006"
-      );
-      t.expect(weth.symbol).toBe("WETH");
-      const dai = await indexer.Token.getOrThrow(
-        "10-0xda10009cbd5d07dd0cecc66161fc93d7c9000da1"
-      );
-      t.expect(dai.symbol).toBe("DAI");
-      // WETH is whitelisted → the pool prices DAI's side
-      t.expect(dai.whitelistPools).toContain(
-        "10-0x03af20bdaaffb4cc0a521796a223f7d85e2aac31"
-      );
-    }
-  );
-});
+//       const weth = await indexer.Token.getOrThrow(
+//         "10-0x4200000000000000000000000000000000000006"
+//       );
+//       t.expect(weth.symbol).toBe("WETH");
+//       const dai = await indexer.Token.getOrThrow(
+//         "10-0xda10009cbd5d07dd0cecc66161fc93d7c9000da1"
+//       );
+//       t.expect(dai.symbol).toBe("DAI");
+//       // WETH is whitelisted → the pool prices DAI's side
+//       t.expect(dai.whitelistPools).toContain(
+//         "10-0x03af20bdaaffb4cc0a521796a223f7d85e2aac31"
+//       );
+//     }
+//   );
+// });

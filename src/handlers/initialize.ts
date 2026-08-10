@@ -46,10 +46,14 @@ indexer.onEvent({ contract: "UniswapV3Pool", event: "Initialize" }, async ({even
 
     context.Bundle.set(bundle);
 
-    await Promise.all([
-        updatePoolDayData(event.block.timestamp, pool, context),
-        updatePoolHourData(event.block.timestamp, pool, context),
-    ]);
+    // --- DISABLED: day/hour interval aggregates -------------------------
+    // Skipped to cut storage and write amplification on the slim sync.
+    // Uncomment this block (and any paired context.*.set calls) to restore
+    // full 1:1 subgraph parity for the *DayData / *HourData entities.
+//     await Promise.all([
+//         updatePoolDayData(event.block.timestamp, pool, context),
+//         updatePoolHourData(event.block.timestamp, pool, context),
+//     ]);
 
     // update token prices
     const [derivedETH_t0, derivedETH_t1] = await Promise.all([

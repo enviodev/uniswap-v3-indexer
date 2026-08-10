@@ -196,61 +196,65 @@ indexer.onEvent({ contract: "UniswapV3Pool", event: "Swap" }, async ({ event, co
         logIndex: BigInt(event.logIndex)
     };
 
-    // interval data
-    const uniswapDayData = { ...await intervalUpdates.updateUniswapDayData(timestamp, event.chainId, factory, context) };
-    const poolDayData = { ...await intervalUpdates.updatePoolDayData(timestamp, pool, context) };
-    const poolHourData = { ...await intervalUpdates.updatePoolHourData(timestamp, pool, context) };
-    const token0DayData = { ...await intervalUpdates.updateTokenDayData(timestamp, token0 as Token, bundle, context) };
-    const token1DayData = { ...await intervalUpdates.updateTokenDayData(timestamp, token1 as Token, bundle, context) };
-    const token0HourData = { ...await intervalUpdates.updateTokenHourData(timestamp, token0 as Token, bundle, context) };
-    const token1HourData = { ...await intervalUpdates.updateTokenHourData(timestamp, token1 as Token, bundle, context) };
+    // --- DISABLED: day/hour interval aggregates -------------------------
+    // Skipped to cut storage and write amplification on the slim sync.
+    // Uncomment this block AND the paired context.*DayData/*HourData.set
+    // calls below to restore full 1:1 subgraph parity.
+//     // interval data
+//     const uniswapDayData = { ...await intervalUpdates.updateUniswapDayData(timestamp, event.chainId, factory, context) };
+//     const poolDayData = { ...await intervalUpdates.updatePoolDayData(timestamp, pool, context) };
+//     const poolHourData = { ...await intervalUpdates.updatePoolHourData(timestamp, pool, context) };
+//     const token0DayData = { ...await intervalUpdates.updateTokenDayData(timestamp, token0 as Token, bundle, context) };
+//     const token1DayData = { ...await intervalUpdates.updateTokenDayData(timestamp, token1 as Token, bundle, context) };
+//     const token0HourData = { ...await intervalUpdates.updateTokenHourData(timestamp, token0 as Token, bundle, context) };
+//     const token1HourData = { ...await intervalUpdates.updateTokenHourData(timestamp, token1 as Token, bundle, context) };
 
-    // update volume metrics
-    uniswapDayData.volumeETH = uniswapDayData.volumeETH.plus(amountTotalETHTracked);
-    uniswapDayData.volumeUSD = uniswapDayData.volumeUSD.plus(amountTotalUSDTracked);
-    uniswapDayData.feesUSD = uniswapDayData.feesUSD.plus(feesUSD);
+//     // update volume metrics
+//     uniswapDayData.volumeETH = uniswapDayData.volumeETH.plus(amountTotalETHTracked);
+//     uniswapDayData.volumeUSD = uniswapDayData.volumeUSD.plus(amountTotalUSDTracked);
+//     uniswapDayData.feesUSD = uniswapDayData.feesUSD.plus(feesUSD);
 
-    poolDayData.volumeUSD = poolDayData.volumeUSD.plus(amountTotalUSDTracked);
-    poolDayData.volumeToken0 = poolDayData.volumeToken0.plus(amount0Abs);
-    poolDayData.volumeToken1 = poolDayData.volumeToken1.plus(amount1Abs);
-    poolDayData.feesUSD = poolDayData.feesUSD.plus(feesUSD);
+//     poolDayData.volumeUSD = poolDayData.volumeUSD.plus(amountTotalUSDTracked);
+//     poolDayData.volumeToken0 = poolDayData.volumeToken0.plus(amount0Abs);
+//     poolDayData.volumeToken1 = poolDayData.volumeToken1.plus(amount1Abs);
+//     poolDayData.feesUSD = poolDayData.feesUSD.plus(feesUSD);
 
-    poolHourData.volumeUSD = poolHourData.volumeUSD.plus(amountTotalUSDTracked);
-    poolHourData.volumeToken0 = poolHourData.volumeToken0.plus(amount0Abs);
-    poolHourData.volumeToken1 = poolHourData.volumeToken1.plus(amount1Abs);
-    poolHourData.feesUSD = poolHourData.feesUSD.plus(feesUSD);
+//     poolHourData.volumeUSD = poolHourData.volumeUSD.plus(amountTotalUSDTracked);
+//     poolHourData.volumeToken0 = poolHourData.volumeToken0.plus(amount0Abs);
+//     poolHourData.volumeToken1 = poolHourData.volumeToken1.plus(amount1Abs);
+//     poolHourData.feesUSD = poolHourData.feesUSD.plus(feesUSD);
 
-    // Note: token{Day,Hour}Data.untrackedVolumeUSD accumulates the TRACKED
-    // amount below — that is what the subgraph does (see its swap handler);
-    // the quirk is preserved for 1:1 parity.
-    token0DayData.volume = token0DayData.volume.plus(amount0Abs);
-    token0DayData.volumeUSD = token0DayData.volumeUSD.plus(amountTotalUSDTracked);
-    token0DayData.untrackedVolumeUSD = token0DayData.untrackedVolumeUSD.plus(amountTotalUSDTracked);
-    token0DayData.feesUSD = token0DayData.feesUSD.plus(feesUSD);
+//     // Note: token{Day,Hour}Data.untrackedVolumeUSD accumulates the TRACKED
+//     // amount below — that is what the subgraph does (see its swap handler);
+//     // the quirk is preserved for 1:1 parity.
+//     token0DayData.volume = token0DayData.volume.plus(amount0Abs);
+//     token0DayData.volumeUSD = token0DayData.volumeUSD.plus(amountTotalUSDTracked);
+//     token0DayData.untrackedVolumeUSD = token0DayData.untrackedVolumeUSD.plus(amountTotalUSDTracked);
+//     token0DayData.feesUSD = token0DayData.feesUSD.plus(feesUSD);
 
-    token0HourData.volume = token0HourData.volume.plus(amount0Abs);
-    token0HourData.volumeUSD = token0HourData.volumeUSD.plus(amountTotalUSDTracked);
-    token0HourData.untrackedVolumeUSD = token0HourData.untrackedVolumeUSD.plus(amountTotalUSDTracked);
-    token0HourData.feesUSD = token0HourData.feesUSD.plus(feesUSD);
+//     token0HourData.volume = token0HourData.volume.plus(amount0Abs);
+//     token0HourData.volumeUSD = token0HourData.volumeUSD.plus(amountTotalUSDTracked);
+//     token0HourData.untrackedVolumeUSD = token0HourData.untrackedVolumeUSD.plus(amountTotalUSDTracked);
+//     token0HourData.feesUSD = token0HourData.feesUSD.plus(feesUSD);
 
-    token1DayData.volume = token1DayData.volume.plus(amount1Abs);
-    token1DayData.volumeUSD = token1DayData.volumeUSD.plus(amountTotalUSDTracked);
-    token1DayData.untrackedVolumeUSD = token1DayData.untrackedVolumeUSD.plus(amountTotalUSDTracked);
-    token1DayData.feesUSD = token1DayData.feesUSD.plus(feesUSD);
+//     token1DayData.volume = token1DayData.volume.plus(amount1Abs);
+//     token1DayData.volumeUSD = token1DayData.volumeUSD.plus(amountTotalUSDTracked);
+//     token1DayData.untrackedVolumeUSD = token1DayData.untrackedVolumeUSD.plus(amountTotalUSDTracked);
+//     token1DayData.feesUSD = token1DayData.feesUSD.plus(feesUSD);
 
-    token1HourData.volume = token1HourData.volume.plus(amount1Abs);
-    token1HourData.volumeUSD = token1HourData.volumeUSD.plus(amountTotalUSDTracked);
-    token1HourData.untrackedVolumeUSD = token1HourData.untrackedVolumeUSD.plus(amountTotalUSDTracked);
-    token1HourData.feesUSD = token1HourData.feesUSD.plus(feesUSD);
+//     token1HourData.volume = token1HourData.volume.plus(amount1Abs);
+//     token1HourData.volumeUSD = token1HourData.volumeUSD.plus(amountTotalUSDTracked);
+//     token1HourData.untrackedVolumeUSD = token1HourData.untrackedVolumeUSD.plus(amountTotalUSDTracked);
+//     token1HourData.feesUSD = token1HourData.feesUSD.plus(feesUSD);
 
     context.Swap.set(swap);
-    context.TokenDayData.set(token0DayData);
-    context.TokenDayData.set(token1DayData);
-    context.UniswapDayData.set(uniswapDayData);
-    context.PoolDayData.set(poolDayData);
-    context.PoolHourData.set(poolHourData);
-    context.TokenHourData.set(token0HourData);
-    context.TokenHourData.set(token1HourData);
+//     context.TokenDayData.set(token0DayData);
+//     context.TokenDayData.set(token1DayData);
+//     context.UniswapDayData.set(uniswapDayData);
+//     context.PoolDayData.set(poolDayData);
+//     context.PoolHourData.set(poolHourData);
+//     context.TokenHourData.set(token0HourData);
+//     context.TokenHourData.set(token1HourData);
     context.Factory.set(factory);
     context.Pool.set(pool);
     context.Token.set(token0);

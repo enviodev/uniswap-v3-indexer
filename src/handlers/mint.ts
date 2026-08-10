@@ -151,15 +151,19 @@ indexer.onEvent({ contract: "UniswapV3Pool", event: "Mint" }, async ({ event, co
     // TODO: Update Tick's volume, fees, and liquidity provider count. Computing these on the tick
     // level requires reimplementing some of the swapping code from v3-core.
 
-    await Promise.all([
-        intervalUpdates.updateUniswapDayData(timestamp, event.chainId, factory, context),
-        intervalUpdates.updatePoolDayData(timestamp, pool, context),
-        intervalUpdates.updatePoolHourData(timestamp, pool, context),
-        intervalUpdates.updateTokenDayData(timestamp, token0, bundle, context),
-        intervalUpdates.updateTokenDayData(timestamp, token1, bundle, context),
-        intervalUpdates.updateTokenHourData(timestamp, token0, bundle, context),
-        intervalUpdates.updateTokenHourData(timestamp, token1, bundle, context),
-    ]);
+    // --- DISABLED: day/hour interval aggregates -------------------------
+    // Skipped to cut storage and write amplification on the slim sync.
+    // Uncomment this block (and any paired context.*.set calls) to restore
+    // full 1:1 subgraph parity for the *DayData / *HourData entities.
+//     await Promise.all([
+//         intervalUpdates.updateUniswapDayData(timestamp, event.chainId, factory, context),
+//         intervalUpdates.updatePoolDayData(timestamp, pool, context),
+//         intervalUpdates.updatePoolHourData(timestamp, pool, context),
+//         intervalUpdates.updateTokenDayData(timestamp, token0, bundle, context),
+//         intervalUpdates.updateTokenDayData(timestamp, token1, bundle, context),
+//         intervalUpdates.updateTokenHourData(timestamp, token0, bundle, context),
+//         intervalUpdates.updateTokenHourData(timestamp, token1, bundle, context),
+//     ]);
 
     context.Token.set(token0);
     context.Token.set(token1);
