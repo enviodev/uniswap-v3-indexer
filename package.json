@@ -20,7 +20,7 @@
     "vitest": "4.1.0"
   },
   "dependencies": {
-    "envio": "3.5.0",
+    "envio": "3.6.1",
     "viem": "2.21.0",
     "dotenv": "^17.2.3"
   }
